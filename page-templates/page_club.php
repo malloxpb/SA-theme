@@ -8,9 +8,7 @@ Template Name: Club page template
 	get_header();
 ?>
 
-
-
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area col-md-9">
 		<main id="main" class="site-main" role="main">
 
 			<h1 class="page-club-title"> <?php echo get_the_title(); ?> </h1>
@@ -56,7 +54,6 @@ Template Name: Club page template
 
 
 		</main><!-- #main -->
-		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

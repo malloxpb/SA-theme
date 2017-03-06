@@ -31,7 +31,7 @@
 
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header <?php if(is_front_page()) echo "has-header"; ?>" role="banner">
 		<div class="header-wrap">
             <div class="container">
                 <div class="row">
@@ -56,6 +56,7 @@
 
 	<?php do_action('sydney_after_header'); ?>
 
+	<?php if (is_front_page()): ?>
 	<div class="sydney-hero-area">
 		<?php sydney_slider_template(); ?>
 		<div class="header-image">
@@ -66,6 +67,7 @@
 
 		<?php do_action('sydney_inside_hero'); ?>
 	</div>
+	<?php endif; ?>
 
 	<?php do_action('sydney_after_hero'); ?>
 
