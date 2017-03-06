@@ -534,19 +534,3 @@ function SAteam_post_type() {
     	register_post_type( 'SAteam', $args );
 }
 add_action( 'init', 'SAteam_post_type' );
-
-// update the 
-add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
-
-function add_my_post_types_to_query( $query ) {
-	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', 'club' ) );
-	return $query;
-}
-
-function my_rewrite_flush() {
-    my_cpt_init();
-    flush_rewrite_rules();
-}
-add_action( 'after_switch_theme', 'my_rewrite_flush' );
-
