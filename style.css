@@ -3382,6 +3382,27 @@ Panels
 			display: none;
 		}
 	}
+	@media only screen and (max-width: 600px) {
+		.list-meta {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			text-align: center;
+		}
+		.list-meta .posted-on {
+			margin-bottom: 5px;
+		}
+		.hentry {
+			padding: 15px;
+			margin-bottom: 15px;
+		}
+		.list-meta .posted-on,
+		.list-meta .read-more {
+			float: none;
+			display: inline-block;
+			padding: 5px 10px;
+		}
+	}
 	/* Mobile Portrait Size */
 	@media only screen and (max-width: 479px) {
 		.roll-project.fullwidth .project-item {
