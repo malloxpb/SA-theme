@@ -32,6 +32,11 @@
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 
 	<header id="masthead" class="site-header <?php if(is_front_page()) echo "has-header"; ?>" role="banner">
+		<div class="alert hide-on-mobile">
+            <div class="grid-container">
+                <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
+            </div>
+        </div>
 		<div class="header-wrap">
             <div class="container">
                 <div class="row">

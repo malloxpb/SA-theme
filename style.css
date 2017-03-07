@@ -154,6 +154,23 @@ Navigation
 .post-navigation {
 	margin: 30px 0;
 }
+/* above nav bar */
+.alert {
+    background: #1c1c1c;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+}
+.alert p {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    font-size: 11px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    line-height: inherit;
+    padding-bottom: 0;
+}
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
@@ -593,7 +610,7 @@ Header
 		color: #fff;
 	}
 	.site-logo {
-		max-height: 100px;
+		max-height: 50px;
 	}
 	.site-header {
 		position: absolute;
@@ -602,7 +619,7 @@ Header
 		width: 100%;
 		z-index: 1000;
 		background-color: #5d0202;
-		padding: 20px 0;
+		padding: 0 0 20px 0;
 		-webkit-transition: all 0.3s ease-out;
 		   -moz-transition: all 0.3s ease-out;
 		    -ms-transition: all 0.3s ease-out;
@@ -1591,9 +1608,6 @@ Widgets
 /*--------------------------------------------------------------
 Blog single
 --------------------------------------------------------------*/
-	.single-post .hentry {
-		padding-bottom: 0;
-	}
 	.single-post .author-post {
 		position: relative;
 		margin-top: 50px;
