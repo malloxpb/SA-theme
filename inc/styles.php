@@ -122,7 +122,7 @@ function sydney_custom_styles($custom) {
 	//Menu background
 	$menu_bg_color = get_theme_mod( 'menu_bg_color', '#000000' );
 	$rgba = sydney_hex2rgba($menu_bg_color, 0.9);
-	$custom .= ".site-header.float-header { background-color:" . esc_attr($rgba) . ";}" . "\n";
+	$custom .= ".site-header.float-header { background-color:#5d0202;}" . "\n";
 	$custom .= "@media only screen and (max-width: 1024px) { .site-header { background-color:" . esc_attr($menu_bg_color) . ";}}" . "\n";
 	//Site title
 	$site_title = get_theme_mod( 'site_title_color', '#ffffff' );
