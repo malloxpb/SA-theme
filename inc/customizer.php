@@ -1322,7 +1322,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'primary_color',
         array(
-            'default'           => '#d65050',
+            'default'           => '#5d0202',
             'sanitize_callback' => 'sanitize_hex_color',
         )
     );
