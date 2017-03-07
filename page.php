@@ -14,7 +14,24 @@ get_header(); ?>
 
 	<div id="primary" class="content-area col-md-9">
 		<main id="main" class="post-wrap" role="main">
+			<?php
+				$args = array(
+					'category_name'    => 'events',
+					'orderby'          => 'date',
+				    'order'            => 'DESC',
+				    'posts_per_page'   => 5,
+					'post_type'        => 'post',
+				);
 
+				$postslist = new WP_Query($args);
+
+				if ($postslist->have_posts()) :
+			        while ($postslist->have_posts()) : 
+			        	$postslist->the_post(); 
+			    		get_template_part( 'content', 'post' );
+			        endwhile;
+			    endif;
+			?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>

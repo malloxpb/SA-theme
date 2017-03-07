@@ -88,17 +88,6 @@ function sydney_posted_on() {
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
-	
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'sydney' ), __( '1 Comment', 'sydney' ), __( '% Comments', 'sydney' ) );
-		echo '</span>';
-	}
-
-	$categories_list = get_the_category_list( __( ', ', 'sydney' ) );
-	if ( $categories_list && sydney_categorized_blog() ) {
-		printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'sydney' ) . '</span>', $categories_list );
-	}
 }
 endif;
 
