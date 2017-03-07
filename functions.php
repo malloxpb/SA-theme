@@ -115,6 +115,7 @@ function sydney_widgets_init() {
 
 	//Register the front page widgets
 	if ( function_exists('siteorigin_panels_activate') ) {
+		register_widget( 'Facebook_Widget' );
 		register_widget( 'Sydney_List' );
 		register_widget( 'Sydney_Services_Type_A' );
 		register_widget( 'Sydney_Services_Type_B' );
@@ -138,6 +139,7 @@ add_action( 'widgets_init', 'sydney_widgets_init' );
  * Load the front page widgets.
  */
 if ( function_exists('siteorigin_panels_activate') ) {
+	require get_template_directory() . "/widgets/facebook-widget.php";
 	require get_template_directory() . "/widgets/fp-list.php";
 	require get_template_directory() . "/widgets/fp-services-type-a.php";
 	require get_template_directory() . "/widgets/fp-services-type-b.php";
@@ -458,8 +460,8 @@ function clubs_post_type() {
 	);
 
 	$args = array( 
-		'label'               => __( 'club', 'west' ),
-		'description'         => __( 'SUNY Plattsburgh Clubs and Organizations', 'west' ),
+		'label'               => __( 'club', 'sydney' ),
+		'description'         => __( 'SUNY Plattsburgh Clubs and Organizations', 'sydney' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
@@ -506,8 +508,8 @@ function SAteam_post_type() {
 	);
 
 	$args = array( 
-		'label'               => __( 'SA team', 'west' ),
-		'description'         => __( 'SUNY Plattsburgh SA team', 'west' ),
+		'label'               => __( 'SA team', 'sydney' ),
+		'description'         => __( 'SUNY Plattsburgh SA team', 'sydney' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
