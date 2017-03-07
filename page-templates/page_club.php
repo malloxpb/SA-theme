@@ -36,7 +36,7 @@ Template Name: Club page template
 								<div class="club-inner">
 									<a class="club-link" href="<?php the_permalink(); ?>"></a>
 									<div class="club-thumbnail">
-										<?php the_post_thumbnail('create_thumb_smallpost'); ?>
+										<?php the_post_thumbnail('sydney-medium-thumb'); ?>
 									</div>
 									<div class="club-description">
 										<a href="#" class="club-title"><?php the_title(); ?></a>

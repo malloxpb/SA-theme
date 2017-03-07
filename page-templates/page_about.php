@@ -33,7 +33,7 @@ get_header(); ?>
 					    <article class="grid-item aboutus-post-wrapper grid-25 tablet-grid-33 mobile-grid-50">
 							<div class="aboutus-inner">
 								<div class="aboutus-thumbnail">
-									<?php the_post_thumbnail('create_thumb_small'); ?>
+									<?php the_post_thumbnail('sydney-service-thumb'); ?>
 								</div>
 								<div class="club-description">
 									<h3 class="aboutus-title"><?php the_title(); ?></h3>
