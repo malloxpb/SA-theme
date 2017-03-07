@@ -218,8 +218,6 @@ Content
 .sticky {
 	display: block;
 }
-.hentry {
-}
 .byline,
 .updated:not(.published) {
 	display: none;
@@ -1351,6 +1349,7 @@ Blog
 	background-color: #fff;
 	position: relative;
 	border: 1px solid #f3f3f3;
+	overflow: hidden;
 }
 
 .byline,
@@ -1422,7 +1421,7 @@ Blog
 }
 .list-meta {
 	position: absolute;
-	bottom: -20px;
+	bottom: 0px;
 	right: 30px;
 	font-size: 13px;
 	border: 0;
