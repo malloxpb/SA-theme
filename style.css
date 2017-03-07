@@ -719,8 +719,11 @@ Header
 		text-decoration: none;
 		outline: none;
 	}
+	.has-header #mainnav ul li a:hover {
+		color: #fff;
+	}
 	#mainnav ul li a:hover {
-		color: #5d0202;
+		color: #fff;
 	}
 	#mainnav ul ul a {
 		width: 180px;
