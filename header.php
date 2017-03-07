@@ -46,9 +46,8 @@
             </div>
         </div>
 		<div class="header-wrap">
-            <div class="container">
-                <div class="row">
-				<div class="col-md-4 col-sm-8 col-xs-12">
+            <div class="grid-container">
+				<div class="grid-33 tablet-grid-66 mobile-grid-70">
 		        <?php if ( get_theme_mod('site_logo') ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 		        <?php else : ?>
@@ -56,12 +55,11 @@
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>	        
 		        <?php endif; ?>
 				</div>
-				<div class="col-md-8 col-sm-4 col-xs-12">
+				<div class="grid-66 tablet-grid-33 mobile-grid-30">
 					<div class="btn-menu"></div>
 					<nav id="mainnav" class="mainnav" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 					</nav><!-- #site-navigation -->
-				</div>
 				</div>
 			</div>
 		</div>
