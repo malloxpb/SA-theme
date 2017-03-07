@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-
+	
 	<?php if (get_theme_mod('fullwidth_single')) { //Check if the post needs to be full width
 		$fullwidth = 'fullwidth';
 	} else {
