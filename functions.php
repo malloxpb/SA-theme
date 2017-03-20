@@ -233,48 +233,6 @@ function sydney_menu_fallback() {
 }
 
 /**
- * Header image overlay
- */
-function sydney_header_overlay() {
-	$overlay = get_theme_mod( 'hide_overlay', 0);
-	if ( !$overlay ) {
-		echo '<div class="overlay"></div>';
-	}
-}
-
-/**
- * Header video
- */
-function sydney_header_video() {
-
-	if ( !function_exists('the_custom_header_markup') ) {
-		return;
-	}
-
-	$front_header_type 	= get_theme_mod( 'front_header_type' );
-	$site_header_type 	= get_theme_mod( 'site_header_type' );
-
-	if ( ( get_theme_mod('front_header_type') == 'core-video' && is_front_page() || get_theme_mod('site_header_type') == 'core-video' && !is_front_page() ) ) {
-		the_custom_header_markup();
-	}
-}
-
-/**
- * Polylang compatibility
- */
-if ( function_exists('pll_register_string') ) :
-function sydney_polylang() {
-	for ( $i=1; $i<=5; $i++) {
-		pll_register_string('Slide title ' . $i, get_theme_mod('slider_title_' . $i), 'Sydney');
-		pll_register_string('Slide subtitle ' . $i, get_theme_mod('slider_subtitle_' . $i), 'Sydney');
-	}
-	pll_register_string('Slider button text', get_theme_mod('slider_button_text'), 'Sydney');
-	pll_register_string('Slider button URL', get_theme_mod('slider_button_url'), 'Sydney');
-}
-add_action( 'admin_init', 'sydney_polylang' );
-endif;
-
-/**
  * Preloader
  */
 function sydney_preloader() {
@@ -294,7 +252,6 @@ add_action('sydney_before_site', 'sydney_preloader');
  */
 function sydney_header_clone() {
 
-	$front_header_type 	= get_theme_mod('front_header_type','slider');
 	$site_header_type 	=get_theme_mod('site_header_type');
 
 	if ( ( $front_header_type == 'nothing' && is_front_page() ) || ( $site_header_type == 'nothing' && !is_front_page() ) ) { ?>
@@ -334,11 +291,6 @@ require get_template_directory() . '/inc/jetpack.php';
  * Page builder support
  */
 require get_template_directory() . '/inc/page-builder.php';
-
-/**
- * Slider
- */
-require get_template_directory() . '/inc/slider.php';
 
 /**
  * Styles
