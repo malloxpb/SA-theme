@@ -209,7 +209,7 @@ add_action( 'wp_enqueue_scripts', 'sydney_enqueue_bootstrap', 9 );
  */
 function sydney_excerpt_length( $length ) {
 
-  $excerpt = get_theme_mod('exc_lenght', '55');
+  $excerpt = get_theme_mod('exc_lenght', '17');
   return $excerpt;
 
 }
