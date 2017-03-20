@@ -223,7 +223,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'slider_image_1',
         array(
-            'default' => get_template_directory_uri() . '/images/1.jpg',
+            'default' => get_template_directory_uri() . '/static/images/1.jpg',
             'sanitize_callback' => 'esc_url_raw',
         )
     );
@@ -291,7 +291,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'slider_image_2',
         array(
-            'default' => get_template_directory_uri() . '/images/2.jpg',
+            'default' => get_template_directory_uri() . '/static/images/2.jpg',
             'sanitize_callback' => 'esc_url_raw',
         )
     );

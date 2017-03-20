@@ -45,8 +45,8 @@ function sydney_slider_template() {
     <div id="slideshow" class="header-slider" data-speed="<?php echo esc_attr($speed); ?>">
         <div class="slides-container">
             <?php 
-                if ( get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/1.png') ) {
-                    echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/1.jpg')) . ');">';
+                if ( get_theme_mod('slider_image_1', get_template_directory_uri() . '/static/images/1.png') ) {
+                    echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_1', get_template_directory_uri() . '/static/images/1.jpg')) . ');">';
                     ?>
                         <div class="slide-inner">
                             <div class="contain animated fadeInRightBig text-slider">
@@ -60,7 +60,7 @@ function sydney_slider_template() {
                 
                 }
                 if ( get_theme_mod('slider_image_2', get_template_directory_uri() . '/images/2.jpg') ) {
-                    echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_2', get_template_directory_uri() . '/images/2.jpg')) . ');">';
+                    echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_2', get_template_directory_uri() . '/static/images/2.jpg')) . ');">';
                     ?>
                         <div class="slide-inner">
                             <div class="contain animated fadeInRightBig text-slider">
