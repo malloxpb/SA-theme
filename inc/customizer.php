@@ -1762,6 +1762,6 @@ function sydney_sanitize_checkbox( $input ) {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function sydney_customize_preview_js() {
-	wp_enqueue_script( 'sydney_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'sydney_customizer', get_template_directory_uri() . '/static/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'sydney_customize_preview_js' );
