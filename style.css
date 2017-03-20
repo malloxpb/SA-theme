@@ -1256,6 +1256,13 @@ Hero section
 .header-slider {
 	overflow: hidden;
 }
+
+/* soliloquy slider */
+.soliloquy-fc-caption {
+	font-family: 'Cedarville Cursive', cursive;
+	color: #fff;
+	font-size: 60px !important;
+}
 /*--------------------------------------------------------------
 Page title
 --------------------------------------------------------------*/

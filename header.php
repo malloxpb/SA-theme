@@ -69,14 +69,7 @@
 
 	<?php if (is_front_page()): ?>
 	<div class="sydney-hero-area">
-		<?php sydney_slider_template(); ?>
-		<div class="header-image">
-			<?php sydney_header_overlay(); ?>
-			<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-		</div>
-		<?php sydney_header_video(); ?>
-
-		<?php do_action('sydney_inside_hero'); ?>
+		<?php  if ( function_exists( 'soliloquy' ) ) { soliloquy( 'homeslider', 'slug' ); } ?>
 	</div>
 	<?php endif; ?>
 
