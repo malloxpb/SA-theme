@@ -35,59 +35,6 @@
         }
     };
 
-    var sliderFix = function() {
-    	$( ".slides-container .slide-item").addClass('sliderFix');
-    	setTimeout(function(){$( ".slides-container .slide-item").removeClass('sliderFix');}, 200);
-    }
-
-	var heroSection = function() {
-		// Background slideshow
-		(function() {
-			if ( $( "#slideshow" ).length ) {
-				$('#slideshow').superslides({
-					play: $('#slideshow').data('speed'),
-					animation: 'fade',
-					pagination: false
-				});
-			}
-		})();
-		// Text slider
-		(function() {
-			if ( $( ".text-slider" ).length ) {
-				$('.text-slider').flexslider({
-					animation: "slide",
-					selector: ".slide-text li",
-					controlNav: false,
-					directionNav: false,
-					slideshowSpeed: $('.text-slider').data('speed'),
-					animationSpeed : 700,
-					slideshow : $('.text-slider').data('slideshow'),
-					touch: true,
-					useCSS: false,
-				});
-			}
-		})();
-
-		$(function() {
-			$('.mainnav a[href*="#"], a.roll-button[href*="#"], .smoothscroll[href*="#"]').on('click',function (e) {
-			    var target = this.hash;
-			    var $target = $(target);
-
-				if ( $target.length ) {
-			    	e.preventDefault();
-					$('html, body').stop().animate({
-					     'scrollTop': $target.offset().top - 70
-					}, 900, 'swing');
-			        
-			        if($('#mainnav-mobi').length) $('#mainnav-mobi').hide();
-			        return false;
-				}
-			});
-		});
-
-
-	};
-
 	var responsiveMenu = function() {
 		var	menuType = 'desktop';
 
@@ -328,16 +275,6 @@
     	setTimeout(function(){$('.preloader').hide();}, 600);
   	}
 
-  	var removeSliderTransition = function() {
-  		$('#slideshow').css('transition', 'height 99999s');
-		$( window ).on( "orientationchange", function( event ) {
-  			$('#slideshow').css('transition', 'none');
-    		setTimeout(function(){
- 				$('#slideshow').css('transition', 'height 99999s');
-			}, 600);			
-		});  	
-  	}
-
     var videoButtons = function() {
     	testMobile = isMobile.iOS();
 		$(window).on('load', function () {
@@ -421,8 +358,6 @@
 
 	// Dom Ready
 	$(function() {
-		sliderFix();
-		heroSection();
 		headerFixed();
 		testimonialCarousel();
 		teamCarousel();
@@ -439,7 +374,6 @@
 		socialMenu();
 		goTop();
     	portfolioIsotope();
-    	removeSliderTransition();
     	videoButtons();
     	headerClone();
 		removePreloader();

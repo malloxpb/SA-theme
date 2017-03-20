@@ -69,6 +69,9 @@
 
 	<?php if (is_front_page()): ?>
 	<div class="sydney-hero-area">
+		<div class="header-image">
+			<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+		</div>
 		<?php  if ( function_exists( 'soliloquy' ) ) { soliloquy( 'homeslider', 'slug' ); } ?>
 	</div>
 	<?php endif; ?>
