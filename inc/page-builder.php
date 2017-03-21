@@ -22,7 +22,6 @@ function sydney_theme_widgets($widgets) {
 		'Sydney_Clients',
 		'Sydney_Testimonials',
 		'Sydney_Skills',
-		'Sydney_Action',
 		'Sydney_Video_Widget',
 		'Sydney_Social_Profile',
 		'Sydney_Employees',
