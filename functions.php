@@ -117,8 +117,6 @@ function sydney_widgets_init() {
 	//Register the front page widgets
 	if ( function_exists('siteorigin_panels_activate') ) {
 		register_widget( 'Facebook_Widget' );
-		register_widget( 'Sydney_Services_Type_A' );
-		register_widget( 'Sydney_Services_Type_B' );
 		register_widget( 'Sydney_Skills' );
 		register_widget( 'Sydney_Video_Widget' );
 		register_widget( 'Sydney_Social_Profile' );
@@ -133,8 +131,6 @@ add_action( 'widgets_init', 'sydney_widgets_init' );
  */
 if ( function_exists('siteorigin_panels_activate') ) {
 	require get_template_directory() . "/widgets/facebook-widget.php";
-	require get_template_directory() . "/widgets/fp-services-type-a.php";
-	require get_template_directory() . "/widgets/fp-services-type-b.php";
 	require get_template_directory() . "/widgets/fp-skills.php";
 	require get_template_directory() . "/widgets/video-widget.php";
 	require get_template_directory() . "/widgets/fp-social.php";
