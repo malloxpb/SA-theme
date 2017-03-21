@@ -30,5 +30,5 @@ function sydney_info_hook_styles(){
    	add_action( 'admin_enqueue_scripts', 'sydney_info_page_styles' );
 }
 function sydney_info_page_styles() {
-	wp_enqueue_style( 'sydney-info-style', get_template_directory_uri() . '/css/info-page.css', array(), true );
+	wp_enqueue_style( 'sydney-info-style', get_template_directory_uri() . '/static/css/info-page.css', array(), true );
 }
