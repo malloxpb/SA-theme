@@ -15,7 +15,7 @@ Template Name: Full width
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'page-templates/content', 'page' ); ?>
 
 				<?php
 
