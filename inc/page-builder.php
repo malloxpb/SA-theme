@@ -22,7 +22,6 @@ function sydney_theme_widgets($widgets) {
 		'Sydney_Skills',
 		'Sydney_Video_Widget',
 		'Sydney_Social_Profile',
-		'Sydney_Latest_News',
 		'Sydney_Portfolio'
 	);
 	foreach($theme_widgets as $theme_widget) {
