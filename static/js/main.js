@@ -201,26 +201,6 @@
 		});
 	};
 
-	var testimonialCarousel = function(){
-		if ( $().owlCarousel ) {
-			$('.roll-testimonials').owlCarousel({
-				navigation : false,
-				pagination: true,
-				responsive: true,
-				items: 1,
-				itemsDesktop: [3000,1],
-				itemsDesktopSmall: [1400,1],
-				itemsTablet:[970,1],
-				itemsTabletSmall: [600,1],
-				itemsMobile: [360,1],
-				touchDrag: true,
-				mouseDrag: true,
-				autoHeight: true,
-				autoPlay: $('.roll-testimonials').data('autoplay')
-			});
-		}
-	};
-
 	var progressBar = function() {
 		$('.progress-bar').on('on-appear', function() {
 			$(this).each(function() {
@@ -280,25 +260,6 @@
 		});
 	};
 
-	var teamCarousel = function(){
-		if ( $().owlCarousel ) {
-			$(".roll-team:not(.roll-team.no-carousel)").owlCarousel({
-				navigation : false,
-				pagination: true,
-				responsive: true,
-				items: 3,
-				itemsDesktopSmall: [1400,3],
-				itemsTablet:[970,2],
-				itemsTabletSmall: [600,1],
-				itemsMobile: [360,1],
-				touchDrag: true,
-				mouseDrag: true,
-				autoHeight: false,
-				autoPlay: false,
-			}); // end owlCarousel
-		} // end if
-	};
-
     var responsiveVideo= function(){
 	  $(document).ready(function(){
 	    $("body").fitVids();
@@ -354,8 +315,6 @@
 		sliderFix();
 		heroSection();
 		headerFixed();
-		testimonialCarousel();
-		teamCarousel();
 		counter();
 		progressBar();
 		detectViewport();

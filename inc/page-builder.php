@@ -17,7 +17,6 @@ function sydney_theme_widgets($widgets) {
 		'Facebook_Widget',
 		'Sydney_Services_Type_A',
 		'Sydney_Services_Type_B',
-		'Sydney_Testimonials',
 		'Sydney_Skills',
 		'Sydney_Video_Widget',
 		'Sydney_Social_Profile'
