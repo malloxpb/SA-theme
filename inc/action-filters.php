@@ -1,11 +1,5 @@
 <?php
 /**
- * Sydney Theme extra customization
- *
- * @package Sydney
- */
-
-/**
  * Change the excerpt length
  */
 function sydney_excerpt_length( $length ) {
