@@ -28,13 +28,13 @@ get_header(); ?>
 				if ($postslist->have_posts()) :
 			        while ($postslist->have_posts()) : 
 			        	$postslist->the_post(); 
-			    		get_template_part( 'content', 'post' );
+			    		get_template_part( 'page-templates/content', 'post' );
 			        endwhile;
 			    endif;
 			?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'page-templates/content', 'page' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

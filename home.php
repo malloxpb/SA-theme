@@ -18,7 +18,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'content', get_post_format() );
+					get_template_part( 'page-templates/content', get_post_format() );
 				?>
 
 			<?php endwhile; ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'page-templates/content', 'none' ); ?>
 
 		<?php endif; ?>
 
