@@ -15,19 +15,6 @@ add_theme_support( 'siteorigin-panels', array(
 function sydney_theme_widgets($widgets) {
 	$theme_widgets = array(
 		'Facebook_Widget',
-		'Sydney_Services_Type_A',
-		'Sydney_Services_Type_B',
-		'Sydney_List',
-		'Sydney_Facts',
-		'Sydney_Clients',
-		'Sydney_Testimonials',
-		'Sydney_Skills',
-		'Sydney_Action',
-		'Sydney_Video_Widget',
-		'Sydney_Social_Profile',
-		'Sydney_Employees',
-		'Sydney_Latest_News',
-		'Sydney_Portfolio'
 	);
 	foreach($theme_widgets as $theme_widget) {
 		if( isset( $widgets[$theme_widget] ) ) {
