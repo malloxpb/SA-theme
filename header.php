@@ -69,7 +69,6 @@
 
 	<?php if (is_front_page()): ?>
 	<div class="sydney-hero-area">
-		<?php /*
 		<?php sydney_slider_template(); ?>
 		<div class="header-image">
 			<?php sydney_header_overlay(); ?>
@@ -78,8 +77,6 @@
 		<?php sydney_header_video(); ?>
 
 		<?php do_action('sydney_inside_hero'); ?>
-		*/ ?>
-		<?php  if ( function_exists( 'soliloquy' ) ) { soliloquy( 'homeslider', 'slug' ); } ?>
 	</div>
 	<?php endif; ?>
 
