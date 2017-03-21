@@ -992,14 +992,6 @@ Layout
 	.aboutus-inner {
 		border: 1px solid;
 		position: relative;
-		transition: all 0.2s ease-in-out;
-	}
-	.aboutus-inner:hover {
-		background: #5d0202;
-		cursor: pointer;
-	}
-	.aboutus-inner:hover .aboutus-title {
-		color: #fff;
 	}
 	.aboutus-inner>* {
 		text-align: center;
