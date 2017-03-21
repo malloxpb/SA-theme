@@ -361,11 +361,6 @@ require get_template_directory() . '/inc/woocommerce.php';
 require get_template_directory() . '/inc/upsell/class-customize.php';
 
 /**
- * Demo content
- */
-require_once dirname( __FILE__ ) . '/demo-content/setup.php';
-
-/**
  *TGM Plugin activation.
  */
 require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
