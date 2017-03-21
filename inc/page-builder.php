@@ -19,7 +19,6 @@ function sydney_theme_widgets($widgets) {
 		'Sydney_Services_Type_B',
 		'Sydney_List',
 		'Sydney_Facts',
-		'Sydney_Clients',
 		'Sydney_Testimonials',
 		'Sydney_Skills',
 		'Sydney_Video_Widget',

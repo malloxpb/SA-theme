@@ -2039,21 +2039,6 @@ Panels
 		padding: 0;
 		font-weight: 600;
 	}
-/* Clients
--------------------------------------------------------------- */
-	.roll-client {
-	    text-align: center;
-	}
-	.roll-client .client-item {
-	    float: none;
-	    display: inline-block;
-		width: 19%;
-		text-align: center;
-		margin-bottom: 30px;
-	}
-	.roll-client .client-item img {
-		max-width: 150px;
-	}
 
 /* Spacer
 -------------------------------------------------------------- */

@@ -121,7 +121,6 @@ function sydney_widgets_init() {
 		register_widget( 'Sydney_Services_Type_A' );
 		register_widget( 'Sydney_Services_Type_B' );
 		register_widget( 'Sydney_Facts' );
-		register_widget( 'Sydney_Clients' );
 		register_widget( 'Sydney_Testimonials' );
 		register_widget( 'Sydney_Skills' );
 		register_widget( 'Sydney_Video_Widget' );
@@ -144,7 +143,6 @@ if ( function_exists('siteorigin_panels_activate') ) {
 	require get_template_directory() . "/widgets/fp-services-type-a.php";
 	require get_template_directory() . "/widgets/fp-services-type-b.php";
 	require get_template_directory() . "/widgets/fp-facts.php";
-	require get_template_directory() . "/widgets/fp-clients.php";
 	require get_template_directory() . "/widgets/fp-testimonials.php";
 	require get_template_directory() . "/widgets/fp-skills.php";
 	require get_template_directory() . "/widgets/video-widget.php";
