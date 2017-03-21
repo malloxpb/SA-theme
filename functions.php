@@ -321,11 +321,6 @@ require get_template_directory() . '/inc/slider.php';
 require get_template_directory() . '/inc/styles.php';
 
 /**
- * Upsell
- */
-require get_template_directory() . '/inc/upsell/class-customize.php';
-
-/**
  *TGM Plugin activation.
  */
 require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
