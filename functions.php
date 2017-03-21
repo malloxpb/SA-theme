@@ -321,16 +321,6 @@ require get_template_directory() . '/inc/slider.php';
 require get_template_directory() . '/inc/styles.php';
 
 /**
- * Theme info
- */
-require get_template_directory() . '/inc/theme-info.php';
-
-/**
- * Woocommerce basic integration
- */
-require get_template_directory() . '/inc/woocommerce.php';
-
-/**
  * Upsell
  */
 require get_template_directory() . '/inc/upsell/class-customize.php';
