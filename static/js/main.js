@@ -45,25 +45,7 @@
 		(function() {
 			if ( $( "#slideshow" ).length ) {
 				$('#slideshow').superslides({
-					play: $('#slideshow').data('speed'),
-					animation: 'fade',
-					pagination: false
-				});
-			}
-		})();
-		// Text slider
-		(function() {
-			if ( $( ".text-slider" ).length ) {
-				$('.text-slider').flexslider({
-					animation: "slide",
-					selector: ".slide-text li",
-					controlNav: false,
-					directionNav: false,
-					slideshowSpeed: $('.text-slider').data('speed'),
-					animationSpeed : 700,
-					slideshow : $('.text-slider').data('slideshow'),
-					touch: true,
-					useCSS: false,
+					play: $('#slideshow').data('speed')
 				});
 			}
 		})();
