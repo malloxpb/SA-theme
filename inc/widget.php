@@ -5,30 +5,30 @@
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 
-add_action( 'widgets_init', function() {
+add_action('widgets_init', function() {
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'sydney' ),
+	register_sidebar(array(
+		'name'          => __('Sidebar', 'sydney'),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
+	));
 
 	//Footer widget areas
 	$widget_areas = get_theme_mod('footer_widget_areas', '3');
 	for ($i=1; $i<=$widget_areas; $i++) {
-		register_sidebar( array(
-			'name'          => __( 'Footer ', 'sydney' ) . $i,
+		register_sidebar(array(
+			'name'          => __('Footer ', 'sydney') . $i,
 			'id'            => 'footer-' . $i,
 			'description'   => '',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
-		) );
+		));
 	}
 });
 
@@ -82,47 +82,47 @@ class Sydney_Contact_Info extends WP_Widget {
 		
 	function widget($args, $instance) {
 		$cache = array();
-		if ( ! $this->is_preview() ) {
+		if (! $this->is_preview()) {
 			$cache = wp_cache_get( 'sydney_contact_info', 'widget' );
 		}
 
-		if ( ! is_array( $cache ) ) {
+		if (! is_array($cache)) {
 			$cache = array();
 		}
 
-		if ( ! isset( $args['widget_id'] ) ) {
+		if (! isset($args['widget_id'])) {
 			$args['widget_id'] = $this->id;
 		}
 
-		if ( isset( $cache[ $args['widget_id'] ] ) ) {
-			echo $cache[ $args['widget_id'] ];
+		if (isset($cache[$args['widget_id']])) {
+			echo $cache[$args['widget_id']];
 			return;
 		}
 
 		ob_start();
 		extract($args);
 
-		$title 		= ( ! empty( $instance['title'] ) ) ? $instance['title'] : '';
-		$title 		= apply_filters( 'widget_title', $title, $instance, $this->id_base );
-		$address   	= isset( $instance['address'] ) ? esc_html( $instance['address'] ) : '';
-		$phone   	= isset( $instance['phone'] ) ? esc_html( $instance['phone'] ) : '';
-		$email   	= isset( $instance['email'] ) ? antispambot(esc_html( $instance['email'] )) : '';
+		$title 		= (! empty($instance['title'])) ? $instance['title'] : '';
+		$title 		= apply_filters('widget_title', $title, $instance, $this->id_base);
+		$address   	= isset($instance['address']) ? esc_html( $instance['address']) : '';
+		$phone   	= isset($instance['phone'] ) ? esc_html( $instance['phone']) : '';
+		$email   	= isset($instance['email'] ) ? antispambot(esc_html( $instance['email'])) : '';
 
 		echo $before_widget;
 		
-		if ( $title ) echo $before_title . $title . $after_title;
+		if ($title) echo $before_title . $title . $after_title;
 		
-		if( ($address) ) {
+		if ($address) {
 			echo '<div class="contact-address">';
 			echo '<span><i class="fa fa-home"></i></span>' . $address;
 			echo '</div>';
 		}
-		if( ($phone) ) {
+		if ($phone) {
 			echo '<div class="contact-phone">';
 			echo '<span><i class="fa fa-phone"></i></span>' . $phone;
 			echo '</div>';
 		}
-		if( ($email) ) {
+		if ($email) {
 			echo '<div class="contact-email">';
 			echo '<span><i class="fa fa-envelope"></i></span>' . '<a href="mailto:' . $email . '">' . $email . '</a>';
 			echo '</div>';
@@ -131,9 +131,9 @@ class Sydney_Contact_Info extends WP_Widget {
 		echo $after_widget;
 
 
-		if ( ! $this->is_preview() ) {
-			$cache[ $args['widget_id'] ] = ob_get_flush();
-			wp_cache_set( 'sydney_contact_info', $cache, 'widget' );
+		if (! $this->is_preview()) {
+			$cache[$args['widget_id']] = ob_get_flush();
+			wp_cache_set('sydney_contact_info', $cache, 'widget');
 		} else {
 			ob_end_flush();
 		}
@@ -141,7 +141,7 @@ class Sydney_Contact_Info extends WP_Widget {
 	
 }
 
-register_widget( 'Sydney_Contact_Info' );
+register_widget('Sydney_Contact_Info');
 
 
 class Facebook_Widget extends WP_Widget {
@@ -223,4 +223,4 @@ class Facebook_Widget extends WP_Widget {
 	}
 }
 
-register_widget( 'Facebook_Widget' );
+register_widget('Facebook_Widget');
