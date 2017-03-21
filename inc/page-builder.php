@@ -15,7 +15,6 @@ add_theme_support( 'siteorigin-panels', array(
 function sydney_theme_widgets($widgets) {
 	$theme_widgets = array(
 		'Facebook_Widget',
-		'Sydney_Video_Widget'
 	);
 	foreach($theme_widgets as $theme_widget) {
 		if( isset( $widgets[$theme_widget] ) ) {
