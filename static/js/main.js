@@ -266,10 +266,6 @@
 	  });
     };
 
-	var socialMenu = function() {
-	    $('.widget_fp_social a').attr( 'target','_blank' );
-	};
-
   	var removePreloader = function() {
     	$('.preloader').css('opacity', 0);
     	setTimeout(function(){$('.preloader').hide();}, 600);
@@ -324,7 +320,6 @@
 		checkipad();
 		panelsStyling();
 		scrolls();
-		socialMenu();
 		goTop();
     	removeSliderTransition();
     	videoButtons();
