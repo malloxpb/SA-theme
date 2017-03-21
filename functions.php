@@ -5,6 +5,7 @@
  * @package Sydney
  */
 
+define('STATIC_VERSION', '00000');
 
 if ( ! function_exists( 'sydney_setup' ) ) :
 /**
@@ -173,7 +174,7 @@ function sydney_scripts() {
 	    wp_enqueue_style( 'sydney-headings-fonts', '//fonts.googleapis.com/css?family=Raleway:400,500,600');
 	}
 
-	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.css', array(), time() );
+	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.css', false, STATIC_VERSION);
 
 	wp_enqueue_style( 'sydney-font-awesome', get_template_directory_uri() . '/static/fonts/font-awesome.min.css' );
 
