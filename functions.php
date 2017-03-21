@@ -84,52 +84,9 @@ function sydney_setup() {
 endif; // sydney_setup
 add_action( 'after_setup_theme', 'sydney_setup' );
 
-/**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
- */
-function sydney_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'sydney' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
 
-	//Footer widget areas
-	$widget_areas = get_theme_mod('footer_widget_areas', '3');
-	for ($i=1; $i<=$widget_areas; $i++) {
-		register_sidebar( array(
-			'name'          => __( 'Footer ', 'sydney' ) . $i,
-			'id'            => 'footer-' . $i,
-			'description'   => '',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
-	}
 
-	//Register the front page widgets
-	if ( function_exists('siteorigin_panels_activate') ) {
-		register_widget( 'Facebook_Widget' );
-		register_widget( 'Sydney_Contact_Info' );
-	}
 
-}
-add_action( 'widgets_init', 'sydney_widgets_init' );
-
-/**
- * Load the front page widgets.
- */
-if ( function_exists('siteorigin_panels_activate') ) {
-	require get_template_directory() . "/widgets/facebook-widget.php";
-	require get_template_directory() . "/widgets/contact-info.php";
-}
 
 /**
  * Enqueue scripts and styles.
@@ -301,11 +258,6 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
-
-/**
  * Page builder support
  */
 require get_template_directory() . '/inc/page-builder.php';
@@ -319,6 +271,11 @@ require get_template_directory() . '/inc/slider.php';
  * Styles
  */
 require get_template_directory() . '/inc/styles.php';
+
+/**
+ * Widget
+ */
+require get_template_directory() . '/inc/widget.php';
 
 /**
  *TGM Plugin activation.
