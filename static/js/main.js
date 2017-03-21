@@ -305,20 +305,6 @@
 	  });
     };
 
-	var projectEffect = function() {
-		var effect = $('.project-wrap').data('portfolio-effect');
-
-		$('.project-item').children('.item-wrap').addClass('orches-animation');
-
-		$('.project-wrap').waypoint(function(direction) {
-			$('.project-item').children('.item-wrap').each(function(idx, ele) {
-				setTimeout(function() {
-					$(ele).addClass('animated ' + effect);
-				}, idx * 150);
-			});
-		}, { offset: '75%' });
-	};
-
 	var socialMenu = function() {
 	    $('.widget_fp_social a').attr( 'target','_blank' );
 	};
@@ -361,63 +347,7 @@
 			var headerHeight = $('.site-header').outerHeight();
 			$('.header-clone').css('height',headerHeight);
 		});		
-	} 
-
-  var portfolioIsotope = function(){
-
-    if ( $('.project-wrap').length ) {
-
-      $('.project-wrap').each(function() {
-
-        var self       = $(this);
-        var filterNav  = self.find('.project-filter').find('a');
-
-        var projectIsotope = function($selector){
-
-          $selector.isotope({
-            filter: '*',
-            itemSelector: '.project-item',
-            percentPosition: true,
-            animationOptions: {
-                duration: 750,
-                easing: 'liniar',
-                queue: false,
-            }
-          });
-
-        }
-
-        self.children().find('.isotope-container').imagesLoaded( function() {
-          projectIsotope(self.children().find('.isotope-container'));
-        });
-
-        $(window).load(function(){
-          projectIsotope(self.children().find('.isotope-container'));
-        });
-
-        filterNav.click(function(){
-            var selector = $(this).attr('data-filter');
-            filterNav.removeClass('active');
-            $(this).addClass('active');
-
-            self.find('.isotope-container').isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'liniar',
-                    queue: false,
-                }
-            });
-
-            return false;
-
-        });
-
-      });
-
-    }
-
-  }
+	}
 
 	// Dom Ready
 	$(function() {
@@ -435,10 +365,8 @@
 		checkipad();
 		panelsStyling();
 		scrolls();
-		projectEffect();
 		socialMenu();
 		goTop();
-    	portfolioIsotope();
     	removeSliderTransition();
     	videoButtons();
     	headerClone();

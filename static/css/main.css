@@ -1719,41 +1719,7 @@ Comments
 .form-submit input {
 	width: auto;
 }
-/*--------------------------------------------------------------
-Portfolio single
---------------------------------------------------------------*/
-	.portfolio-images {
-		margin-bottom: 40px;
-	}
-	.portfolio-info {
-		background-color: #f7f7f7;
-		border: 1px solid #eee;
-		padding: 25px 25px 40px;
-		font-family: "Raleway", sans-serif;
-	}
-	.portfolio-info h5 {
-		margin: 0 0 15px;
-		text-transform: uppercase;
-	}
-	.portfolio-info ul {
-		list-style: none;
-		font-size: 14px;
-		margin-bottom: 10px;
-	}
-	.portfolio-info ul li {
-		padding: 10px 0;
-	}
-	.portfolio-info ul li span {
-		float: right;
-		color: #443f3f;
-	}
-	.portfolio-info .button-group {
-		text-align: center;
-	}
-	.portfolio-info .button-group a {
-		width: 100%;
-		margin-top: 10px;
-	}
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/

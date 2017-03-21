@@ -20,8 +20,7 @@ function sydney_theme_widgets($widgets) {
 		'Sydney_Testimonials',
 		'Sydney_Skills',
 		'Sydney_Video_Widget',
-		'Sydney_Social_Profile',
-		'Sydney_Portfolio'
+		'Sydney_Social_Profile'
 	);
 	foreach($theme_widgets as $theme_widget) {
 		if( isset( $widgets[$theme_widget] ) ) {
