@@ -16,7 +16,11 @@ function sydney_scripts() {
 	    wp_enqueue_style( 'sydney-headings-fonts', '//fonts.googleapis.com/css?family=Raleway:400,500,600');
 	}
 
-	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.css', false, STATIC_VERSION);
+	wp_enqueue_style( 'slider-fonts', '//fonts.googleapis.com/css?family=Cedarville+Cursive');
+
+	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.min.css', false, STATIC_VERSION);
+
+	wp_enqueue_style( 'slider-style', get_template_directory_uri() . '/static/css/superslides.css');
 
 	wp_enqueue_style( 'sydney-font-awesome', get_template_directory_uri() . '/static/fonts/font-awesome.min.css' );
 
@@ -26,6 +30,10 @@ function sydney_scripts() {
 	wp_style_add_data( 'sydney-ie9', 'conditional', 'lte IE 9' );
 
 	wp_enqueue_script( 'sydney-scripts', get_template_directory_uri() . '/static/js/scripts.js', array('jquery'),'', true );
+
+	wp_enqueue_script( 'slider-easing-scripts', get_template_directory_uri() . '/static/js/jquery.easing.1.3.js');
+
+	wp_enqueue_script( 'slider-enhanced-scripts', get_template_directory_uri() . '/static/js/jquery.animate-enhanced.min.js');
 
 	wp_enqueue_script( 'sydney-main', get_template_directory_uri() . '/static/js/main.min.js', array('jquery'), STATIC_VERSION, true );
 
