@@ -1082,7 +1082,6 @@ Hero section
 }
 
 .slide-inner {
-	display: none;
 	position: absolute;
 	top: 70%;
 	left: 0;
@@ -1125,46 +1124,46 @@ Hero section
  }
 
 @-webkit-keyframes pulsate {
-    0% {
-        -webkit-transform: scale(0.1, 0.1);
-        opacity: 0.0;
-    }
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
 
-    50% {
-        opacity: 1.0;
-    }
+  50% {
+    opacity: 1.0;
+  }
 
-    100% {
-        -webkit-transform: scale(1.2, 1.2);
-        opacity: 0.0;
-    }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
 }
 @-moz-keyframes pulsate {
-    0% {
-        -moz-transform: scale(0.1, 0.1);
-        opacity: 0.0;
-    }
+  0% {
+    -moz-transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
 
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        -moz-transform: scale(1.2, 1.2);
-        opacity: 0.0;
-    }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    -moz-transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
 }
 @keyframes pulsate {
-    0% {
-        transform: scale(0.1, 0.1);
-        opacity: 0.0;
-    }
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        transform: scale(1.2, 1.2);
-        opacity: 0.0;
-    }
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
 }
 /*--------------------------------------------------------------
 Page title
