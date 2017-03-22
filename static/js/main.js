@@ -52,7 +52,7 @@
 			    $('.loading-container').fadeOut(function() {
 			        $(this).remove();
 			    });
-			    $('.slide-inner').removeClass('hidden');
+			    $('.slide-inner').css('display', 'inherit');
 			});
 		})();
 
