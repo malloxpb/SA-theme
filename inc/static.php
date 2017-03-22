@@ -16,6 +16,8 @@ function sydney_scripts() {
 	    wp_enqueue_style( 'sydney-headings-fonts', '//fonts.googleapis.com/css?family=Raleway:400,500,600');
 	}
 
+	wp_enqueue_style( 'slider-fonts', '//fonts.googleapis.com/css?family=Cedarville+Cursive');
+
 	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.css', false, STATIC_VERSION);
 
 	wp_enqueue_style( 'sydney-font-awesome', get_template_directory_uri() . '/static/fonts/font-awesome.min.css' );
