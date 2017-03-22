@@ -69,6 +69,9 @@
 
 	<?php if (is_front_page()): ?>
 	<div class="sydney-hero-area">
+		<div class="loading-container">
+		    <div class="pulse"></div>
+		</div>
 		<?php sydney_slider_template(); ?>
 		<div class="header-image">
 			<?php sydney_header_overlay(); ?>

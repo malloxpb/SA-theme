@@ -48,6 +48,11 @@
 					play: $('#slideshow').data('speed')
 				});
 			}
+			$(document).on('init.slides', function() {
+			    $('.loading-container').fadeOut(function() {
+			        $(this).remove();
+			    });
+			});
 		})();
 
 		$(function() {
