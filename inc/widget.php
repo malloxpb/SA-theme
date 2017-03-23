@@ -275,6 +275,7 @@ class Club_Preview extends WP_Widget {
 		    endif;
 			?>
 		</div>
+		</div>
 		<?php
 		echo $args['after_widget'];
 	}

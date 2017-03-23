@@ -108,6 +108,9 @@ Alignments
 	display: none;
 }
 /* under slider widget */
+.under-slider {
+	margin-bottom: -83px;
+}
 .under-slider h2 {
 	text-align: center;
 	margin: 50px 0;

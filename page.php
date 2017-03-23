@@ -14,6 +14,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area col-md-9">
 		<main id="main" class="post-wrap" role="main">
+
+		<h2> Student Association events </h2>
 			<?php
 				$args = array(
 					'category_name'    => 'events',
