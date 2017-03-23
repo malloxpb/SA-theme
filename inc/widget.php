@@ -17,6 +17,16 @@ add_action('widgets_init', function() {
 		'after_title'   => '</h3>',
 	));
 
+	register_sidebar(array(
+		'name'          => __('Under Home page Slider', 'sydney'),
+		'id'            => 'under-slider',
+		'description'   => 'Under the Home page slider',
+		'before_widget' => '<div class="under-slider">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
+
 	//Footer widget areas
 	$widget_areas = get_theme_mod('footer_widget_areas', '3');
 	for ($i=1; $i<=$widget_areas; $i++) {
@@ -154,8 +164,6 @@ class Facebook_Widget extends WP_Widget {
 	function widget($args, $instance) {
 		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		echo $args['before_widget'];
-
 		// default facebook page 
 		$facebook = "https://www.facebook.com/plattsburghsa/?__mref=message_bubble";
 
@@ -192,8 +200,9 @@ class Facebook_Widget extends WP_Widget {
 
 		echo $args['before_widget'];
 		
-		if ( !empty($instance['title']) )
+		if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
+		}
 		?>
 
 		<!-- facebook plugin --> 
@@ -224,3 +233,66 @@ class Facebook_Widget extends WP_Widget {
 }
 
 register_widget('Facebook_Widget');
+
+
+class Club_Preview extends WP_Widget {
+
+	function __construct() {
+		$widget_ops = array( 'description' => __('Display a slider of club thumbnails', 'sydney') );
+		parent::__construct( 'Club_Preview', __('Club thumnnails slider', 'sydney'), $widget_ops );
+	}
+
+	function widget($args, $instance) {
+		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+
+		echo $args['before_widget'];
+		
+		if ( !empty($instance['title']) ) {
+			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
+		}
+		?>
+		<div class="owl-carousel owl-theme">
+		    <?php 
+		    $args = array(
+			    'posts_per_page'   => 15,
+				'post_type'        => 'club',
+				'meta_query' => array(array('key' => '_thumbnail_id'))
+			);
+
+		    $postslist = new WP_Query($args);
+
+		    if ($postslist->have_posts()):
+		        while ($postslist->have_posts()): 
+		        	$postslist->the_post();
+		        	?>
+		        	<div class="item">
+		        		<a class="owl-coverlink" href="<?php echo get_site_url() . "/clubs"; ?>"></a>
+						<?php the_post_thumbnail('sydney-medium-thumb'); ?>
+					</div>
+		        	<?php
+		        endwhile;
+		        wp_reset_postdata();
+		    endif;
+			?>
+		</div>
+		<?php
+		echo $args['after_widget'];
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance['title'] = strip_tags( stripslashes($new_instance['title']) );
+		return $instance;
+	}
+
+	function form( $instance ) {
+		$title = isset( $instance['title'] ) ? $instance['title'] : '';
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'west') ?></label>
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
+		</p>
+		<?php
+	}
+}
+
+register_widget('Club_Preview');

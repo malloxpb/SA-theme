@@ -85,12 +85,10 @@
 
 	<?php do_action('sydney_after_hero'); ?>
 
+	<?php if (is_front_page()): ?>
+		<?php dynamic_sidebar('under-slider'); ?>
+	<?php endif; ?>
+
 	<div id="content" class="page-wrap">
 		<div class="container content-wrapper">
-			<?php if (is_front_page()): ?>
-				<div class="club-container-home">
-					<h1> Join us and participate in clubs on campus! </h1>
-					<p> </p>
-				</div>
-			<?php endif; ?>
 			<div class="row">	
