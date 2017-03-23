@@ -1023,7 +1023,7 @@ Hero section
 	   padding-left: 0;
 	}
 	.slides-container .slide-item {
-	    background-position: center;
+	    background-position: inherit !important;
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}

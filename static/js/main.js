@@ -258,16 +258,6 @@
     	setTimeout(function(){$('.preloader').hide();}, 600);
   	}
 
-  	var removeSliderTransition = function() {
-  		$('#slideshow').css('transition', 'height 99999s');
-		$( window ).on( "orientationchange", function( event ) {
-  			$('#slideshow').css('transition', 'none');
-    		setTimeout(function(){
- 				$('#slideshow').css('transition', 'height 99999s');
-			}, 600);			
-		});  	
-  	}
-
     var videoButtons = function() {
     	testMobile = isMobile.iOS();
 		$(window).on('load', function () {
