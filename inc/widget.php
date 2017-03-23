@@ -266,7 +266,7 @@ class Club_Preview extends WP_Widget {
 		        	$postslist->the_post();
 		        	?>
 		        	<div class="item">
-		        		<a class="owl-coverlink" href="<?php echo get_site_url() . "/clubs"; ?>"></a>
+		        		<a class="owl-coverlink" href="<?php echo get_site_url() . "/clubsandorganizations"; ?>"></a>
 						<?php the_post_thumbnail('sydney-medium-thumb'); ?>
 					</div>
 		        	<?php
