@@ -23,8 +23,8 @@ add_action('widgets_init', function() {
 		'description'   => 'Under the Home page slider',
 		'before_widget' => '<div class="under-slider">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
 	));
 
 	//Footer widget areas
