@@ -107,6 +107,11 @@ Alignments
 .widget_search .search-submit {
 	display: none;
 }
+/* under slider widget */
+.under-slider .widget-title {
+	text-align: center;
+	margin: 50px 0;
+}
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
@@ -945,13 +950,29 @@ Layout
 	.entry-post img {
 		margin: 10px 0 20px;
 	}
-	.header-slider,
-	.owl-wrapper {
-		direction: ltr;
+	.owl-theme .owl-nav i {
+	  margin-top: 2px;
+	  font-size: 80px;
 	}
-	.header-slider,
-	.owl-carousel {
-	      -webkit-transform: translate3d(0,0,0);
+	.owl-theme .owl-nav div {
+	    padding: 5px 9px;
+	    position: absolute;
+	}
+	.owl-theme .owl-nav .owl-prev {
+	      left: 0;
+	      top: 40px;
+	}
+	.owl-theme .owl-nav .owl-next {
+	      right: 0;
+	      top: 40px;
+	}
+	.owl-coverlink {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 /* club page */
 	.page-club-title {
@@ -1023,7 +1044,7 @@ Hero section
 	   padding-left: 0;
 	}
 	.slides-container .slide-item {
-	    background-position: center;
+	    background-position: inherit !important;
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}
@@ -2600,13 +2621,6 @@ Panels
 	}
 	.switcher-container .switcher-icon a:focus {
 		color: #5d0202;
-	}
-	.owl-theme .owl-controls .owl-page span{
-	  border: 2px solid #5d0202;
-	}
-	.owl-theme .owl-controls .owl-page.active span,
-	.owl-theme .owl-controls.clickable .owl-page:hover span{
-	  background-color: #5d0202;
 	}
 	.roll-icon-box .icon {
 		border: 1px solid #5d0202;
