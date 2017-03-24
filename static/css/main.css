@@ -954,20 +954,21 @@ Layout
 		margin: 10px 0 20px;
 	}
 	.owl-theme .owl-nav i {
-	  margin-top: 2px;
-	  font-size: 80px;
+	    margin-top: 2px;
+	    font-size: 80px;
+	    color: #fff;
 	}
 	.owl-theme .owl-nav div {
 	    padding: 5px 9px;
 	    position: absolute;
 	}
 	.owl-theme .owl-nav .owl-prev {
-	      left: 0;
-	      top: 40px;
+	    left: 0;
+	    top: 40px;
 	}
 	.owl-theme .owl-nav .owl-next {
-	      right: 0;
-	      top: 40px;
+	    right: 0;
+	    top: 40px;
 	}
 	.owl-coverlink {
 		position: absolute;
