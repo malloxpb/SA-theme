@@ -244,14 +244,14 @@ class Club_Preview extends WP_Widget {
 
 	function widget($args, $instance) {
 		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		
+
 		echo $args['before_widget'];
         ?>
 
         <?php if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
 		}?>
-        <div class="owl-carousel">
+        <div class="owl-carousel owl-theme">
             <?php
             $clubargs = [
                 'posts_per_page'   => 15,
