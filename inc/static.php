@@ -17,7 +17,7 @@ function sydney_scripts() {
 	}
 
 	wp_enqueue_style( 'slider-fonts', '//fonts.googleapis.com/css?family=Cedarville+Cursive');
-	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.min.css', false, STATIC_VERSION);
+	wp_enqueue_style( 'sydney-style', get_template_directory_uri() . '/static/css/main.css', false, STATIC_VERSION);
 	wp_enqueue_style( 'slider-style', get_template_directory_uri() . '/static/css/superslides.css');
 	wp_enqueue_style('owl-carousel-style', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css', false, '2.2.1');
 	wp_enqueue_style( 'sydney-font-awesome', get_template_directory_uri() . '/static/fonts/font-awesome.min.css' );

@@ -90,5 +90,5 @@
 	<?php endif; ?>
 
 	<div id="content" class="page-wrap">
-		<div class="container content-wrapper">
+		<div class="grid-container content-wrapper">
 			<div class="row">	

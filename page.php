@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-9">
+	<div id="primary" class="content-area grid-75">
 		<main id="main" class="post-wrap" role="main">
 
 		<h2> Student Association events </h2>

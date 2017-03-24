@@ -1278,19 +1278,10 @@ Blog
 	}
 	.content-area .hentry {
 		position: relative;
-		padding-top: 50px;
 		padding-bottom: 20px;
 	}
 	.content-area .hentry:first-child {
 		padding-top: 0;
-	}
-	.content-area .hentry:after {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 30px;
-		height: 1px;
 	}
 	.content-area .hentry:first-child:after {
 		height: 0;
@@ -1455,6 +1446,9 @@ Blog
 /*--------------------------------------------------------------
 Widgets
 --------------------------------------------------------------*/
+	div#secondary {
+	    padding-top: 30px;
+	}
 	.widget-area .widget {
 		position: relative;
 		margin-bottom: 30px;
@@ -1874,7 +1868,7 @@ Go to top button
 		        transition: all 0.5s;
 	}
 	.go-top:hover {
-		background-color: #fff;
+		opacity: 0.6;
 	}
 	.go-top.show {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
