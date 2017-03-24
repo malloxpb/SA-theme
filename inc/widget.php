@@ -244,40 +244,36 @@ class Club_Preview extends WP_Widget {
 
 	function widget($args, $instance) {
 		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-
-		echo $args['before_widget'];
 		
-		if ( !empty($instance['title']) ) {
+		echo $args['before_widget'];
+        ?>
+
+        <?php if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
-		}
-		?>
-		<div class="owl-carousel owl-theme">
-		    <?php 
-		    $args = array(
-			    'posts_per_page'   => 15,
+		}?>
+        <div class="owl-carousel">
+            <?php
+            $clubargs = [
+                'posts_per_page'   => 15,
 				'post_type'        => 'club',
 				'meta_query' => array(array('key' => '_thumbnail_id'))
-			);
+            ];
+            $loop = new WP_Query($clubargs);
+            while ($loop->have_posts()) {
+                $loop->the_post();
+            ?>
+    		<div class="item">
+        		<a class="owl-coverlink" href="<?php echo get_site_url() . "/clubsandorganizations"; ?>"></a>
+				<?php the_post_thumbnail('sydney-medium-thumb'); ?>
+			</div>
 
-		    $postslist = new WP_Query($args);
-
-		    if ($postslist->have_posts()):
-		        while ($postslist->have_posts()): 
-		        	$postslist->the_post();
-		        	?>
-		        	<div class="item">
-		        		<a class="owl-coverlink" href="<?php echo get_site_url() . "/clubsandorganizations"; ?>"></a>
-						<?php the_post_thumbnail('sydney-medium-thumb'); ?>
-					</div>
-		        	<?php
-		        endwhile;
-		        wp_reset_postdata();
-		    endif;
-			?>
-		</div>
-		</div>
-		<?php
-		echo $args['after_widget'];
+            <?php
+            }
+            wp_reset_query();
+            ?>
+        </div>
+        <?php
+        echo $args['after_widget'];
 	}
 
 	function update( $new_instance, $old_instance ) {
