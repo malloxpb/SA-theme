@@ -149,8 +149,8 @@ function sydney_custom_styles($custom) {
 	$sidebar_background = get_theme_mod( 'sidebar_background', '#ffffff' );
 	$custom .= "#secondary { background-color:#1C1E29}"."\n";
 	//Sidebar color
-	$sidebar_color = get_theme_mod( 'sidebar_color', '#fff' );
-	$custom .= "#secondary, #secondary a, #secondary .widget-title { color:" . esc_attr($sidebar_color) . "}"."\n";	
+	$sidebar_color = get_theme_mod( 'sidebar_color', '#767676' );
+	$custom .= "#secondary, #secondary a { color:" . esc_attr($sidebar_color) . "}"."\n";	
 	//Footer widget area background
 	$footer_widgets_background = get_theme_mod( 'footer_widgets_background', '#252525' );
 	$custom .= ".footer-widgets { background-color:" . esc_attr($footer_widgets_background) . "}"."\n";	

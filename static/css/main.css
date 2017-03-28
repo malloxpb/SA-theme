@@ -1475,7 +1475,7 @@ Widgets
 	.widget-area .widget-title {
 		font-size: 16px;
 		line-height: normal;
-		color: #443f3f;
+		color: #fff;
 		font-weight: 600;
 		padding-bottom: 24px;
 		margin: 0;
@@ -1493,7 +1493,7 @@ Widgets
 	}
 	.widget-area,
 	.widget-area  a {
-		color: #fff;
+		color: #767676;
 	}
 	/* widget popular posts */
 	.widget-popular-post .news .thumb {
