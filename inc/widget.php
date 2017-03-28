@@ -293,3 +293,42 @@ class Club_Preview extends WP_Widget {
 }
 
 register_widget('Club_Preview');
+
+class Instagram_Widget extends WP_Widget {
+
+	function __construct() {
+		$widget_ops = array( 'description' => __('Display a grid of instagram pictures', 'sydney') );
+		parent::__construct( 'Instagram_Widget', __('Instagram latest posts', 'sydney'), $widget_ops );
+	}
+
+	function widget($args, $instance) {
+		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+
+		echo $args['before_widget'];
+        ?>
+
+        <?php if ( !empty($instance['title']) ) {
+			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
+		}?>
+        <iframe src="https://snapwidget.com/embed/358809" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+        <?php
+        echo $args['after_widget'];
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance['title'] = strip_tags( stripslashes($new_instance['title']) );
+		return $instance;
+	}
+
+	function form( $instance ) {
+		$title = isset( $instance['title'] ) ? $instance['title'] : '';
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'west') ?></label>
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
+		</p>
+		<?php
+	}
+}
+
+register_widget('Instagram_Widget');
