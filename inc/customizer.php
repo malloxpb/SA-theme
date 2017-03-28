@@ -1481,7 +1481,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'body_text_color',
         array(
-            'default'           => '#767676',
+            'default'           => '#000',
             'sanitize_callback' => 'sanitize_hex_color',
             'transport'         => 'postMessage'
         )
@@ -1521,7 +1521,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'sidebar_color',
         array(
-            'default'           => '#767676',
+            'default'           => '#fff',
             'sanitize_callback' => 'sanitize_hex_color',
             'transport'         => 'postMessage'
         )
@@ -1561,7 +1561,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'footer_widgets_color',
         array(
-            'default'           => '#767676',
+            'default'           => '#fff',
             'sanitize_callback' => 'sanitize_hex_color',
             'transport'         => 'postMessage'
         )

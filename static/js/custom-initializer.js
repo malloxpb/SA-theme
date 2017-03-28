@@ -16,6 +16,10 @@ jQuery(function($) {
 	            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
 	            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         	],
+        	autoplay: true,
+        	lazyLoad: true,
+        	autoplayTimeout: 4000,
+        	slideBy: 'page',
 		    responsive:{
 		        0:{
 		            items:1

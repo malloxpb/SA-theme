@@ -143,20 +143,20 @@ function sydney_custom_styles($custom) {
 	$slider_text = get_theme_mod( 'slider_text', '#ffffff' );
 	$custom .= ".text-slider .maintitle, .text-slider .subtitle { color:" . esc_attr($slider_text) . "}"."\n";
 	//Body
-	$body_text = get_theme_mod( 'body_text_color', '#767676' );
+	$body_text = get_theme_mod( 'body_text_color', '#000' );
 	$custom .= "body { color:" . esc_attr($body_text) . "}"."\n";
 	//Sidebar background
 	$sidebar_background = get_theme_mod( 'sidebar_background', '#ffffff' );
 	$custom .= "#secondary { background-color:#1C1E29}"."\n";
 	//Sidebar color
-	$sidebar_color = get_theme_mod( 'sidebar_color', '#767676' );
+	$sidebar_color = get_theme_mod( 'sidebar_color', '#fff' );
 	$custom .= "#secondary, #secondary a, #secondary .widget-title { color:" . esc_attr($sidebar_color) . "}"."\n";	
 	//Footer widget area background
 	$footer_widgets_background = get_theme_mod( 'footer_widgets_background', '#252525' );
 	$custom .= ".footer-widgets { background-color:" . esc_attr($footer_widgets_background) . "}"."\n";	
 	//Footer widget area color
-	$footer_widgets_color = get_theme_mod( 'footer_widgets_color', '#767676' );
-	if ( $footer_widgets_color != '#767676' ) {
+	$footer_widgets_color = get_theme_mod( 'footer_widgets_color', '#fff' );
+	if ( $footer_widgets_color != '#fff' ) {
 		$custom .= "#sidebar-footer,#sidebar-footer a,.footer-widgets .widget-title { color:" . esc_attr($footer_widgets_color) . "}"."\n";	
 	}
 	//Footer background
