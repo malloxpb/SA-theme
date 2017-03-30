@@ -9,7 +9,7 @@
 		<div class="grid-33">
 			<?php if ( has_post_thumbnail() && ( get_theme_mod( 'index_feat_image' ) != 1 ) ) : ?>
 				<div class="poster-thumb">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('sydney-post-thumb'); ?></a>
 				</div>
 			<?php endif; ?>
 		</div>
