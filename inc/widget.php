@@ -361,7 +361,7 @@ class Event_Listing extends WP_Widget {
 		}
 
 		$args = array(
-			'category_name'    => array('events', 'club-events'),
+			'category_name'    => 'events, club-events',
 			'orderby'          => 'date',
 		    'order'            => 'DESC',
 		    'posts_per_page'   => 5,
