@@ -47,6 +47,13 @@ function sydney_row_styles($fields) {
 		'priority' => 3,
 		'group'	   => 'design'		
 	);
+	$fields['padding'] = array(
+		'name' => __('Top/bottom padding', 'sydney'),
+		'type' => 'measurement',
+		'description' => __('Add a value in the field to change the top/bottom row padding, otherwise 100px will be applied by default', 'sydney'),
+		'priority' => 4,
+		'group'	   => 'layout'
+	);
 	$fields['align'] = array(
 		'name' => __('Center align the content?', 'sydney'),
 		'type' => 'checkbox',
@@ -125,7 +132,7 @@ function sydney_row_styles_output($attr, $style) {
 	if(!empty($style['padding'])) {
 		$attr['style'] .= 'padding: ' . esc_attr($style['padding']) . ' 0; ';
 	} else {
-		$attr['style'] .= 'padding: 100px 0; ';
+		$attr['style'] .= 'padding: 10px 0; ';
 	}
 
 	if( !empty( $style['mobile_padding'] ) ) {
