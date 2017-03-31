@@ -18,7 +18,7 @@ get_header(); ?>
 		<h2> Student Association events </h2>
 			<?php
 				$args = array(
-					'category_name'    => 'events',
+					'category_name'    => 'sa-events',
 					'orderby'          => 'date',
 				    'order'            => 'DESC',
 				    'posts_per_page'   => 5,

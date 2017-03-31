@@ -364,7 +364,7 @@ class Event_Listing extends WP_Widget {
 			'category_name'    => 'club-events',
 			'orderby'          => 'date',
 		    'order'            => 'DESC',
-		    'posts_per_page'   => 5,
+		    'posts_per_page'   => 2,
 			'post_type'        => 'post',
 		);
 
