@@ -132,7 +132,7 @@ function sydney_row_styles_output($attr, $style) {
 	if(!empty($style['padding'])) {
 		$attr['style'] .= 'padding: ' . esc_attr($style['padding']) . ' 0; ';
 	} else {
-		$attr['style'] .= 'padding: 10px 0; ';
+		$attr['style'] .= 'padding: 30px 0; ';
 	}
 
 	if( !empty( $style['mobile_padding'] ) ) {
