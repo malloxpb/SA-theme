@@ -47,13 +47,6 @@ function sydney_row_styles($fields) {
 		'priority' => 3,
 		'group'	   => 'design'		
 	);
-	$fields['padding'] = array(
-		'name' => __('Top/bottom padding', 'sydney'),
-		'type' => 'measurement',
-		'description' => __('Add a value in the field to change the top/bottom row padding, otherwise 100px will be applied by default', 'sydney'),
-		'priority' => 4,
-		'group'	   => 'layout'
-	);
 	$fields['align'] = array(
 		'name' => __('Center align the content?', 'sydney'),
 		'type' => 'checkbox',
