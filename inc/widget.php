@@ -343,11 +343,11 @@ class Instagram_Widget extends WP_Widget {
 
 register_widget('Instagram_Widget');
 
-class Calendar_Widget extends WP_Widget {
+class Event_Listing extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'description' => __('Display a calendar widget', 'sydney') );
-		parent::__construct( 'Calendar_Widget', __('Calendar event widget', 'sydney'), $widget_ops );
+		$widget_ops = array( 'description' => __('Display a list of upcoming events', 'sydney') );
+		parent::__construct( 'Event_Listing', __('Event widget', 'sydney'), $widget_ops );
 	}
 
 	function widget($args, $instance) {
@@ -358,9 +358,25 @@ class Calendar_Widget extends WP_Widget {
 
         <?php if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce instagram-title">' . $instance['title'] . '</span>' . $args['after_title'];
-		}?>
-        <iframe src="https://calendar.google.com/calendar/embed?src=nr44hnf7rhbmkf9g6ucfmh2jec%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-        <?php
+		}
+
+		$args = array(
+			'category_name'    => array('events', 'club-events'),
+			'orderby'          => 'date',
+		    'order'            => 'DESC',
+		    'posts_per_page'   => 5,
+			'post_type'        => 'post',
+		);
+
+		$postslist = new WP_Query($args);
+
+		if ($postslist->have_posts()) :
+	        while ($postslist->have_posts()) : 
+	        	$postslist->the_post(); 
+	    		get_template_part( 'page-templates/content', 'post' );
+	        endwhile;
+	    endif;
+			
         echo $args['after_widget'];
 	}
 
@@ -380,4 +396,4 @@ class Calendar_Widget extends WP_Widget {
 	}
 }
 
-register_widget('Calendar_Widget');
+register_widget('Event_Listing');
