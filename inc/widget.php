@@ -342,3 +342,42 @@ class Instagram_Widget extends WP_Widget {
 }
 
 register_widget('Instagram_Widget');
+
+class Calendar_Widget extends WP_Widget {
+
+	function __construct() {
+		$widget_ops = array( 'description' => __('Display a grid of instagram pictures', 'sydney') );
+		parent::__construct( 'Calendar_Widget', __('Instagram latest posts', 'sydney'), $widget_ops );
+	}
+
+	function widget($args, $instance) {
+		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+
+		echo $args['before_widget'];
+        ?>
+
+        <?php if ( !empty($instance['title']) ) {
+			echo $args['before_title'] . '<span class="wow bounce instagram-title">' . $instance['title'] . '</span>' . $args['after_title'];
+		}?>
+        <iframe src="https://calendar.google.com/calendar/embed?src=nr44hnf7rhbmkf9g6ucfmh2jec%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <?php
+        echo $args['after_widget'];
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance['title'] = strip_tags( stripslashes($new_instance['title']) );
+		return $instance;
+	}
+
+	function form( $instance ) {
+		$title = isset( $instance['title'] ) ? $instance['title'] : '';
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'west') ?></label>
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
+		</p>
+		<?php
+	}
+}
+
+register_widget('Calendar_Widget');
