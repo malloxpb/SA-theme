@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<?php do_action('sydney_before_content'); ?>
 
-	<div id="primary" class="content-area col-md-9 <?php echo sydney_blog_layout(); ?>">
+	<div id="primary" class="content-area grid-70 <?php echo sydney_blog_layout(); ?>">
 		<main id="main" class="post-wrap" role="main">
 
 		<?php if ( have_posts() ) : ?>

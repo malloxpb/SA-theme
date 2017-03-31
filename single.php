@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<?php do_action('sydney_before_content'); ?>
 
-	<div id="primary" class="content-area col-md-9 <?php echo $fullwidth; ?>">
+	<div id="primary" class="content-area grid-70 <?php echo $fullwidth; ?>">
 		<main id="main" class="post-wrap" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>

@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-9">
+	<div id="primary" class="content-area grid-70">
 		<main id="main" class="post-wrap" role="main">
 
 		<?php if ( have_posts() ) : ?>
