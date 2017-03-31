@@ -346,8 +346,8 @@ register_widget('Instagram_Widget');
 class Calendar_Widget extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'description' => __('Display a grid of instagram pictures', 'sydney') );
-		parent::__construct( 'Calendar_Widget', __('Instagram latest posts', 'sydney'), $widget_ops );
+		$widget_ops = array( 'description' => __('Display a calendar widget', 'sydney') );
+		parent::__construct( 'Calendar_Widget', __('Calendar event widget', 'sydney'), $widget_ops );
 	}
 
 	function widget($args, $instance) {
