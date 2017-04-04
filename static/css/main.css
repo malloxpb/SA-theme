@@ -500,11 +500,7 @@ Header
 		z-index: 1000;
 		background-color: #5d0202;
 		padding: 0 0 5px 0;
-		-webkit-transition: all 0.3s ease-out;
-		   -moz-transition: all 0.3s ease-out;
-		    -ms-transition: all 0.3s ease-out;
-		     -o-transition: all 0.3s ease-out;
-		        transition: all 0.3s ease-out;
+		border-bottom: 1px solid #000;
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
