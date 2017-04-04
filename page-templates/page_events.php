@@ -15,7 +15,7 @@ get_header(); ?>
 					'category_name'    => 'events',
 					'orderby'          => 'date',
 				    'order'            => 'DESC',
-				    'posts_per_page'   => 10,
+				    'posts_per_page'   => 15,
 				    'paged'            => $paged,
 					'post_type'        => 'post',
 				);
