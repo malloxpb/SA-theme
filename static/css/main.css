@@ -111,14 +111,6 @@ form.search-form label,
 form.search-form input.search-field {
 	width: 100%;
 }
-/* under slider widget */
-.under-slider {
-	margin-bottom: -83px;
-}
-.under-slider h2 {
-	text-align: center;
-	margin: 50px 0;
-}
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
@@ -503,9 +495,7 @@ Header
 		max-height: 50px;
 	}
 	.site-header {
-		position: absolute;
-		top: 0;
-		left: 0;
+		position: relative;
 		width: 100%;
 		z-index: 1000;
 		background-color: #5d0202;
@@ -515,13 +505,6 @@ Header
 		    -ms-transition: all 0.3s ease-out;
 		     -o-transition: all 0.3s ease-out;
 		        transition: all 0.3s ease-out;
-	}
-	.site-header.has-header {
-		background: transparent;
-	}
-	.admin-bar .site-header,
-	.admin-bar .site-header.float-header {
-		top: 32px;
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
@@ -981,6 +964,12 @@ Layout
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+	}
+	.item img {
+		max-width: 48px;
+	}
+	.above-header {
+		background: #353535;
 	}
 /* club page */
 	.page-club-title {
