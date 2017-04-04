@@ -421,7 +421,7 @@ class Calendar_Widget extends WP_Widget {
         <?php if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce instagram-title">' . $instance['title'] . '</span>' . $args['after_title'];
 		}?>
-        <iframe src="https://calendar.google.com/calendar/embed?src=nr44hnf7rhbmkf9g6ucfmh2jec%40group.calendar.google.com&showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=nr44hnf7rhbmkf9g6ucfmh2jec%40group.calendar.google.com&showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style="border-width:0" width="360" height="360" frameborder="0" scrolling="no"></iframe>
         <?php
         echo $args['after_widget'];
 	}
