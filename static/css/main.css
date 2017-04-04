@@ -991,6 +991,7 @@ Layout
 		color: #fff;
 		font-size: 1.1em;
 		text-align: right;
+		padding: 5px 0px 5px 0px;
 	}
 	.item h6, .item h3 {
 		margin: 0;
