@@ -279,7 +279,7 @@ class Event_Preview extends WP_Widget {
 					<p>
 					<?php
 						$title = get_the_title();
-						echo wp_trim_words($title, 4);
+						echo wp_trim_words($title, 3);
 					?>
 					</p>
 				</div>
