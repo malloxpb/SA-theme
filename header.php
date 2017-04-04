@@ -38,8 +38,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sydney' ); ?></a>
 
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
-
-	<header id="masthead" class="site-header <?php if(is_front_page()) echo "has-header"; ?>" role="banner">
+	<?php dynamic_sidebar('above-header'); ?>
+	<div id="scroller-anchor"></div>
+	<header id="masthead" class="site-header" role="banner">
 		<div class="alert hide-on-mobile">
             <div class="grid-container">
                 <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
@@ -84,10 +85,6 @@
 	<?php endif; ?>
 
 	<?php do_action('sydney_after_hero'); ?>
-
-	<?php if (is_front_page()): ?>
-		<?php dynamic_sidebar('under-slider'); ?>
-	<?php endif; ?>
 
 	<div id="content" class="page-wrap">
 		<div class="grid-container content-wrapper">

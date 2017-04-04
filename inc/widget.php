@@ -28,10 +28,10 @@ add_action('widgets_init', function() {
 	));
 
 	register_sidebar(array(
-		'name'          => __('Under Home page Slider', 'sydney'),
-		'id'            => 'under-slider',
-		'description'   => 'Under the Home page slider',
-		'before_widget' => '<div class="under-slider">',
+		'name'          => __('Above the nav bar', 'sydney'),
+		'id'            => 'above-header',
+		'description'   => '',
+		'before_widget' => '<div class="above-header hide-on-mobile hide-on-tablet">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
@@ -245,36 +245,39 @@ class Facebook_Widget extends WP_Widget {
 register_widget('Facebook_Widget');
 
 
-class Club_Preview extends WP_Widget {
+class Event_Preview extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'description' => __('Display a slider of club thumbnails', 'sydney') );
-		parent::__construct( 'Club_Preview', __('Club thumnnails slider', 'sydney'), $widget_ops );
+		$widget_ops = array( 'description' => __('Display a slider of events thumbnails', 'sydney') );
+		parent::__construct( 'Event_Preview', __('Events thumnnails slider', 'sydney'), $widget_ops );
 	}
 
 	function widget($args, $instance) {
-		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-
 		echo $args['before_widget'];
         ?>
-
-        <?php if ( !empty($instance['title']) ) {
-			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
-		}?>
         <div class="owl-carousel owl-theme">
             <?php
-            $clubargs = [
-                'posts_per_page'   => 15,
-				'post_type'        => 'club',
-				'meta_query' => array(array('key' => '_thumbnail_id'))
+            $eventargs = [
+            	'category_name' => 'club-events',
+				'post_type'        => 'post',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'post_status' => 'publish',
+
+
             ];
-            $loop = new WP_Query($clubargs);
+            $loop = new WP_Query($eventargs);
             while ($loop->have_posts()) {
                 $loop->the_post();
             ?>
-    		<div class="item">
-        		<a class="owl-coverlink" href="<?php echo get_site_url() . "/clubsandorganizations"; ?>"></a>
-				<?php the_post_thumbnail('sydney-medium-thumb'); ?>
+    		<div class="item grid-container">
+        		<a class="owl-coverlink" href="<?php echo esc_url( get_permalink() ); ?>"></a>
+    			<div class="grid-33">
+					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
+				</div>
+				<div class="grid-66">
+					<?php the_title( sprintf( '<h6><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
+				</div>
 			</div>
 
             <?php
@@ -287,22 +290,17 @@ class Club_Preview extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance['title'] = strip_tags( stripslashes($new_instance['title']) );
 		return $instance;
 	}
 
 	function form( $instance ) {
-		$title = isset( $instance['title'] ) ? $instance['title'] : '';
 		?>
-		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'west') ?></label>
-			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
-		</p>
+		<br><br>
 		<?php
 	}
 }
 
-register_widget('Club_Preview');
+register_widget('Event_Preview');
 
 class Instagram_Widget extends WP_Widget {
 

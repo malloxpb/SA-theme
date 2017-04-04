@@ -10,27 +10,49 @@ jQuery(function($) {
 
 	$(document).ready(function(){
 		$('.owl-carousel').owlCarousel({
-		    loop:true,
-		    nav:true,
-		    navText: [
+			nav: true,
+			navText: [
 	            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
 	            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         	],
-        	autoplay: true,
         	lazyLoad: true,
-        	autoplayTimeout: 4000,
-        	slideBy: 'page',
 		    responsive:{
-		        0:{
-		            items:1
+		    	1024: {
+		    		items: 5
+		    	},
+		        1400:{
+		            items: 7
 		        },
-		        600:{
-		            items:3
-		        },
-		        1000:{
-		            items:5
-		        }
 		    }
 		});
+
+		function moveScroller() {
+		    var $anchor = $("#scroller-anchor");
+		    var $scroller = $('.site-header');
+
+		    var move = function() {
+		        var st = $(window).scrollTop();
+		        var ot = $anchor.offset().top;
+		        if(st > ot) {
+		            $scroller.css({
+		                position: "fixed",
+		                top: "0px"
+		            });
+		            $('.alert').show();
+		        } else {
+		            if(st <= ot) {
+		                $scroller.css({
+		                    position: "relative",
+		                    top: ""
+		                });
+		                $('.alert').hide();
+		            }
+		        }
+		    };
+		    $(window).scroll(move);
+		    move();
+		}
+
+		moveScroller();
 	});
 });

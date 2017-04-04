@@ -5,7 +5,9 @@
  * @package Sydney
  */
 
-define('STATIC_VERSION', '00022');
+define('STATIC_VERSION', '00035');
+
+show_admin_bar( false );
 
 require get_template_directory() . '/inc/init.php';
 require get_template_directory() . '/inc/action-filters.php';

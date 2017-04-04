@@ -111,14 +111,6 @@ form.search-form label,
 form.search-form input.search-field {
 	width: 100%;
 }
-/* under slider widget */
-.under-slider {
-	margin-bottom: -83px;
-}
-.under-slider h2 {
-	text-align: center;
-	margin: 50px 0;
-}
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
@@ -503,9 +495,7 @@ Header
 		max-height: 50px;
 	}
 	.site-header {
-		position: absolute;
-		top: 0;
-		left: 0;
+		position: relative;
 		width: 100%;
 		z-index: 1000;
 		background-color: #5d0202;
@@ -515,13 +505,6 @@ Header
 		    -ms-transition: all 0.3s ease-out;
 		     -o-transition: all 0.3s ease-out;
 		        transition: all 0.3s ease-out;
-	}
-	.site-header.has-header {
-		background: transparent;
-	}
-	.admin-bar .site-header,
-	.admin-bar .site-header.float-header {
-		top: 32px;
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
@@ -957,22 +940,39 @@ Layout
 	.entry-post img {
 		margin: 10px 0 20px;
 	}
+	.owl-carousel .owl-stage:first-child {
+		margin-left: 35px;
+	}
 	.owl-theme .owl-nav i {
 	    margin-top: 2px;
-	    font-size: 80px;
+	    font-size: 60px;
 	    color: #fff;
 	}
 	.owl-theme .owl-nav div {
-	    padding: 5px 9px;
 	    position: absolute;
 	}
 	.owl-theme .owl-nav .owl-prev {
 	    left: 0;
-	    top: 40px;
+	    top: 0;
+	    border-right: 1px solid #3e3d3d;
 	}
 	.owl-theme .owl-nav .owl-next {
 	    right: 0;
-	    top: 40px;
+	    top: 0;
+	    border-left: 1px solid #3e3d3d;
+	}
+	.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+		height: 68px;
+	    background: #1c1c1c;
+	    padding: 0px 10px 0px 10px;
+	}
+	.owl-item {
+		padding: 15px 0 5px 0;
+		border-left: 1px solid #3e3d3d;
+		height: 68px;
+	}
+	.owl-item:hover {
+		background: #181923;
 	}
 	.owl-coverlink {
 		position: absolute;
@@ -981,6 +981,26 @@ Layout
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+	}
+	.item img {
+		max-width: 48px;
+	}
+	.item a {
+		color: #fff;
+		font-size: 0.7em;
+	}
+	.item h6, .item h3 {
+		margin: 0;
+	}
+	.item h3 {
+		text-align: center;
+	}
+	.item .grid-66 > * {
+		float: right;
+	}
+	.above-header {
+		background: #1c1c1c;
+		height: 68px;
 	}
 /* club page */
 	.page-club-title {

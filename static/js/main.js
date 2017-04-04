@@ -204,25 +204,6 @@
 		});
 	};
 
- 	var headerFixed = function() {
-			var headerFix = $('.site-header').offset().top;
-			$(window).on('load scroll', function() {
-				var y = $(this).scrollTop();
-				if ( y >= headerFix) {
-					$('.site-header').addClass('fixed');
-					$('body').addClass('siteScrolled');
-				} else {
-					$('.site-header').removeClass('fixed');
-					$('body').removeClass('siteScrolled');
-				}
-				if ( y >= 107 ) {
-					$('.site-header').addClass('float-header');
-				} else {
-					$('.site-header').removeClass('float-header');
-				}
-			});
-	};
-
 	var counter = function() {
 		$('.roll-counter').on('on-appear', function() {
 			$(this).find('.numb-count').each(function() {
