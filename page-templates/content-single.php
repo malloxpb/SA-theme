@@ -8,11 +8,11 @@
 
 	<?php do_action('sydney_inside_top_post'); ?>
 
-	<?php if ( has_post_thumbnail() && ( get_theme_mod( 'post_feat_image' ) != 1 ) ) : ?>
+	<?php /*if ( has_post_thumbnail() && ( get_theme_mod( 'post_feat_image' ) != 1 ) ) : ?>
 		<div class="entry-thumb">
 			<?php the_post_thumbnail('sydney-large-thumb'); ?>
 		</div>
-	<?php endif; ?>
+	<?php endif; */?>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="title-post entry-title">', '</h1>' ); ?>

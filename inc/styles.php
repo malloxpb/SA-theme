@@ -90,7 +90,7 @@ function sydney_custom_styles($custom) {
 
 	//Header image
 	$header_bg_size = get_theme_mod('header_bg_size','cover');	
-	$header_height = get_theme_mod('header_height','300');
+	$header_height = get_theme_mod('header_height','500');
 	$custom .= ".header-image { background-size:" . esc_attr($header_bg_size) . ";}"."\n";
 	$custom .= ".header-image { height:" . intval($header_height) . "px; }"."\n";
 

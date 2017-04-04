@@ -42,7 +42,7 @@ function sydney_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size('sydney-post-thumb', 600, 350, true);
-	add_image_size('sydney-large-thumb', 830, 830, true);
+	add_image_size('sydney-large-thumb', 1400, 700, array( 'center', 'top' ));
 	add_image_size('sydney-medium-thumb', 550, 400, true);
 	add_image_size('sydney-small-thumb', 230, 230, true);
 	add_image_size('sydney-service-thumb', 350, 350, true);

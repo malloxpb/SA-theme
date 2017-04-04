@@ -62,8 +62,9 @@ function sydney_header_style() {
 	?>
 	<style type="text/css">
 		.header-image {
-			background-image: url(<?php echo get_header_image(); ?>);
+			background-image: url(<?php echo the_post_thumbnail_url('sydney-large-thumb'); ?>);
 			display: block;
+			background-attachment: fixed;
 		}
 		@media only screen and (max-width: 1024px) {
 			.header-inner {

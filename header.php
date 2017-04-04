@@ -86,6 +86,15 @@
 
 	<?php do_action('sydney_after_hero'); ?>
 
+	<?php if (is_single()): ?>
+		<?php if (has_post_thumbnail() && (get_theme_mod( 'post_feat_image' ) != 1)): ?>
+			<div class="header-image">
+				<?php sydney_header_overlay(); ?>
+				<img class="header-inner" src="<?php the_post_thumbnail_url(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+			</div>
+		<?php endif; ?>
+	<?php endif; ?>
+
 	<div id="content" class="page-wrap">
 		<div class="grid-container content-wrapper">
 			<div class="row">	
