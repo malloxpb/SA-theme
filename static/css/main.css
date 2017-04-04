@@ -1161,7 +1161,7 @@ Hero section
     z-index: 10;
 }
 .loading-container .pulse {
-    border: 3px solid #999;
+    border: 3px solid #5d0202;
     height: 30px;
     width: 30px;
     position: absolute;
