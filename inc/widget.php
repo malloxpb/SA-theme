@@ -279,10 +279,10 @@ class Event_Preview extends WP_Widget {
 					<p>
 					<?php
 						$title = get_the_title();
-						if (strlen($title) <= 26) {
+						if (strlen($title) <= 27) {
 							echo $title;
 						} else {
-							echo substr($title, 0, 26) . "...";
+							echo substr($title, 0, 27) . "...";
 						}
 					?>
 					</p>
