@@ -256,9 +256,6 @@ class Event_Preview extends WP_Widget {
 		echo $args['before_widget'];
         ?>
         <div class="owl-carousel owl-theme">
-        	<div class="item">
-            	<h3><a> Upcoming Events </a></h3>
-            </div>
             <?php
             $eventargs = [
             	'category_name' => 'club-events',
@@ -274,6 +271,7 @@ class Event_Preview extends WP_Widget {
                 $loop->the_post();
             ?>
     		<div class="item grid-container">
+        		<a class="owl-coverlink" href="<?php echo esc_url( get_permalink() ); ?>"></a>
     			<div class="grid-33">
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>

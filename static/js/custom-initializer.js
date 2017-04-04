@@ -10,6 +10,11 @@ jQuery(function($) {
 
 	$(document).ready(function(){
 		$('.owl-carousel').owlCarousel({
+			nav: true,
+			navText: [
+	            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+	            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        	],
         	lazyLoad: true,
 		    responsive:{
 		    	1024: {

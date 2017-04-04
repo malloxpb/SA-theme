@@ -940,26 +940,44 @@ Layout
 	.entry-post img {
 		margin: 10px 0 20px;
 	}
-	/*.owl-theme .owl-nav i {
+	.owl-theme .owl-nav i {
 	    margin-top: 2px;
-	    font-size: 80px;
+	    font-size: 60px;
 	    color: #fff;
 	}
 	.owl-theme .owl-nav div {
-	    padding: 5px 9px;
 	    position: absolute;
 	}
 	.owl-theme .owl-nav .owl-prev {
 	    left: 0;
-	    top: 40px;
+	    top: 0;
+	    border-right: 1px solid #3e3d3d;
 	}
 	.owl-theme .owl-nav .owl-next {
 	    right: 0;
-	    top: 40px;
-	}*/
+	    top: 0;
+	    border-left: 1px solid #3e3d3d;
+	}
+	.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+		height: 68px;
+	    background: rgba(28, 28, 28, 0.6);
+	    padding: 0px 10px 0px 10px;
+	}
 	.owl-item {
-		padding: 10px 0;
+		padding: 15px 0 5px 0;
 		border-left: 1px solid #3e3d3d;
+		height: 68px;
+	}
+	.owl-item:hover {
+		background: #181923;
+	}
+	.owl-coverlink {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 	.item img {
 		max-width: 48px;
@@ -974,9 +992,12 @@ Layout
 	.item h3 {
 		text-align: center;
 	}
+	.item .grid-66 > * {
+		float: right;
+	}
 	.above-header {
-		background: #1C1E29;
-		height: 58px;
+		background: #1c1c1c;
+		height: 68px;
 	}
 /* club page */
 	.page-club-title {
