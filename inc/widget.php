@@ -31,7 +31,7 @@ add_action('widgets_init', function() {
 		'name'          => __('Above the nav bar', 'sydney'),
 		'id'            => 'above-header',
 		'description'   => '',
-		'before_widget' => '<div class="above-header">',
+		'before_widget' => '<div class="above-header hide-on-mobile hide-on-tablet">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
@@ -256,11 +256,18 @@ class Event_Preview extends WP_Widget {
 		echo $args['before_widget'];
         ?>
         <div class="owl-carousel owl-theme">
+        	<div class="item">
+            	<h3><a> Upcoming Events </a></h3>
+            </div>
             <?php
             $eventargs = [
             	'category_name' => 'club-events',
-                'posts_per_page'   => 15,
 				'post_type'        => 'post',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'post_status' => 'publish',
+
+
             ];
             $loop = new WP_Query($eventargs);
             while ($loop->have_posts()) {
@@ -268,11 +275,10 @@ class Event_Preview extends WP_Widget {
             ?>
     		<div class="item grid-container">
     			<div class="grid-33">
-        			<!-- <a class="owl-coverlink" href="<?php echo get_site_url(); ?>"></a> -->
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
 				<div class="grid-66">
-					<p></p>
+					<?php the_title( sprintf( '<h6><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
 				</div>
 			</div>
 

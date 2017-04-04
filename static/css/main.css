@@ -940,7 +940,7 @@ Layout
 	.entry-post img {
 		margin: 10px 0 20px;
 	}
-	.owl-theme .owl-nav i {
+	/*.owl-theme .owl-nav i {
 	    margin-top: 2px;
 	    font-size: 80px;
 	    color: #fff;
@@ -956,20 +956,27 @@ Layout
 	.owl-theme .owl-nav .owl-next {
 	    right: 0;
 	    top: 40px;
-	}
-	.owl-coverlink {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
+	}*/
+	.owl-item {
+		padding: 10px 0;
+		border-left: 1px solid #3e3d3d;
 	}
 	.item img {
 		max-width: 48px;
 	}
+	.item a {
+		color: #fff;
+		font-size: 0.7em;
+	}
+	.item h6, .item h3 {
+		margin: 0;
+	}
+	.item h3 {
+		text-align: center;
+	}
 	.above-header {
-		background: #353535;
+		background: #1C1E29;
+		height: 58px;
 	}
 /* club page */
 	.page-club-title {

@@ -39,6 +39,7 @@
 
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 	<?php dynamic_sidebar('above-header'); ?>
+	<div id="scroller-anchor"></div>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="alert hide-on-mobile">
             <div class="grid-container">
