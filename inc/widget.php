@@ -279,11 +279,7 @@ class Event_Preview extends WP_Widget {
 					<p>
 					<?php
 						$title = get_the_title();
-						if (strlen($title) <= 27) {
-							echo $title;
-						} else {
-							echo substr($title, 0, 27) . "...";
-						}
+						echo wp_trim_words($title, 4);
 					?>
 					</p>
 				</div>
