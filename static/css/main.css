@@ -944,8 +944,8 @@ Layout
 		margin-left: 35px;
 	}
 	.owl-theme .owl-nav i {
-	    margin-top: 2px;
-	    font-size: 60px;
+	    margin-top: 13px;
+	    font-size: 40px;
 	    color: #fff;
 	}
 	.owl-theme .owl-nav div {
@@ -967,7 +967,6 @@ Layout
 	    padding: 0px 10px 0px 10px;
 	}
 	.owl-item {
-		padding: 15px 0 5px 0;
 		border-left: 1px solid #3e3d3d;
 		height: 68px;
 	}
@@ -982,12 +981,16 @@ Layout
 		height: 100%;
 		overflow: hidden;
 	}
+	.item .grid-33 {
+		padding: 10px 0 10px 0;
+	}
 	.item img {
 		max-width: 48px;
 	}
-	.item a {
+	.item p {
 		color: #fff;
-		font-size: 0.7em;
+		font-size: 1.1em;
+		text-align: right;
 	}
 	.item h6, .item h3 {
 		margin: 0;

@@ -276,7 +276,16 @@ class Event_Preview extends WP_Widget {
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
 				<div class="grid-66">
-					<?php the_title( sprintf( '<h6><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
+					<p>
+					<?php
+						$title = get_the_title();
+						if (strlen($title) <= 25) {
+							echo $title;
+						} else {
+							echo substr($title, 0, 25) . "...";
+						}
+					?>
+					</p>
 				</div>
 			</div>
 
