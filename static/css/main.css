@@ -940,6 +940,9 @@ Layout
 	.entry-post img {
 		margin: 10px 0 20px;
 	}
+	.owl-carousel .owl-stage:first-child {
+		margin-left: 35px;
+	}
 	.owl-theme .owl-nav i {
 	    margin-top: 2px;
 	    font-size: 60px;
@@ -960,7 +963,7 @@ Layout
 	}
 	.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
 		height: 68px;
-	    background: rgba(28, 28, 28, 0.6);
+	    background: #1c1c1c;
 	    padding: 0px 10px 0px 10px;
 	}
 	.owl-item {
