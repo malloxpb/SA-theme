@@ -8,7 +8,7 @@ get_header(); ?>
 	<div id="primary" class="content-area grid-70">
 		<main id="main" class="post-wrap" role="main">
 
-		<h2> Student Association activities </h2>
+		<h2> Events on campus </h2>
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$args = array(
