@@ -278,12 +278,12 @@ class Event_Preview extends WP_Widget {
 				<div class="grid-66">
 					<h3>
 					<?php
+						$title = get_the_title();
 						if (strlen($title) <= 11) {
 							echo $title;
 						} else {
 							echo substr($title, 0, 11) . "...";
 						}
-
 					?>
 					</h3><br>
 					<?php echo the_excerpt(); ?>
