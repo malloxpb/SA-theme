@@ -276,12 +276,13 @@ class Event_Preview extends WP_Widget {
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
 				<div class="grid-66">
-					<p>
+					<h3>
 					<?php
 						$title = get_the_title();
 						echo wp_trim_words($title, 3);
 					?>
-					</p>
+					</h3><br>
+					<?php echo the_excerpt(); ?>
 				</div>
 			</div>
 
