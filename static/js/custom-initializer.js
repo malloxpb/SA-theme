@@ -18,10 +18,10 @@ jQuery(function($) {
         	lazyLoad: true,
 		    responsive:{
 		    	1024: {
-		    		items: 5
+		    		items: 4
 		    	},
 		        1400:{
-		            items: 7
+		            items: 5
 		        },
 		    }
 		});
