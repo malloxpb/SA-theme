@@ -7,8 +7,6 @@
 
 define('STATIC_VERSION', '00038');
 
-show_admin_bar( false );
-
 require get_template_directory() . '/inc/init.php';
 require get_template_directory() . '/inc/action-filters.php';
 require get_template_directory() . '/inc/static.php';
