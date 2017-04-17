@@ -177,37 +177,6 @@ class Facebook_Widget extends WP_Widget {
 		// default facebook page 
 		$facebook = "https://www.facebook.com/plattsburghsa/?__mref=message_bubble";
 
-		$mapping = [
-			"studentassociation" => $facebook,
-			"vnation" => "https://www.facebook.com/vnationpsu/",
-			"dancecorp" => "https://www.facebook.com/SUNYPlattsburghDanceCorps/",
-			"owe" => "https://www.facebook.com/groups/24127702851/",
-			"autism" => "https://m.facebook.com/asusunyplattsburgh",
-			"alarab" => "https://www.facebook.com/Club-Al-Arabiyya-1390613177876835/",
-			"afa" => "https://www.facebook.com/AFAPlattsburgh",
-			"investmentfund" => "https://www.facebook.com/groups/637399729730119/",
-			"wqke" => "https://www.facebook.com/groups/24127702851/",
-			"foodgroup" => "https://facebook.com/SUNYPlattsburghFoodGroup",
-			"pava" => "https://www.facebook.com/groups/sunypava/",
-			"ski" => "https://www.facebook.com/psuskiandsnowboard/",
-			"acapella" => "https://www.facebook.com/MinorAdjustmentsMusic",
-			"cec" => "https://www.facebook.com/groups/1496443317333226/",
-			"southasian" => "https://www.facebook.com/SUNYPlattsburghSASA/"
-			
-		];
-
-		foreach (get_the_category() as $category) {
-			$cat_name = strtolower($category->cat_name);
-
-			if (array_key_exists($cat_name, $mapping)) {
-				$facebook = $mapping[$cat_name];
-
-				// break the loop right after find the right page
-				break;
-			}
-		}
-
-
 		echo $args['before_widget'];
 		
 		if ( !empty($instance['title']) ) {
@@ -351,6 +320,7 @@ class Instagram_Widget extends WP_Widget {
 
 register_widget('Instagram_Widget');
 
+/*
 class Event_Listing extends WP_Widget {
 
 	function __construct() {
@@ -444,3 +414,4 @@ class Calendar_Widget extends WP_Widget {
 }
 
 register_widget('Calendar_Widget');
+*/
