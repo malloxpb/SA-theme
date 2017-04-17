@@ -38,6 +38,7 @@ Navigation
     position: relative;
     height: 30px;
     line-height: 30px;
+    display: none;
 }
 .alert p {
     display: inline-block;
@@ -498,9 +499,7 @@ Header
 		position: relative;
 		width: 100%;
 		z-index: 1000;
-		background-color: #5d0202;
 		padding: 0 0 5px 0;
-		border-bottom: 1px solid #000;
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;

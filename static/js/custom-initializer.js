@@ -33,19 +33,21 @@ jQuery(function($) {
 		    var move = function() {
 		        var st = $(window).scrollTop();
 		        var ot = $anchor.offset().top;
-		        if(st > ot) {
+		        if(st > 68) {
 		            $scroller.css({
 		                position: "fixed",
-		                top: "0px"
+		                top: "0px",
+		                background: "#5d0202",
 		            });
-		            $('.alert').show();
+		            $('.alert').css('display', 'inherit');
 		        } else {
-		            if(st <= ot) {
+		            if(st <= 68) {
 		                $scroller.css({
-		                    position: "relative",
-		                    top: ""
+		                    position: "absolute",
+		                    top: "68px",
+		                    background: "transparent",
 		                });
-		                $('.alert').hide();
+		                $('.alert').css('display', 'none');
 		            }
 		        }
 		    };
