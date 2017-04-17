@@ -18,10 +18,10 @@ jQuery(function($) {
         	lazyLoad: true,
 		    responsive:{
 		    	1024: {
-		    		items: 5
+		    		items: 4
 		    	},
 		        1400:{
-		            items: 7
+		            items: 5
 		        },
 		    }
 		});
@@ -33,20 +33,21 @@ jQuery(function($) {
 		    var move = function() {
 		        var st = $(window).scrollTop();
 		        var ot = $anchor.offset().top;
-		        if(st > ot) {
-		            $scroller.css({
-		                position: "fixed",
-		                top: "0px"
-		            });
-		            $('.alert').show();
+
+		        // set the header fix
+		        $scroller.css({
+                    position: "fixed",
+                    top: "0px"
+                });
+
+		        if (st > 68) {
+		            $('.site-logo').hide();
+		            $('#mainnav').css('float', 'left');
+		            $('.menu-items').css('padding-top', '0');
 		        } else {
-		            if(st <= ot) {
-		                $scroller.css({
-		                    position: "relative",
-		                    top: ""
-		                });
-		                $('.alert').hide();
-		            }
+		        	$('.site-logo').show();
+		        	$('#mainnav').css('float', 'right');
+		        	$('.menu-items').css('padding-top', '12px');
 		        }
 		    };
 		    $(window).scroll(move);

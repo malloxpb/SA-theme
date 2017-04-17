@@ -32,20 +32,22 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<?php do_action('sydney_before_site'); //Hooked: sydney_preloader() ?>
+<?php /*do_action('sydney_before_site'); //Hooked: sydney_preloader() */ ?>
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sydney' ); ?></a>
 
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
-	<?php dynamic_sidebar('above-header'); ?>
-	<div id="scroller-anchor"></div>
 	<header id="masthead" class="site-header" role="banner">
+	<div id="scroller-anchor"></div>
+	<?php dynamic_sidebar('above-header'); ?>
+	<?php /* 
 		<div class="alert hide-on-mobile">
             <div class="grid-container">
                 <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
             </div>
         </div>
+    */?>
 		<div class="header-wrap">
             <div class="grid-container">
 				<div class="grid-33 tablet-grid-66 mobile-grid-70">
@@ -56,7 +58,7 @@
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>	        
 		        <?php endif; ?>
 				</div>
-				<div class="grid-66 tablet-grid-33 mobile-grid-30">
+				<div class="menu-items grid-66 tablet-grid-33 mobile-grid-30">
 					<div class="btn-menu"></div>
 					<nav id="mainnav" class="mainnav" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
