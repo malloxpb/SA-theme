@@ -4,6 +4,7 @@
  */
 function sydney_scripts() {
 
+	// styles
 	if ( get_theme_mod('body_font_name') !='' ) {
 	    wp_enqueue_style( 'sydney-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) );
 	} else {
@@ -26,6 +27,7 @@ function sydney_scripts() {
 
 	wp_style_add_data( 'sydney-ie9', 'conditional', 'lte IE 9' );
 
+	// scripts
 	wp_enqueue_script( 'sydney-scripts', get_template_directory_uri() . '/static/js/scripts.js', array('jquery'),'', true );
 	wp_enqueue_script( 'slider-easing-scripts', get_template_directory_uri() . '/static/js/jquery.easing.1.3.js');
 	wp_enqueue_script( 'slider-enhanced-scripts', get_template_directory_uri() . '/static/js/jquery.animate-enhanced.min.js');
