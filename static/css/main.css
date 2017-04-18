@@ -1128,10 +1128,12 @@ Hero section
 		padding: 20px 0 50px;
 		font-weight: 300;
 	}
-.text-slider {
-  position: relative;
+	.text-slider {
+	  position: relative;
+	}
+#slideshow {
+	max-height: 87vh;
 }
-
 .slide-inner {
 	position: absolute;
 	top: 50%;
