@@ -44,7 +44,7 @@ jQuery(function($) {
 		            if(st <= 68) {
 		                $scroller.css({
 		                    position: "absolute",
-		                    top: "68px",
+		                    top: ($('#wpadminbar')) ? "100px" : "68px",
 		                    background: "transparent",
 		                });
 		                $('.alert').css('display', 'none');
