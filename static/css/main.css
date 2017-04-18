@@ -1148,10 +1148,21 @@ Hero section
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
+#slideshow .slides-pagination {
+	margin-bottom: 10px;
+}
+#slideshow .slides-pagination a {
+	background: transparent;
+	border: 2px solid #fff;
+	width: 15px;
+	height: 15px;
+}
+#slideshow .slides-pagination a.current {
+	background: #fff;
+}
 .header-slider {
 	overflow: hidden;
 }
-
 .loading-container {
     position: absolute;
     left: 50%;
