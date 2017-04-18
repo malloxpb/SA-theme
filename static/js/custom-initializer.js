@@ -33,6 +33,7 @@ jQuery(function($) {
 		    var move = function() {
 		        var st = $(window).scrollTop();
 		        var ot = $anchor.offset().top;
+		        var margin = ($('#wpadminbar').length) ? "100px" : "68px";
 		        if(st > 68) {
 		            $scroller.css({
 		                position: "fixed",
@@ -44,7 +45,7 @@ jQuery(function($) {
 		            if(st <= 68) {
 		                $scroller.css({
 		                    position: "absolute",
-		                    top: ($('#wpadminbar')) ? "100px" : "68px",
+		                    top: margin,
 		                    background: "transparent",
 		                });
 		                $('.alert').css('display', 'none');
