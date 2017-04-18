@@ -2743,8 +2743,9 @@ Panels
 			display: block;
 		}
 		.site-header {
-			position: static;
+			position: absolute;
 			background-color: rgba(0,0,0,0.9);
+			top: 0 !important;
 		}
 		.site-header.has-header {
 			background-color: rgba(0,0,0,0.9);
