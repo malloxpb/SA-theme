@@ -501,6 +501,9 @@ Header
 		z-index: 1000;
 		padding: 0 0 5px 0;
 	}
+	.site-header.not-front-page-header {
+		background: rgb(93, 2, 2) !important;
+	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
 	}	
