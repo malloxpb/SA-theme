@@ -1214,6 +1214,9 @@ Hero section
 .header-slider {
 	overflow: hidden;
 }
+.sydney-hero-area {
+	height: 92vh;
+}
 .loading-container {
     position: absolute;
     left: 50%;
