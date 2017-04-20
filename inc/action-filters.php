@@ -147,7 +147,7 @@ function clubs_post_type() {
 		'capability_type'     => 'page',
 		'menu_icon'     => 'dashicons-store'
 	);
-    	register_post_type( 'club', $args );
+    register_post_type( 'club', $args );
 }
 add_action( 'init', 'clubs_post_type' );
 
@@ -195,6 +195,6 @@ function SAteam_post_type() {
 		'capability_type'     => 'page',
 		'menu_icon'     => 'dashicons-businessman'
 	);
-    	register_post_type( 'SAteam', $args );
+    register_post_type( 'SAteam', $args );
 }
 add_action( 'init', 'SAteam_post_type' );

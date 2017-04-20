@@ -86,7 +86,7 @@
 
 	<?php do_action('sydney_after_hero'); ?>
 
-	<?php if (is_single()): ?>
+	<?php if (!is_singular("post")): ?>
 		<?php if (has_post_thumbnail() && (get_theme_mod( 'post_feat_image' ) != 1)): ?>
 			<div class="header-image">
 				<?php sydney_header_overlay(); ?>
