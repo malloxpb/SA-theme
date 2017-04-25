@@ -24,6 +24,7 @@
 
 <body <?php body_class(); ?>>
 <div id="fb-root"></div>
+<div id="facebook"><!--
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -31,6 +32,7 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1160309744035139";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+--></div>
 
 <?php // do_action('sydney_before_site'); //Hooked: sydney_preloader() ?>
 
