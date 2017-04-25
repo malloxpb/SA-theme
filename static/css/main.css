@@ -2463,7 +2463,8 @@ Panels
 	input[type="reset"]:hover,
 	input[type="submit"]:hover {
 		background-color: transparent;
-		color: #5d0202;
+		color: #767676;
+		border: 1px solid #767676;
 	}
 	textarea:focus,
 	input[type="text"]:focus,
