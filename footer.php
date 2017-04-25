@@ -21,7 +21,7 @@
 		
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<span> @2017 Student Association at <a class="footer-link" href="http://web.plattsburgh.edu/">State University of New York Plattsburgh</a> </span>
+			<span> @2017 Student Association at <a class="footer-link" href="http://web.plattsburgh.edu/">State University of New York at Plattsburgh</a> </span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
