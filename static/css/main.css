@@ -1568,7 +1568,7 @@ Widgets
 	.widget-area .widget-title {
 		font-size: 16px;
 		line-height: normal;
-		color: #fff;
+		color: #767676;
 		font-weight: 600;
 		padding-bottom: 24px;
 		margin: 0;
@@ -1771,7 +1771,7 @@ Footer
 	}
 	.footer-widgets .widget-title {
 		text-transform: uppercase;
-		color: #fff;
+		color: #767676;
 		line-height: normal;
 		margin: 5px 0 0;
 	}
@@ -2111,7 +2111,7 @@ Panels
 -------------------------------------------------------------- */
 
 .sydney_contact_info_widget span {
-	color: #fff;
+	color: #767676;
 	margin-right: 15px;
 }
 .sydney_contact_info_widget div {
