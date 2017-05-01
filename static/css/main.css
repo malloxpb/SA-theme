@@ -728,79 +728,9 @@ Header
 		transition: all 0.3s ease;
 		-webkit-transition: all 0.3s ease;
 	}
-	#mainnav-mobi ul li a {
-		float: none;
-	}
-	#mainnav-mobi ul li::before {
-		content: '';
-	}
 /*--------------------------------------------------------------
 Mobile navigation
 --------------------------------------------------------------*/
-	#mainnav-mobi {
-		display: block;
-		margin: 0 auto;
-		width: 100%;
-		position: absolute;
-		top:28px;
-		background-color: #1c1c1c;
-		z-index: 1000;
-	}
-	#mainnav-mobi ul {
-		display: block;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	#mainnav-mobi ul li {
-		margin:0;
-		position: relative;
-		text-align: left;
-		border-top: 1px solid #252525;
-		cursor: pointer;
-	}
-	#mainnav-mobi ul > li > a {
-		display: block;
-		text-decoration: none;
-		padding: 10px 50px;
-		color: #fff;
-	}
-	#mainnav-mobi ul.sub-menu {
-		top: 100%;
-		left: 0;
-		z-index: 2000;
-		position: relative;
-		background-color: #161625;
-	}
-	#mainnav-mobi > ul > li > ul > li,
-	#mainnav-mobi > ul > li > ul > li > ul > li {
-		position: relative;
-		border-top: 1px solid #252525;
-		background-color: #222;
-	}
-	#mainnav-mobi > ul > li > ul > li >  a {
-		padding-left: 70px !important
-	}
-	#mainnav-mobi > ul > li > ul > li > ul > li a {
-		padding-left: 90px !important
-	}
-	#mainnav-mobi ul.sub-menu > li > a {
-		display: block;
-		text-decoration: none;
-		padding: 5px 60px;
-		border-top-color: rgba(255,255,255,0.1);
-		-webkit-transition: all 0.2s ease-out;
-		   -moz-transition: all 0.2s ease-out;
-		     -o-transition: all 0.2s ease-out;
-		        transition: all 0.2s ease-out;
-	}
-	#mainnav-mobi > ul > li > ul > li:first-child a {
-		border-top: none;
-	}
-	#mainnav-mobi ul.sub-menu > li > a:hover,
-	#mainnav-mobi > ul > li > ul > li.active > a {
-		color: #fff;
-	}
 	.btn-menu {
 		float: right;
 		font-size: 28px;
@@ -2724,11 +2654,6 @@ Panels
 		}
 	}
 	@media only screen and (max-width: 1025px) {
-		#mainnav-mobi {
-			top: 8%;
-		    right: 0;
-		    width: 50%;
-		}
 		.header-wrap .grid-66 {
 			padding: 0 20px 0 0;
 		}
@@ -2786,11 +2711,6 @@ Panels
 		h4 { font-size: 18px;}
 		h5 { font-size: 16px;}
 		h6 { font-size: 14px;}
-		#mainnav-mobi {
-			top: 13%;
-		    right: 0;
-		    width: 50%;
-		}
 	}
 	/* Tablet Landscape */
 	 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
@@ -2867,9 +2787,6 @@ Panels
 			float: right;
 			margin-top: 5px;
 		}
-		#mainnav-mobi {
-			top: 14%;
-		}
 		.site-header.float-header {
 			padding-top: 20px;
 			padding-bottom: 20px;
@@ -2930,16 +2847,8 @@ Panels
 		.text-slider {
 			margin-bottom: 15px;
 		}
-		#mainnav-mobi {
-			top: 14%;
-		    right: 0px;
-		    width: 50%;
-		}
 	}
 	@media only screen and (max-width: 320px) {
-		#mainnav-mobi {
-			top: 18%;
-		}
 		.text-slider {
 			margin-bottom: 0;
 		}
