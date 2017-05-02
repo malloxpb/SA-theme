@@ -241,10 +241,10 @@ class Event_Preview extends WP_Widget {
             ?>
     		<div class="item grid-container">
         		<a class="owl-coverlink" href="<?php echo esc_url( get_permalink() ); ?>"></a>
-    			<div class="grid-33">
+    			<div class="grid-33 mobile-grid-33">
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
-				<div class="grid-66">
+				<div class="grid-66 mobile-grid-66">
 					<h3>
 					<?php
 						$title = get_the_title();

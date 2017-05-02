@@ -737,11 +737,20 @@ Mobile navigation
     z-index: 10000;
     position: absolute;
 }
+.menu-slide-button:hover {
+	border: none;
+}
+.menu-slide-button:focus {
+	outline: none;
+}
 .menu-slide-button .hamburger-inner,
 .menu-slide-button .hamburger-inner:before,
 .menu-slide-button .hamburger-inner:after {
 	width: 30px;
 	background-color: #fff;
+}
+#menu-mobile {
+	display: none !important;
 }
 /*--------------------------------------------------------------
 Layout

@@ -4,21 +4,51 @@ jQuery(function($) {
 	        columnWidth : ''
 	    });
 
-		$container.imagesLoaded().progress(function() {
-		    $container.masonry('layout');
-		});
+	$container.imagesLoaded().progress(function() {
+	    $container.masonry('layout');
+	});
 
-	$(document).ready(function(){
+	function moveScroller() {
+	    var $anchor = $("#scroller-anchor");
+	    var $scroller = $('.site-header');
+
+	    var move = function() {
+	        var st = $(window).scrollTop();
+	        var ot = $anchor.offset().top;
+	        var margin = ($('#wpadminbar').length) ? "" : "68px";
+	        if(st > 68) {
+	            $scroller.css({
+	                position: "fixed",
+	                top: "0px",
+	                background: "#5d0202",
+	            });
+	            $('.alert').css('display', 'inherit');
+	        } else {
+	            if(st <= 68) {
+	                $scroller.css({
+	                    position: "absolute",
+	                    top: margin,
+	                    background: "transparent",
+	                });
+	                $('.alert').css('display', 'none');
+	            }
+	        }
+	    };
+	    $(window).scroll(move);
+	    move();
+	} 
+
+	function owlInit() {
 		$('.owl-carousel').owlCarousel({
 			nav: true,
 			navText: [
 	            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
 	            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-        	],
-        	lazyLoad: true,
+	    	],
+	    	lazyLoad: true,
 		    responsive:{
 		    	0: {
-		    		items: 3
+		    		items: 2
 		    	},
 		    	1024: {
 		    		items: 4
@@ -28,39 +58,9 @@ jQuery(function($) {
 		        },
 		    }
 		});
+	}
 
-		function moveScroller() {
-		    var $anchor = $("#scroller-anchor");
-		    var $scroller = $('.site-header');
-
-		    var move = function() {
-		        var st = $(window).scrollTop();
-		        var ot = $anchor.offset().top;
-		        var margin = ($('#wpadminbar').length) ? "" : "68px";
-		        if(st > 68) {
-		            $scroller.css({
-		                position: "fixed",
-		                top: "0px",
-		                background: "#5d0202",
-		            });
-		            $('.alert').css('display', 'inherit');
-		        } else {
-		            if(st <= 68) {
-		                $scroller.css({
-		                    position: "absolute",
-		                    top: margin,
-		                    background: "transparent",
-		                });
-		                $('.alert').css('display', 'none');
-		            }
-		        }
-		    };
-		    $(window).scroll(move);
-		    move();
-		}
-
-		moveScroller();
-
+	function menuMobile() {
 		slideMenu = $('#menu-mobile');
 
 	    var sidebarMenu = $('#menu-mobile').find('nav');
@@ -88,5 +88,11 @@ jQuery(function($) {
 	    // $('.menu-toggle.close').on('click', function () {
 	    //     api.close();
 	    // });
+	}
+
+	$(document).ready(function(){
+		owlInit();
+		moveScroller();
+		menuMobile();
 	});
 });
