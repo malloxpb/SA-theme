@@ -43,6 +43,21 @@
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 	<?php dynamic_sidebar('above-header'); ?>
 	<div id="scroller-anchor"></div>
+	<button class="hamburger hamburger--spring menu-slide-button" type="button">
+	    <span class="hamburger-box">
+	        <span class="hamburger-inner"></span>
+	    </span>
+	</button>
+	<!-- reposive menu  -->
+	<div id="menu-mobile">
+		<?php 
+		wp_nav_menu(array(
+			'theme_location' => 'mobile_menu',
+			'container' => 'nav',
+		));
+		?>
+	</div>
+
 	<header id="masthead" class="site-header <?php if (!is_front_page()) echo "not-front-page-header" ?>" role="banner">
 		<div class="alert hide-on-mobile">
             <div class="grid-container">
@@ -60,7 +75,6 @@
 		        <?php endif; ?>
 				</div>
 				<div class="grid-66 tablet-grid-33 mobile-grid-30">
-					<div class="btn-menu"></div>
 					<nav id="mainnav" class="mainnav" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 					</nav><!-- #site-navigation -->

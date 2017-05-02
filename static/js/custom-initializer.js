@@ -17,6 +17,9 @@ jQuery(function($) {
         	],
         	lazyLoad: true,
 		    responsive:{
+		    	0: {
+		    		items: 3
+		    	},
 		    	1024: {
 		    		items: 4
 		    	},
@@ -33,7 +36,7 @@ jQuery(function($) {
 		    var move = function() {
 		        var st = $(window).scrollTop();
 		        var ot = $anchor.offset().top;
-		        var margin = ($('#wpadminbar').length) ? "100px" : "68px";
+		        var margin = ($('#wpadminbar').length) ? "" : "68px";
 		        if(st > 68) {
 		            $scroller.css({
 		                position: "fixed",
@@ -57,5 +60,33 @@ jQuery(function($) {
 		}
 
 		moveScroller();
+
+		slideMenu = $('#menu-mobile');
+
+	    var sidebarMenu = $('#menu-mobile').find('nav');
+
+	    sidebarMenu.mmenu({
+	        "extensions": [
+	            "pagedim-black",
+	            "border-offset"
+	        ],
+	        offCanvas: {
+	          "position": "right"
+	        },
+	        navbar: {
+			    title: ""
+			},
+	    });
+
+	    var api = sidebarMenu.data('mmenu');
+
+	    $('.menu-slide-button').on('click', function () {
+	        api.open();
+	        $('.menu-slide-button').toggleClass('is-active');
+	    });
+
+	    // $('.menu-toggle.close').on('click', function () {
+	    //     api.close();
+	    // });
 	});
 });

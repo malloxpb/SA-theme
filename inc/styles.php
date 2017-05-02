@@ -106,7 +106,6 @@ function sydney_custom_styles($custom) {
 		$custom .= "#mainnav li { float: none; display: inline-block;}"."\n";
 		$custom .= "#mainnav ul ul li { display: block; text-align: left; float:left;}"."\n";
 		$custom .= ".site-logo, .header-wrap .col-md-4 { margin-bottom: 15px; }"."\n";
-		$custom .= ".btn-menu { margin: 0 auto; float: none; }"."\n";
 		$custom .= ".header-wrap .container > .row { display: block; }"."\n";
 	}	
 

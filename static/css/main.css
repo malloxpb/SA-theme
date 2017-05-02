@@ -731,46 +731,18 @@ Header
 /*--------------------------------------------------------------
 Mobile navigation
 --------------------------------------------------------------*/
-	.btn-menu {
-		float: right;
-		font-size: 28px;
-		font-family: "FontAwesome";
-		color: #fff;
-		text-align:center;
-		width: 28px;
-		height: 28px;
-		cursor: pointer;
-		-webkit-transition: all 0.3s ease-out;
-		   -moz-transition: all 0.3s ease-out;
-		    -ms-transition: all 0.3s ease-out;
-		     -o-transition: all 0.3s ease-out;
-		        transition: all 0.3s ease-out;
-	}
-	.btn-menu:before{
-		content: "\f0c9";
-	}
-	.btn-submenu {
-		position: absolute;
-		right: 20px;
-		top: 0;
-		font-family: "FontAwesome";
-		font-size: 20px;
-		line-height: 45px;
-		text-align: center;
-		cursor: pointer;
-		width: 70px;
-		height: 44px;
-	}
-	.btn-submenu:before {
-		content: "\f107";
-		color: #fff;
-	}
-	.btn-submenu.active:before {
-		content: "\f106"
-	}
-	.btn-menu {
-		display: none
-	}
+.menu-slide-button {
+	right: 0;
+    top: 68px;
+    z-index: 10000;
+    position: absolute;
+}
+.menu-slide-button .hamburger-inner,
+.menu-slide-button .hamburger-inner:before,
+.menu-slide-button .hamburger-inner:after {
+	width: 30px;
+	background-color: #fff;
+}
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
@@ -2683,7 +2655,6 @@ Panels
 		.site-header {
 			position: absolute;
 			background-color: rgba(0,0,0,0.9);
-			top: 0 !important;
 		}
 		.site-header.has-header {
 			background-color: rgba(0,0,0,0.9);
