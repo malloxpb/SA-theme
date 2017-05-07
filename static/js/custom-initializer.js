@@ -1,12 +1,14 @@
 jQuery(function($) {
-	var $container = $('#masonry-grid').masonry({
-	        itemSelector : '.grid-item',
-	        columnWidth : ''
-	    });
+	function unsemanticGrid() {
+		var $container = $('#masonry-grid').masonry({
+		        itemSelector : '.grid-item',
+		        columnWidth : ''
+		    });
 
-	$container.imagesLoaded().progress(function() {
-	    $container.masonry('layout');
-	});
+		$container.imagesLoaded().progress(function() {
+		    $container.masonry('layout');
+		});
+	}
 
 	function moveScroller() {
 	    var $anchor = $("#scroller-anchor");
@@ -90,14 +92,18 @@ jQuery(function($) {
 	    // });
 	}
 
-	$(document).ready(function(){
-		owlInit();
-		moveScroller();
-		menuMobile();
-
+	function resizeSlider() {
 		$(window).resize(function() {
 	        var bodyheight = $(this).width() + 30;
 	        $(".slide-item").width(bodyheight);
 	    }).resize();
+	}
+
+	$(document).ready(function(){
+		owlInit();
+		moveScroller();
+		menuMobile();
+		unsemanticGrid()
+		resizeSlider()
 	});
 });
