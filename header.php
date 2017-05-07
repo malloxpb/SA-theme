@@ -86,6 +86,7 @@
 	<?php do_action('sydney_after_header'); ?>
 
 	<?php if (is_front_page()): ?>
+	<div class="customized-slider-width"></div>
 	<div class="sydney-hero-area">
 		<div class="loading-container">
 		    <div class="pulse"></div>

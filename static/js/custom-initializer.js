@@ -70,7 +70,8 @@ jQuery(function($) {
 	    sidebarMenu.mmenu({
 	        "extensions": [
 	            "pagedim-black",
-	            "border-offset"
+	            "border-offset",
+	            "theme-dark"
 	        ],
 	        offCanvas: {
 	          "position": "right"
@@ -81,21 +82,27 @@ jQuery(function($) {
 	    });
 
 	    var api = sidebarMenu.data('mmenu');
-
-	    $('.menu-slide-button').on('click', function () {
+	   	$('.menu-slide-button').on('click', function() {
 	        api.open();
-	        $('.menu-slide-button').toggleClass('is-active');
 	    });
 
-	    // $('.menu-toggle.close').on('click', function () {
-	    //     api.close();
-	    // });
+	    api.bind( "opened", function() {
+		   setTimeout(function() {
+		      $('.menu-slide-button').addClass( "is-active" );
+		   }, 100);
+		});
+		api.bind( "closed", function() {
+		   setTimeout(function() {
+		      $('.menu-slide-button').removeClass( "is-active" );
+		   }, 100);
+		});
+		
 	}
 
 	function resizeSlider() {
 		$(window).resize(function() {
 	        var bodyheight = $(this).width() + 30;
-	        $(".slide-item").width(bodyheight);
+	        $(".customized-slider-width").width(bodyheight);
 	    }).resize();
 	}
 
@@ -103,7 +110,7 @@ jQuery(function($) {
 		owlInit();
 		moveScroller();
 		menuMobile();
-		unsemanticGrid()
-		resizeSlider()
+		unsemanticGrid();
+		resizeSlider();
 	});
 });
