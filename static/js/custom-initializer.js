@@ -94,5 +94,10 @@ jQuery(function($) {
 		owlInit();
 		moveScroller();
 		menuMobile();
+
+		$(window).resize(function() {
+	        var bodyheight = $(this).width() + 30;
+	        $(".slide-item").width(bodyheight);
+	    }).resize();
 	});
 });
