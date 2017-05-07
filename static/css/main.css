@@ -751,7 +751,7 @@ Mobile navigation
 .menu-slide-button:focus {
 	outline: none;
 }
-ul.menu.mm-listview {
+.mm-listview {
     padding-top: 50px;
 }
 /*--------------------------------------------------------------
