@@ -863,9 +863,6 @@ Layout
 	.entry-post img {
 		margin: 10px 0 20px;
 	}
-	.owl-carousel .owl-stage:first-child {
-		margin-left: 35px;
-	}
 	.owl-theme .owl-nav i {
 	    margin-top: 13px;
 	    font-size: 40px;
@@ -886,7 +883,7 @@ Layout
 	}
 	.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
 		height: 68px;
-	    background: #1c1c1c;
+	    background: rgba(28, 28, 28, 0.54);
 	    padding: 0px 10px 0px 10px;
 	}
 	.owl-item {
@@ -904,7 +901,7 @@ Layout
 		height: 100%;
 		overflow: hidden;
 	}
-	.item .grid-33 {
+	.item .grid-25 {
 		padding: 10px 0 10px 0;
 	}
 	.item img {
@@ -925,10 +922,10 @@ Layout
 		line-height: normal;
 		color: #fff;
 	}
-	.item .grid-66 {
+	.item .grid-75 {
 		padding-top: 5px;
 	}
-	.item .grid-66 > * {
+	.item .grid-75 > * {
 		float: right;
 	}
 	.above-header {
