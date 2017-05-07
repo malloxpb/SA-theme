@@ -233,7 +233,7 @@ class Event_Preview extends WP_Widget {
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'post_status' => 'publish',
-
+				'posts_per_page' => 20,
             ];
             $loop = new WP_Query($eventargs);
             while ($loop->have_posts()) {
