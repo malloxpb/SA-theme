@@ -31,7 +31,7 @@ add_action('widgets_init', function() {
 		'name'          => __('Above the nav bar', 'sydney'),
 		'id'            => 'above-header',
 		'description'   => '',
-		'before_widget' => '<div class="above-header hide-on-mobile hide-on-tablet">',
+		'before_widget' => '<div class="above-header">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
@@ -229,11 +229,10 @@ class Event_Preview extends WP_Widget {
             <?php
             $eventargs = [
             	'category_name' => 'club-events',
-				'post_type'        => 'post',
+				'post_type' => 'post',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'post_status' => 'publish',
-
 
             ];
             $loop = new WP_Query($eventargs);
@@ -242,17 +241,17 @@ class Event_Preview extends WP_Widget {
             ?>
     		<div class="item grid-container">
         		<a class="owl-coverlink" href="<?php echo esc_url( get_permalink() ); ?>"></a>
-    			<div class="grid-33">
+    			<div class="grid-25 tablet-grid-20 mobile-grid-50">
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
-				<div class="grid-66">
+				<div class="grid-75 tablet-grid-80 mobile-grid-50">
 					<h3>
 					<?php
 						$title = get_the_title();
-						if (strlen($title) <= 11) {
+						if (strlen($title) <= 20) {
 							echo $title;
 						} else {
-							echo substr($title, 0, 11) . "...";
+							echo substr($title, 0, 20) . "...";
 						}
 					?>
 					</h3><br>

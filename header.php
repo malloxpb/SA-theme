@@ -6,7 +6,8 @@
  *
  * @package Sydney
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -38,10 +39,23 @@
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sydney' ); ?></a>
-
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 	<?php dynamic_sidebar('above-header'); ?>
 	<div id="scroller-anchor"></div>
+	
+	<button id="menu-button-close" class="menu-slide-button close hide-on-desktop" type="button">
+	    <i class="fa fa-times" aria-hidden="true"></i>
+	</button>
+	<!-- reposive menu  -->
+	<div id="menu-mobile">
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'mobile_menu',
+			'container' => 'nav',
+		));
+		?>
+	</div>
+
 	<header id="masthead" class="site-header <?php if (!is_front_page()) echo "not-front-page-header" ?>" role="banner">
 		<div class="alert hide-on-mobile">
             <div class="grid-container">
@@ -59,10 +73,12 @@
 		        <?php endif; ?>
 				</div>
 				<div class="grid-66 tablet-grid-33 mobile-grid-30">
-					<div class="btn-menu"></div>
 					<nav id="mainnav" class="mainnav" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 					</nav><!-- #site-navigation -->
+					<button id="menu-button-open" class="menu-slide-button open hide-on-desktop" type="button">
+					    <i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -71,6 +87,7 @@
 	<?php do_action('sydney_after_header'); ?>
 
 	<?php if (is_front_page()): ?>
+	<div class="customized-slider-width"></div>
 	<div class="sydney-hero-area">
 		<div class="loading-container">
 		    <div class="pulse"></div>

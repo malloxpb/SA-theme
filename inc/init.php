@@ -50,9 +50,10 @@ function sydney_setup() {
 	add_image_size('sydney-extra-small-thumb', 48, 48, true);
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'sydney' ),
-	) );
+	register_nav_menus(array(
+		'primary' => __('Primary Menu', 'sydney'),
+		'mobile_menu' => __('Mobile Menu', 'sydney'),
+	));
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
