@@ -24,7 +24,7 @@ function sydney_scripts() {
 	wp_enqueue_style( 'sydney-font-awesome', get_template_directory_uri() . '/static/fonts/font-awesome.min.css' );
 	wp_enqueue_style( 'sydney-ie9', get_template_directory_uri() . '/static/css/ie9.css', array( 'sydney-style' ) );
 	wp_enqueue_style( 'sydney-unsemantic-grid', get_template_directory_uri() . '/static/css/unsemantic-grid/unsemantic-grid-responsive-tablet.css' );
-	wp_enqueue_style('sydney-sidebar', '//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.0.1/jquery.mmenu.all.css', false, '6.0.1');
+	wp_enqueue_style('sydney-sidebar', '//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.0.2/jquery.mmenu.all.css', false, '6.0.2');
 	wp_enqueue_style('sydney-hamburger', get_template_directory_uri() . '/static/css/hamburgers.css', false, '0.8.1');
 
 	wp_style_add_data( 'sydney-ie9', 'conditional', 'lte IE 9' );
@@ -37,7 +37,7 @@ function sydney_scripts() {
 	wp_enqueue_script('sydney-owljs', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js', ['jquery'], '2.2.1', true);
 	wp_enqueue_script( 'sydney-customizedjs', get_template_directory_uri() . '/static/js/custom-initializer.js', array('jquery'), STATIC_VERSION, true );
 	wp_enqueue_script('sydney-snapwidget', '//snapwidget.com/js/snapwidget.js', ['jquery'], '', true);
-	wp_enqueue_script('sydney-sidebar', '//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.0.1/jquery.mmenu.all.min.js', ['jquery'], '6.0.1', true);
+	wp_enqueue_script('sydney-sidebar', '//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.0.2/jquery.mmenu.all.min.js', ['jquery'], '6.0.2', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

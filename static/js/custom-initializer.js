@@ -82,18 +82,18 @@ jQuery(function($) {
 	    });
 
 	    var api = sidebarMenu.data('mmenu');
-	   	$('.menu-slide-button').on('click', function() {
+	   	$('#menu-button').on('click', function() {
 	        api.open();
 	    });
 
-	    api.bind( "opened", function() {
+	    api.bind( "openPanel:finish", function() {
 		   setTimeout(function() {
-		      $('.menu-slide-button').addClass( "is-active" );
+		      $('#menu-button').addClass( "is-active" );
 		   }, 100);
 		});
-		api.bind( "closed", function() {
+		api.bind( "closePanel", function() {
 		   setTimeout(function() {
-		      $('.menu-slide-button').removeClass( "is-active" );
+		      $('#menu-button').removeClass( "is-active" );
 		   }, 100);
 		});
 		

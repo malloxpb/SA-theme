@@ -566,7 +566,6 @@ Header
 	}
 
 	.site-header.float-header {
-		background-color: rgba(0,0,0,0.9);
 		border-bottom: 1px solid #000;
 	}
 	.site-header.float-header #mainnav {
@@ -2663,10 +2662,6 @@ Panels
 		}
 		.site-header {
 			position: absolute;
-			background-color: rgba(0,0,0,0.9);
-		}
-		.site-header.has-header {
-			background-color: rgba(0,0,0,0.9);
 		}
 		.header-clone {
 			display: none;

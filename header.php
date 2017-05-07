@@ -43,7 +43,7 @@
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 	<?php dynamic_sidebar('above-header'); ?>
 	<div id="scroller-anchor"></div>
-	<button class="hamburger hamburger--spring menu-slide-button hide-on-desktop" type="button">
+	<button id="menu-button" class="hamburger hamburger--spring menu-slide-button hide-on-desktop" type="button">
 	    <span class="hamburger-box">
 	        <span class="hamburger-inner"></span>
 	    </span>
