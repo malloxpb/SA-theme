@@ -39,14 +39,12 @@
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sydney' ); ?></a>
-
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 	<?php dynamic_sidebar('above-header'); ?>
 	<div id="scroller-anchor"></div>
-	<button id="menu-button" class="hamburger hamburger--spring menu-slide-button hide-on-desktop" type="button">
-	    <span class="hamburger-box">
-	        <span class="hamburger-inner"></span>
-	    </span>
+	
+	<button id="menu-button-close" class="menu-slide-button close hide-on-desktop" type="button">
+	    <i class="fa fa-times" aria-hidden="true"></i>
 	</button>
 	<!-- reposive menu  -->
 	<div id="menu-mobile">
@@ -78,6 +76,9 @@
 					<nav id="mainnav" class="mainnav" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 					</nav><!-- #site-navigation -->
+					<button id="menu-button-open" class="menu-slide-button open hide-on-desktop" type="button">
+					    <i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
 				</div>
 			</div>
 		</div>

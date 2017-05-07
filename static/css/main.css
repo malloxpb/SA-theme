@@ -730,11 +730,26 @@ Header
 /*--------------------------------------------------------------
 Mobile navigation
 --------------------------------------------------------------*/
-.menu-slide-button {
+#menu-mobile {
+	display: none !important;
+}
+.menu-slide-button.open {
 	right: 0;
-    top: 68px;
     z-index: 10000;
     position: absolute;
+    background: transparent;
+    border: none;
+}
+.menu-slide-button.open i:before,
+.menu-slide-button.close i:before {
+	font-size: 25px;
+}
+.menu-slide-button.close {
+	position: fixed;
+	right: -450px;
+	top: 0;
+    background: transparent;
+    border: none;
 }
 .menu-slide-button:hover {
 	border: none;
@@ -742,14 +757,8 @@ Mobile navigation
 .menu-slide-button:focus {
 	outline: none;
 }
-.menu-slide-button .hamburger-inner,
-.menu-slide-button .hamburger-inner:before,
-.menu-slide-button .hamburger-inner:after {
-	width: 30px;
-	background-color: #fff;
-}
-#menu-mobile {
-	display: none !important;
+ul.menu.mm-listview {
+    padding-top: 50px;
 }
 /*--------------------------------------------------------------
 Layout

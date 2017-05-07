@@ -25,7 +25,6 @@ function sydney_scripts() {
 	wp_enqueue_style( 'sydney-ie9', get_template_directory_uri() . '/static/css/ie9.css', array( 'sydney-style' ) );
 	wp_enqueue_style( 'sydney-unsemantic-grid', get_template_directory_uri() . '/static/css/unsemantic-grid/unsemantic-grid-responsive-tablet.css' );
 	wp_enqueue_style('sydney-sidebar', '//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.0.2/jquery.mmenu.all.css', false, '6.0.2');
-	wp_enqueue_style('sydney-hamburger', get_template_directory_uri() . '/static/css/hamburgers.css', false, '0.8.1');
 
 	wp_style_add_data( 'sydney-ie9', 'conditional', 'lte IE 9' );
 

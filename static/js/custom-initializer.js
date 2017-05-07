@@ -82,21 +82,12 @@ jQuery(function($) {
 	    });
 
 	    var api = sidebarMenu.data('mmenu');
-	   	$('#menu-button').on('click', function() {
+	   	$('#menu-button-open').on('click', function() {
 	        api.open();
 	    });
-
-	    api.bind( "openPanel:finish", function() {
-		   setTimeout(function() {
-		      $('#menu-button').addClass( "is-active" );
-		   }, 100);
-		});
-		api.bind( "closePanel", function() {
-		   setTimeout(function() {
-		      $('#menu-button').removeClass( "is-active" );
-		   }, 100);
-		});
-		
+		$('#menu-button-close').on('click', function() {
+	        api.close();
+	    });
 	}
 
 	function resizeSlider() {
