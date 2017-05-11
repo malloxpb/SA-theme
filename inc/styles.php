@@ -50,36 +50,6 @@ function sydney_custom_styles($custom) {
     $menu_size = get_theme_mod( 'menu_size', '14' );
     if ($menu_size) {
         $custom .= "#mainnav ul li a { font-size:" . intval($menu_size) . "px; }"."\n";
-    }    	    	
-	//H1 size
-	$h1_size = get_theme_mod( 'h1_size','52' );
-	if ($h1_size) {
-		$custom .= "h1 { font-size:" . intval($h1_size) . "px; }"."\n";
-	}
-    //H2 size
-    $h2_size = get_theme_mod( 'h2_size','42' );
-    if ($h2_size) {
-        $custom .= "h2 { font-size:" . intval($h2_size) . "px; }"."\n";
-    }
-    //H3 size
-    $h3_size = get_theme_mod( 'h3_size','32' );
-    if ($h3_size) {
-        $custom .= "h3 { font-size:" . intval($h3_size) . "px; }"."\n";
-    }
-    //H4 size
-    $h4_size = get_theme_mod( 'h4_size','25' );
-    if ($h4_size) {
-        $custom .= "h4 { font-size:" . intval($h4_size) . "px; }"."\n";
-    }
-    //H5 size
-    $h5_size = get_theme_mod( 'h5_size','20' );
-    if ($h5_size) {
-        $custom .= "h5 { font-size:" . intval($h5_size) . "px; }"."\n";
-    }
-    //H6 size
-    $h6_size = get_theme_mod( 'h6_size','18' );
-    if ($h6_size) {
-        $custom .= "h6 { font-size:" . intval($h6_size) . "px; }"."\n";
     }
     //Body size
     $body_size = get_theme_mod( 'body_size', '14' );
