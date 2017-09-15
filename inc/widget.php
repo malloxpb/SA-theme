@@ -58,9 +58,9 @@ class Sydney_Contact_Info extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array('classname' => 'sydney_contact_info_widget', 'description' => __( 'Display your contact info', 'sydney') );
         parent::__construct(false, $name = __('Sydney: Contact info', 'sydney'), $widget_ops);
-		$this->alt_option_name = 'sydney_contact_info';	
+		$this->alt_option_name = 'sydney_contact_info';
     }
-	
+
 	function form($instance) {
 
 		$title    = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
@@ -81,7 +81,7 @@ class Sydney_Contact_Info extends WP_Widget {
 	<input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo $phone; ?>" size="3" /></p>
 
 	<p><label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Enter your email address', 'sydney' ); ?></label>
-	<input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo $email; ?>" size="3" /></p>	
+	<input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo $email; ?>" size="3" /></p>
 
 	<?php
 	}
@@ -95,11 +95,11 @@ class Sydney_Contact_Info extends WP_Widget {
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
 		if ( isset($alloptions['sydney_contact_info']) )
-			delete_option('sydney_contact_info');		  
-		  
+			delete_option('sydney_contact_info');
+
 		return $instance;
 	}
-		
+
 	function widget($args, $instance) {
 		$cache = array();
 		if (! $this->is_preview()) {
@@ -129,9 +129,9 @@ class Sydney_Contact_Info extends WP_Widget {
 		$email   	= isset($instance['email'] ) ? antispambot(esc_html( $instance['email'])) : '';
 
 		echo $before_widget;
-		
+
 		if ($title) echo $before_title . $title . $after_title;
-		
+
 		if ($address) {
 			echo '<div class="contact-address">';
 			echo '<span><i class="fa fa-home"></i></span>' . $address;
@@ -146,7 +146,7 @@ class Sydney_Contact_Info extends WP_Widget {
 			echo '<div class="contact-email">';
 			echo '<span><i class="fa fa-envelope"></i></span>' . '<a href="mailto:' . $email . '">' . $email . '</a>';
 			echo '</div>';
-		}				
+		}
 
 		echo $after_widget;
 
@@ -158,7 +158,7 @@ class Sydney_Contact_Info extends WP_Widget {
 			ob_end_flush();
 		}
 	}
-	
+
 }
 
 register_widget('Sydney_Contact_Info');
@@ -174,11 +174,11 @@ class Facebook_Widget extends WP_Widget {
 	function widget($args, $instance) {
 		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		// default facebook page 
+		// default facebook page
 		$facebook = "https://www.facebook.com/plattsburghsa/?__mref=message_bubble";
 
 		echo $args['before_widget'];
-		
+
 		if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce">' . $instance['title'] . '</span>' . $args['after_title'];
 		}
@@ -187,11 +187,11 @@ class Facebook_Widget extends WP_Widget {
 		<!-- facebook plugin -->
 		<div class="fb-page"
 		  data-lazy-widget="facebook"
-		  data-href="<?php echo $facebook; ?>" 
+		  data-href="<?php echo $facebook; ?>"
 		  data-width="340"
 		  data-hide-cover="false"
 		  data-show-facepile="true"></div>
-		
+
 		<?php
 		echo $args['after_widget'];
 	}
@@ -240,7 +240,7 @@ class Event_Preview extends WP_Widget {
                 $loop->the_post();
             ?>
     		<div class="item grid-container">
-        		<a class="owl-coverlink" href="<?php echo esc_url( get_permalink() ); ?>"></a>
+        		<a class="owl-coverlink" href="<?php // echo esc_url( get_permalink() ); ?>"></a>
     			<div class="grid-25 tablet-grid-20 mobile-grid-50">
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
@@ -349,12 +349,12 @@ class Event_Listing extends WP_Widget {
 		$postslist = new WP_Query($args);
 
 		if ($postslist->have_posts()) :
-	        while ($postslist->have_posts()) : 
-	        	$postslist->the_post(); 
+	        while ($postslist->have_posts()) :
+	        	$postslist->the_post();
 	    		get_template_part( 'page-templates/content', 'post' );
 	        endwhile;
 	    endif;
-			
+
         echo $args['after_widget'];
 	}
 
