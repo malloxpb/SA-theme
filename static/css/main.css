@@ -108,7 +108,7 @@ Alignments
 .widget_search .search-submit {
 	display: none;
 }
-form.search-form label, 
+form.search-form label,
 form.search-form input.search-field {
 	width: 100%;
 }
@@ -506,7 +506,7 @@ Header
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
-	}	
+	}
 	.header-image {
 		display: none;
 		position: relative;
@@ -529,7 +529,7 @@ Header
 	}
 	.site-description:empty {
 		margin: 0;
-	}	
+	}
 	.site-header.fixed {
 		position: fixed;
 	}
@@ -893,6 +893,7 @@ Layout
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+		cursor: default;
 	}
 	.item .grid-25 {
 		padding: 10px 0 10px 0;
@@ -2664,7 +2665,7 @@ Panels
 		}
 		.header-clone {
 			display: none;
-		}		
+		}
 		.posts-navigation {
 			overflow: hidden;
 			margin-bottom: 30px;
@@ -2837,4 +2838,4 @@ Panels
 			    -ms-flex-align: center;
 			        align-items: center;
 		}
-	}	
+	}

@@ -5,7 +5,7 @@
  * @package Sydney
  */
 
-define('STATIC_VERSION', '00086');
+define('STATIC_VERSION', '00087');
 
 require get_template_directory() . '/inc/init.php';
 require get_template_directory() . '/inc/action-filters.php';
