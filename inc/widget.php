@@ -240,7 +240,7 @@ class Event_Preview extends WP_Widget {
                 $loop->the_post();
             ?>
     		<div class="item grid-container">
-        		<a class="owl-coverlink" href="<?php // echo esc_url( get_permalink() ); ?>"></a>
+        		<!-- <a class="owl-coverlink" href="<?php // echo esc_url( get_permalink() ); ?>"></a> -->
     			<div class="grid-25 tablet-grid-20 mobile-grid-50">
 					<?php the_post_thumbnail('sydney-extra-small-thumb'); ?>
 				</div>
