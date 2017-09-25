@@ -79,7 +79,7 @@ function sydney_posted_on() {
 
 	$posted_on = sprintf(
 		_x( 'Posted on %s', 'post date', 'sydney' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
 	$byline = sprintf(
@@ -254,8 +254,8 @@ add_action( 'save_post',     'sydney_category_transient_flusher' );
  * @param int $range
  */
 
-function kriesi_pagination($pages = '', $range = 2) {  
-    $showitems = ($range * 2)+1;  
+function kriesi_pagination($pages = '', $range = 2) {
+    $showitems = ($range * 2)+1;
 
     global $paged;
 
@@ -292,7 +292,7 @@ function kriesi_pagination($pages = '', $range = 2) {
         // 2 arrows at the end of the pagination
         if ($paged < $pages && $showitems < $pages) {
          	echo "<a href='".get_pagenum_link($paged + 1) . "'>&rsaquo;</a>";
-        } 
+        }
         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) {
         	echo "<a href='".get_pagenum_link($pages) . "'>&raquo;</a>";
         }
