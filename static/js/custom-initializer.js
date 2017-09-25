@@ -17,7 +17,7 @@ jQuery(function($) {
 	    var move = function() {
 	        var st = $(window).scrollTop();
 	        var ot = $anchor.offset().top;
-	        var margin = ($('#wpadminbar').length) ? "" : "68px";
+	        var margin = ($('#wpadminbar').length) ? "" : "0px"; // 68 px
 	        if(st > 68) {
 	            $scroller.css({
 	                position: "fixed",
@@ -30,7 +30,7 @@ jQuery(function($) {
 	                $scroller.css({
 	                    position: "absolute",
 	                    top: margin,
-	                    background: "transparent",
+	                    background: "#000",
 	                });
 	                $('.alert').css('display', 'none');
 	            }
@@ -38,7 +38,7 @@ jQuery(function($) {
 	    };
 	    $(window).scroll(move);
 	    move();
-	} 
+	}
 
 	function owlInit() {
 		$('.owl-carousel').owlCarousel({
