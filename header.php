@@ -42,7 +42,7 @@
 	<?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
 	<?php dynamic_sidebar('above-header'); ?>
 	<div id="scroller-anchor"></div>
-	
+
 	<button id="menu-button-close" class="menu-slide-button close hide-on-desktop" type="button">
 	    <i class="fa fa-times" aria-hidden="true"></i>
 	</button>
@@ -66,10 +66,10 @@
             <div class="grid-container">
 				<div class="grid-33 tablet-grid-66 mobile-grid-70">
 		        <?php if ( get_theme_mod('site_logo') ) : ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+					<?php /* <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>">*/ ?><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /><?php /* </a> */ ?>
 		        <?php else : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>	        
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		        <?php endif; ?>
 				</div>
 				<div class="grid-66 tablet-grid-33 mobile-grid-30">
@@ -116,4 +116,4 @@
 
 	<div id="content" class="page-wrap">
 		<div class="grid-container content-wrapper">
-			<div class="row">	
+			<div class="row">
