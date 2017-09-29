@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="primary" class="content-area grid-70">
 		<main id="main" class="post-wrap" role="main">
 
-		<h2> Student Association activities </h2>
+		<h1> Student Association activities </h1>
 			<?php
 				$args = array(
 					'category_name'    => 'sa-events',
@@ -28,8 +28,8 @@ get_header(); ?>
 				$postslist = new WP_Query($args);
 
 				if ($postslist->have_posts()) :
-			        while ($postslist->have_posts()) : 
-			        	$postslist->the_post(); 
+			        while ($postslist->have_posts()) :
+			        	$postslist->the_post();
 			    		get_template_part( 'page-templates/content', 'post' );
 			        endwhile;
 			        wp_reset_postdata();

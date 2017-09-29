@@ -17,7 +17,7 @@
 		<div class="<?php if (has_post_thumbnail()) echo "grid-66"; ?>">
 			<div class="inner-content">
 				<header class="poster-header">
-					<?php the_title( sprintf( '<h1 class="poster-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+					<?php the_title( sprintf( '<h2 class="poster-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 				</header><!-- .poster-header -->
 
 				<div class="poster-content">
