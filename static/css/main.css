@@ -1496,7 +1496,7 @@ Widgets
 	}
 	.widget-area,
 	.widget-area  a {
-		color: #767676;
+		color: #fff;
 	}
 	/* widget popular posts */
 	.widget-popular-post .news .thumb {
@@ -1681,7 +1681,7 @@ Footer
 	}
 	.footer-widgets .widget-title {
 		text-transform: uppercase;
-		color: #767676;
+		color: #fff;
 		line-height: normal;
 		margin: 5px 0 0;
 	}
@@ -1746,7 +1746,7 @@ Bottom
 	}
 	.site-footer,
 	.site-footer a {
-		color: #666;
+		color: #fff;
 	}
 	.site-footer .socials {
 		margin: 0;

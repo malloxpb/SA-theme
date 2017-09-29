@@ -28,7 +28,7 @@ function sydney_custom_styles($custom) {
 		$custom .= ".site-header.float-header {padding:20px 0;}"."\n";
 	}
 	//Fonts
-	$body_fonts = get_theme_mod('body_font_family');	
+	$body_fonts = get_theme_mod('body_font_family');
 	$headings_fonts = get_theme_mod('headings_font_family');
 	if ( $body_fonts !='' ) {
 		$custom .= "body, #mainnav ul ul a { font-family:" . $body_fonts . "!important;}"."\n";
@@ -58,7 +58,7 @@ function sydney_custom_styles($custom) {
     }
 
 	//Header image
-	$header_bg_size = get_theme_mod('header_bg_size','cover');	
+	$header_bg_size = get_theme_mod('header_bg_size','cover');
 	$header_height = get_theme_mod('header_height','500');
 	$custom .= ".header-image { background-size:" . esc_attr($header_bg_size) . ";}"."\n";
 	$custom .= ".header-image { height:" . intval($header_height) . "px; }"."\n";
@@ -76,7 +76,7 @@ function sydney_custom_styles($custom) {
 		$custom .= "#mainnav ul ul li { display: block; text-align: left; float:left;}"."\n";
 		$custom .= ".site-logo, .header-wrap .col-md-4 { margin-bottom: 15px; }"."\n";
 		$custom .= ".header-wrap .container > .row { display: block; }"."\n";
-	}	
+	}
 
 
 	//__COLORS
@@ -116,41 +116,41 @@ function sydney_custom_styles($custom) {
 	$sidebar_background = get_theme_mod( 'sidebar_background', '#ffffff' );
 	$custom .= "#secondary { background-color:#1C1E29}"."\n";
 	//Sidebar color
-	$sidebar_color = get_theme_mod( 'sidebar_color', '#767676' );
-	$custom .= "#secondary, #secondary a { color:" . esc_attr($sidebar_color) . "}"."\n";	
+	$sidebar_color = get_theme_mod( 'sidebar_color', '#fff' );
+	$custom .= "#secondary, #secondary a { color:" . esc_attr($sidebar_color) . "}"."\n";
 	//Footer widget area background
 	$footer_widgets_background = get_theme_mod( 'footer_widgets_background', '#252525' );
-	$custom .= ".footer-widgets { background-color:" . esc_attr($footer_widgets_background) . "}"."\n";	
+	$custom .= ".footer-widgets { background-color:" . esc_attr($footer_widgets_background) . "}"."\n";
 	//Footer widget area color
 	$footer_widgets_color = get_theme_mod( 'footer_widgets_color', '#fff' );
 	if ( $footer_widgets_color != '#fff' ) {
-		$custom .= "#sidebar-footer,#sidebar-footer a,.footer-widgets .widget-title { color:" . esc_attr($footer_widgets_color) . "}"."\n";	
+		$custom .= "#sidebar-footer,#sidebar-footer a,.footer-widgets .widget-title { color:" . esc_attr($footer_widgets_color) . "}"."\n";
 	}
 	//Footer background
 	$footer_background = get_theme_mod( 'footer_background', '#1c1c1c' );
-	$custom .= ".site-footer { background-color:" . esc_attr($footer_background) . "}"."\n";	
+	$custom .= ".site-footer { background-color:" . esc_attr($footer_background) . "}"."\n";
 	//Footer color
-	$footer_color = get_theme_mod( 'footer_color', '#666666' );
-	$custom .= ".site-footer,.site-footer a { color:" . esc_attr($footer_color) . "}"."\n";	
+	$footer_color = get_theme_mod( 'footer_color', '#fff' );
+	$custom .= ".site-footer,.site-footer a { color:" . esc_attr($footer_color) . "}"."\n";
 	//Rows overlay
 	$rows_overlay = get_theme_mod( 'rows_overlay', '#000000' );
-	$custom .= ".overlay { background-color:" . esc_attr($rows_overlay) . "}"."\n";	
+	$custom .= ".overlay { background-color:" . esc_attr($rows_overlay) . "}"."\n";
 
 	//Page wrapper padding
 	$pw_top_padding = get_theme_mod( 'wrapper_top_padding', '83' );
 	$pw_bottom_padding = get_theme_mod( 'wrapper_bottom_padding', '100' );
-	$custom .= ".page-wrap { padding-top:" . intval($pw_top_padding) . "px;}"."\n";	
-	$custom .= ".page-wrap { padding-bottom:" . intval($pw_bottom_padding) . "px;}"."\n";	
+	$custom .= ".page-wrap { padding-top:" . intval($pw_top_padding) . "px;}"."\n";
+	$custom .= ".page-wrap { padding-bottom:" . intval($pw_bottom_padding) . "px;}"."\n";
 
 
     $text_slide = get_theme_mod('textslider_slide', 0);
     if ( $text_slide ) {
-		$custom .= ".slide-inner { display:none;}"."\n";	
-		$custom .= ".slide-inner.text-slider-stopped { display:block;}"."\n";	
+		$custom .= ".slide-inner { display:none;}"."\n";
+		$custom .= ".slide-inner.text-slider-stopped { display:block;}"."\n";
     }
 
 
 	//Output all the styles
-	wp_add_inline_style( 'sydney-style', $custom );	
+	wp_add_inline_style( 'sydney-style', $custom );
 }
 add_action( 'wp_enqueue_scripts', 'sydney_custom_styles' );
