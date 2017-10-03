@@ -1089,10 +1089,13 @@ Hero section
 #slideshow .slides-navigation a:hover {
 	background: rgba(0, 0, 0, 0.4);
 }
-#slideshow .slides-navigation a i{
+#slideshow .slides-navigation a i {
 	color: #fff;
 	font-size: 20px;
 	z-index: 100;
+}
+#slideshow .slides-navigation a span {
+	display: none;
 }
 #slideshow .slides-navigation a.prev {
 	left: 10px;
