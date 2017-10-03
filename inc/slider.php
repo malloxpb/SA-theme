@@ -127,8 +127,8 @@ function sydney_slider_template() {
             <?php echo sydney_stop_text(); ?>
         <?php endif; ?>
         <nav class="slides-navigation">
-            <button class="next"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
-            <button href="#" class="prev"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <a href="#" class="next"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
         </nav>
     </div>
 
