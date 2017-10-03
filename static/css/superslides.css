@@ -26,14 +26,14 @@
   top: 46%;
   width: 100%;
 }
-.slides-navigation a {
+.slides-navigation button {
   position: absolute;
   display: block;
 }
-.slides-navigation a.prev {
+.slides-navigation button.prev {
   left: 0;
 }
-.slides-navigation a.next {
+.slides-navigation button.next {
   right: 0;
 }
 

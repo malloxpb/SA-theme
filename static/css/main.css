@@ -1072,7 +1072,7 @@ Hero section
 #slideshow .slides-navigation {
 	top: 39%;
 }
-#slideshow .slides-navigation a {
+#slideshow .slides-navigation button {
 	border: 2px solid #fff;
     border-radius: 30px;
     width: 40px;
@@ -1086,30 +1086,30 @@ Hero section
     -o-transition: background 0.15s ease;
     transition: background 0.15s ease;
 }
-#slideshow .slides-navigation a:hover {
+#slideshow .slides-navigation button:hover {
 	background: rgba(0, 0, 0, 0.4);
 }
-#slideshow .slides-navigation a i{
+#slideshow .slides-navigation button i{
 	color: #fff;
 	font-size: 20px;
 	z-index: 100;
 }
-#slideshow .slides-navigation a.prev {
+#slideshow .slides-navigation button.prev {
 	left: 10px;
 }
-#slideshow .slides-navigation a.prev i {
+#slideshow .slides-navigation button.prev i {
 	padding: 8px;
 }
-#slideshow .slides-navigation a.next {
+#slideshow .slides-navigation button.next {
 	right: 10px;
 }
-#slideshow .slides-navigation a.next i {
+#slideshow .slides-navigation button.next i {
     padding: 8px 0 0 12px;
 }
-#slideshow .slides-navigation a.prev i:before {
+#slideshow .slides-navigation button.prev i:before {
 	content: "\f053";
 }
-#slideshow .slides-navigation a.next i:before {
+#slideshow .slides-navigation button.next i:before {
 	content: "\f054";
 }
 #slideshow .slides-pagination {
