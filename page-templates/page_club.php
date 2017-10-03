@@ -12,7 +12,7 @@ Template Name: Club page template
 		<main id="main" class="site-main" role="main">
 
 			<h1 class="page-club-title"> <?php echo get_the_title(); ?> </h1>
-		
+
 			<div id="masonry-grid">
 				<div class="grid-container">
 				<?php
@@ -29,12 +29,14 @@ Template Name: Club page template
 				    $postslist = new WP_Query($args);
 
 				    if ($postslist->have_posts()):
-				        while ($postslist->have_posts()): 
-				        	$postslist->the_post(); 
+				        while ($postslist->have_posts()):
+				        	$postslist->the_post();
 				    	?>
 						    <article class="grid-item club-item clearfix grid-33 tablet-grid-50 mobile-grid-100">
 								<div class="club-inner">
-									<a class="club-link" href="<?php the_permalink(); ?>"></a>
+									<a class="club-link" href="<?php the_permalink(); ?>">
+										<span>Link to the club page</span>
+									</a>
 									<div class="club-thumbnail">
 										<?php the_post_thumbnail('sydney-medium-thumb'); ?>
 									</div>
@@ -44,7 +46,7 @@ Template Name: Club page template
 									</div>
 								</div>
 							</article>
-				    	<?php  
+				    	<?php
 				        endwhile;
 				        echo '</div></div>';
 				        kriesi_pagination($postslist->max_num_pages);

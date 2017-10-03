@@ -959,6 +959,9 @@ Layout
 	    left: 0;
 	    z-index: 1;
 	}
+	.club-link span {
+		display: none;
+	}
 /* about us page */
 	.aboutus-inner {
 		border: 1px solid;
