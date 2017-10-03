@@ -44,6 +44,7 @@
 	<div id="scroller-anchor"></div>
 
 	<button id="menu-button-close" class="menu-slide-button close hide-on-desktop" type="button">
+		<span>Button for navigation menu</span>
 	    <i class="fa fa-times" aria-hidden="true"></i>
 	</button>
 	<!-- reposive menu  -->
@@ -77,6 +78,7 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 					</nav><!-- #site-navigation -->
 					<button id="menu-button-open" class="menu-slide-button open hide-on-desktop" type="button">
+						<span>Button for navigation menu</span>
 					    <i class="fa fa-bars" aria-hidden="true"></i>
 					</button>
 				</div>

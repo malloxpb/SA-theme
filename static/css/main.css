@@ -727,6 +727,9 @@ Mobile navigation
 #menu-mobile {
 	display: none !important;
 }
+.menu-slide-button span {
+	display: none;
+}
 .menu-slide-button.open {
 	right: 0;
     z-index: 10000;
