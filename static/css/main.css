@@ -1701,6 +1701,13 @@ Footer
 		line-height: normal;
 		margin: 5px 0 0;
 	}
+	.widget-area, .widget-area  a:hover,
+	.widget-area, .widget-area  a:focus {
+		color: #777;
+	}
+	.sow-contact-form strong {
+		color: #fff;
+	}
 	/* widget info */
 	.widget-info .logo-footer {
 		margin-bottom: 36px;
@@ -2037,10 +2044,11 @@ Panels
 -------------------------------------------------------------- */
 
 .sydney_contact_info_widget span {
-	color: #767676;
+	color: #fff;
 	margin-right: 15px;
 }
 .sydney_contact_info_widget div {
+	color: #fff;
 	margin-bottom: 15px;
 }
 /* Icon List
