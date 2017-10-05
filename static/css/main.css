@@ -613,7 +613,10 @@ Header
 		color: #fff;
 	}
 	#mainnav ul li a:hover {
-		color: #fff;
+		color: #777;
+	}
+	#mainnav ul li a:focus {
+		color: #777;
 	}
 	#mainnav ul ul a {
 		width: 180px;
