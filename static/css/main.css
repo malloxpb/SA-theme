@@ -1465,6 +1465,10 @@ Blog
 /*--------------------------------------------------------------
 Widgets
 --------------------------------------------------------------*/
+	#secondary, #secondary a:hover,
+	#secondary, #secondary a:focus {
+		color: #777;
+	}
 	div#secondary {
 	    padding: 30px;
 	}
