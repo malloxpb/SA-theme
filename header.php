@@ -63,11 +63,12 @@
                 <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
             </div>
         </div>
+		<?php /*
 		<div class="header-wrap">
             <div class="grid-container">
 				<div class="grid-33 tablet-grid-66 mobile-grid-70">
 		        <?php if ( get_theme_mod('site_logo') ) : ?>
-					<?php /* <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>">*/ ?><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /><?php /* </a> */ ?>
+					<img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" />
 		        <?php else : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -83,6 +84,38 @@
 					</button>
 				</div>
 			</div>
+		</div>
+		*/ ?>
+		<!-- Simple header with scrollable tabs. -->
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		    <header class="mdl-layout__header">
+			    <div class="mdl-layout__header-row">
+			        <!-- Title -->
+			        <span class="mdl-layout-title">Title</span>
+			        <!-- Add spacer, to align navigation to the right -->
+			        <div class="mdl-layout-spacer"></div>
+			        <!-- Navigation. We hide it in small screens. -->
+			        <nav class="mdl-navigation mdl-layout--large-screen-only">
+				        <a class="mdl-navigation__link" href="">Link</a>
+				        <a class="mdl-navigation__link" href="">Link</a>
+				        <a class="mdl-navigation__link" href="">Link</a>
+				        <a class="mdl-navigation__link" href="">Link</a>
+			        </nav>
+			    </div>
+		    </header>
+		<div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title">Title</span>
+		    <nav class="mdl-navigation">
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		    </nav>
+		</div>
+		    <main class="mdl-layout__content">
+		    	<div class="page-content"><!-- Your content goes here --></div>
+		    </main>
 		</div>
 	</header><!-- #masthead -->
 

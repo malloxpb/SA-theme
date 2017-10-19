@@ -496,10 +496,18 @@ Header
 		max-height: 50px;
 	}
 	.site-header {
-		position: absolute;
 		width: 100%;
 		z-index: 1000;
 		padding: 0 0 5px 0;
+	}
+	.mdl-layout__header {
+		background: rgb(93, 2, 2) !important;
+	}
+	.mdl-layout--fixed-header {
+		position: fixed !important;
+	}
+	.mdl-layout {
+		z-index: 100;
 	}
 	.site-header.not-front-page-header {
 		background: rgb(93, 2, 2) !important;
@@ -2683,9 +2691,6 @@ Panels
 		}
 		.btn-menu {
 			display: block;
-		}
-		.site-header {
-			position: absolute;
 		}
 		.header-clone {
 			display: none;

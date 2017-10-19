@@ -10,36 +10,6 @@ jQuery(function($) {
 		});
 	}
 
-	function moveScroller() {
-	    var $anchor = $("#scroller-anchor");
-	    var $scroller = $('.site-header');
-
-	    var move = function() {
-	        var st = $(window).scrollTop();
-	        var ot = $anchor.offset().top;
-	        var margin = ($('#wpadminbar').length) ? "" : "0px"; // 68 px
-	        if(st > 68) {
-	            $scroller.css({
-	                position: "fixed",
-	                top: "0px",
-	                background: "#5d0202",
-	            });
-	            $('.alert').css('display', 'inherit');
-	        } else {
-	            if(st <= 68) {
-	                $scroller.css({
-	                    position: "absolute",
-	                    top: margin,
-	                    background: "#000",
-	                });
-	                $('.alert').css('display', 'none');
-	            }
-	        }
-	    };
-	    $(window).scroll(move);
-	    move();
-	}
-
 	function owlInit() {
 		$('.owl-carousel').owlCarousel({
 			nav: true,
@@ -102,7 +72,6 @@ jQuery(function($) {
 
 	$(document).ready(function(){
 		owlInit();
-		moveScroller();
 		menuMobile();
 		unsemanticGrid();
 		resizeSlider();
