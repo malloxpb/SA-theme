@@ -272,9 +272,9 @@ Repeatable Patterns
 				box-sizing: border-box;
 	}
 	body {
-		font: 14px/1.7 "Source Sans Pro", sans-serif;
+		font: 14px/1.7 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		background: #fff;
-		color: #000;
+		color: #757575;
 	}
 	a {
 		text-decoration: none;
@@ -286,7 +286,7 @@ Repeatable Patterns
 	}
 	a:hover,
 	a:focus {
-		color: #443f3f;
+		color: #757575;
 		text-decoration: none;
 		outline: 0;
 		-webkit-transition: all 0.3s ease-in-out;
@@ -314,26 +314,26 @@ Repeatable Patterns
 	strong {
 		font-weight: 600;
 	}
-	h1 { font: 52px/1.1 "Raleway", sans-serif;}
-	h2 { font: 42px/1.1 "Raleway", sans-serif;}
-	h3 { font: 32px/1.1 "Raleway", sans-serif;}
-	h4 { font: 25px/1.1 "Raleway", sans-serif;}
-	h5 { font: 20px/1.1 "Raleway", sans-serif;}
-	h6 { font: 18px/1.1 "Raleway", sans-serif;}
+	h1 { font: 52px/1.1 'Roboto', 'Helvetica', 'Arial', sans-serif;}
+	h2 { font: 42px/1.1 'Roboto', 'Helvetica', 'Arial', sans-serif;}
+	h3 { font: 32px/1.1 'Roboto', 'Helvetica', 'Arial', sans-serif;}
+	h4 { font: 25px/1.1 'Roboto', 'Helvetica', 'Arial', sans-serif;}
+	h5 { font: 20px/1.1 'Roboto', 'Helvetica', 'Arial', sans-serif;}
+	h6 { font: 18px/1.1 'Roboto', 'Helvetica', 'Arial', sans-serif;}
 	h1, h2, h3, h4, h5, h6 {
-		color: #443f3f;
+		color: #757575;
 		font-weight: 600;
 		margin: 10px 0 24px;
 	}
 	.text-white { color: #fff !important; }
-	.text-dark { color: #443f3f !important;}
+	.text-dark { color: #757575 !important;}
 	button,
 	input[type="button"],
 	input[type="reset"],
 	input[type="submit"] {
 		position: relative;
 		display: inline-block;
-		font-family: "Raleway", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		font-size: 13px;
 		line-height: 24px;
 		font-weight: 700;
@@ -501,13 +501,16 @@ Header
 		padding: 0 0 5px 0;
 	}
 	.mdl-layout__header {
-		background: rgb(93, 2, 2) !important;
+		background: #fff !important;
 	}
 	.mdl-layout--fixed-header {
 		position: fixed !important;
 	}
 	.mdl-layout {
 		z-index: 100;
+	}
+	.mdl-layout__drawer-button .material-icons {
+		color: rgba(0,0,0,0.54);
 	}
 	.site-header.not-front-page-header {
 		background: rgb(93, 2, 2) !important;
@@ -611,7 +614,7 @@ Header
 		position: relative;
 		display: block;
 		font-size: 14px;
-		font-family: "Raleway", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		color: #fff;
 		font-weight: 500;
 		text-decoration: none;
@@ -628,7 +631,7 @@ Header
 	}
 	#mainnav ul ul a {
 		width: 180px;
-		font-family: "Source Sans Pro", sans-serif !important;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 	}
 	#mainnav > ul > li:last-child {
 		padding-right: 0;
@@ -1039,7 +1042,7 @@ Hero section
 		margin: 0;
 		letter-spacing: 1px;
 		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-		font-family: 'Cedarville Cursive', cursive;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 	}
 	.text-slider .maintitle {
 		position: relative;
@@ -1570,7 +1573,7 @@ Widgets
 		color: #5e5e5e;
 	}
 	.instagram-title {
-		color: #000;
+		color: #757575;
 	}
 /*--------------------------------------------------------------
 Blog single
@@ -1973,7 +1976,7 @@ Panels
 	}
 	.roll-counter .name-count,
 	.roll-counter .numb-count {
-		font-family: "Raleway", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 	}
 	.roll-counter .name-count {
 		font-size: 14px;
@@ -2122,7 +2125,7 @@ Panels
 	.roll-button {
 		position: relative;
 		display: inline-block;
-		font-family: "Raleway", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		font-size: 13px;
 		line-height: 24px;
 		font-weight: 700;
@@ -2311,7 +2314,7 @@ Panels
 		margin-right: 2px;
 	}
 	.roll-tabs .menu-tab li a {
-		font-family: "Raleway", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		font-size: 14px;
 		font-weight: 500;
 		display: block;
@@ -2519,7 +2522,7 @@ Panels
 		background-color: #5d0202;
 	}
 	.roll-testimonials .name {
-		font-family: "Raleway", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		font-size: 18px;
 		font-weight: 500;
 		color: #5d0202;
