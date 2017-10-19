@@ -23,7 +23,7 @@ function sydney_custom_styles($custom) {
 	$custom = '';
 	//Header
 	if ( (get_theme_mod('front_header_type','slider') == 'nothing' && is_front_page()) || (get_theme_mod('site_header_type') == 'nothing' && !is_front_page()) ) {
-		$menu_bg_color = get_theme_mod( 'menu_bg_color', '#000000' );
+		$menu_bg_color = get_theme_mod( 'menu_bg_color', '#fff' );
 		$rgba 	= sydney_hex2rgba($menu_bg_color, 0.9);
 		$custom .= ".site-header.float-header {padding:20px 0;}"."\n";
 	}
@@ -88,7 +88,7 @@ function sydney_custom_styles($custom) {
 	$custom .= ".roll-socials li a:hover,.roll-socials li a,.roll-button.light:hover,.roll-button.border,.roll-button,.roll-icon-list .icon,.roll-icon-box .icon,.owl-theme .owl-controls .owl-page span,.comment .comment-detail,.widget-tags .tag-list a:hover,.blog-pagination ul li,.hentry blockquote,.error-wrap #search-submit:hover,textarea:focus,input[type=\"text\"]:focus,input[type=\"password\"]:focus,input[type=\"datetime\"]:focus,input[type=\"datetime-local\"]:focus,input[type=\"date\"]:focus,input[type=\"month\"]:focus,input[type=\"time\"]:focus,input[type=\"week\"]:focus,input[type=\"number\"]:focus,input[type=\"email\"]:focus,input[type=\"url\"]:focus,input[type=\"search\"]:focus,input[type=\"tel\"]:focus,input[type=\"color\"]:focus, button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"], .archive .team-social li a { border-color:" . esc_attr($primary_color) . "}"."\n";
 	}
 	//Menu background
-	$menu_bg_color = get_theme_mod( 'menu_bg_color', '#000000' );
+	$menu_bg_color = get_theme_mod( 'menu_bg_color', '#fff' );
 	$rgba = sydney_hex2rgba($menu_bg_color, 0.9);
 	$custom .= ".site-header.float-header { background-color:rgba(93,2,2,0.9);}" . "\n";
 	//Site title
@@ -98,7 +98,7 @@ function sydney_custom_styles($custom) {
 	$site_desc = get_theme_mod( 'site_desc_color', '#ffffff' );
 	$custom .= ".site-description { color:" . esc_attr($site_desc) . "}"."\n";
 	//Top level menu items color
-	$top_items_color = get_theme_mod( 'top_items_color', '#ffffff' );
+	$top_items_color = get_theme_mod( 'top_items_color', 'rgba(0,0,0,0.54)' );
 	$custom .= "#mainnav ul li a, #mainnav ul li::before { color:" . esc_attr($top_items_color) . "}"."\n";
 	//Sub menu items color
 	$submenu_items_color = get_theme_mod( 'submenu_items_color', '#ffffff' );
@@ -110,7 +110,7 @@ function sydney_custom_styles($custom) {
 	$slider_text = get_theme_mod( 'slider_text', '#ffffff' );
 	$custom .= ".text-slider .maintitle, .text-slider .subtitle { color:" . esc_attr($slider_text) . "}"."\n";
 	//Body
-	$body_text = get_theme_mod( 'body_text_color', '#000' );
+	$body_text = get_theme_mod( 'body_text_color', '#757575' );
 	$custom .= "body { color:" . esc_attr($body_text) . "}"."\n";
 	//Sidebar background
 	$sidebar_background = get_theme_mod( 'sidebar_background', '#ffffff' );
