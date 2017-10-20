@@ -746,6 +746,16 @@ Layout
 	.mdl-card__title {
 		min-height: 200px;
 		background: #000;
+		position: relative;
+	}
+	.card-title-background {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #000;
+		z-index: -1;
 	}
 	.mdl-card__title a {
 		color: #fff;
