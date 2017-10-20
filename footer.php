@@ -7,30 +7,30 @@
  * @package Sydney
  */
 ?>
-			</div>
+							</div>
+						</div>
+					</div><!-- #content -->
+
+					<?php do_action('sydney_before_footer'); ?>
+
+					<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+						<?php get_sidebar('footer'); ?>
+					<?php endif; ?>
+
+				    <a class="go-top"><i class="fa fa-angle-up"></i></a>
+
+					<footer id="colophon" class="site-footer" role="contentinfo">
+						<div class="site-info container">
+							<span> @2017 Student Association at <a class="footer-link" href="http://web.plattsburgh.edu/">State University of New York at Plattsburgh</a> </span>
+						</div><!-- .site-info -->
+					</footer><!-- #colophon -->
+
+					<?php do_action('sydney_after_footer'); ?>
+					<?php wp_footer(); ?>
+				</div>
+			</main>
 		</div>
-	</div><!-- #content -->
-
-	<?php do_action('sydney_before_footer'); ?>
-
-	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-		<?php get_sidebar('footer'); ?>
-	<?php endif; ?>
-
-    <a class="go-top"><i class="fa fa-angle-up"></i></a>
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info container">
-			<span> @2017 Student Association at <a class="footer-link" href="http://web.plattsburgh.edu/">State University of New York at Plattsburgh</a> </span>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-	<?php do_action('sydney_after_footer'); ?>
-	<?php wp_footer(); ?>
-</div>
-</main>
-</div>
-</div><!-- #page -->
+	</div><!-- #page -->
 
 
 
