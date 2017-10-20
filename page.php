@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="primary" class="content-area grid-70">
 		<main id="main" class="post-wrap" role="main">
 
-		<h1> Student Association activities </h1>
+		<h3> Student Association activities </h3>
 			<?php
 				$args = array(
 					'category_name'    => 'sa-events',
