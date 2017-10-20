@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("demo-card-wide mdl-card mdl-shadow--2dp"); ?>>
-	<div class="mdl-card__title" style="background:url('<?php if (has_post_thumbnail() && (get_theme_mod('index_feat_image') != 1)) { the_post_thumbnail_url('sydney-post-thumb'); } ?>')">
+	<div class="mdl-card__title" style="background:url('<?php if (has_post_thumbnail() && (get_theme_mod('index_feat_image') != 1)) { the_post_thumbnail_url('sydney-post-thumb'); } ?>');background-size:cover;background-repeat:none;">
 	    <?php the_title( sprintf( '<h2 class="poster-title mdl-card__title-text"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</div>
 
