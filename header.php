@@ -57,53 +57,33 @@
 		?>
 	</div>
 
-	<header id="masthead" class="site-header <?php if (!is_front_page()) echo "not-front-page-header" ?>" role="banner">
-		<div class="alert hide-on-mobile">
-            <div class="grid-container">
-                <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
-            </div>
-        </div>
-		<?php /*
-		<div class="header-wrap">
-            <div class="grid-container">
-				<div class="grid-33 tablet-grid-66 mobile-grid-70">
-		        <?php if ( get_theme_mod('site_logo') ) : ?>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header id="masthead" class="mdl-layout__header site-header <?php if (!is_front_page()) echo "not-front-page-header" ?>" role="banner">
+			<div class="alert hide-on-mobile">
+	            <div class="grid-container">
+	                <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
+	            </div>
+	        </div>
+		    <div class="mdl-layout__header-row">
+		        <!-- Title -->
+				<?php if ( get_theme_mod('site_logo') ) : ?>
 					<img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" />
 		        <?php else : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		        <?php endif; ?>
-				</div>
-				<div class="grid-66 tablet-grid-33 mobile-grid-30">
-					<nav id="mainnav" class="mainnav" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
-					</nav><!-- #site-navigation -->
-					<button id="menu-button-open" class="menu-slide-button open hide-on-desktop" type="button">
-						<span>Button for navigation menu</span>
-					    <i class="fa fa-bars" aria-hidden="true"></i>
-					</button>
-				</div>
-			</div>
-		</div>
-		*/ ?>
-		<!-- Simple header with scrollable tabs. -->
-		<!-- Always shows a header, even in smaller screens. -->
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		    <header class="mdl-layout__header">
-			    <div class="mdl-layout__header-row">
-			        <!-- Title -->
-			        <span class="mdl-layout-title">Title</span>
-			        <!-- Add spacer, to align navigation to the right -->
-			        <div class="mdl-layout-spacer"></div>
-			        <!-- Navigation. We hide it in small screens. -->
-			        <nav class="mdl-navigation mdl-layout--large-screen-only">
-				        <a class="mdl-navigation__link" href="">Link</a>
-				        <a class="mdl-navigation__link" href="">Link</a>
-				        <a class="mdl-navigation__link" href="">Link</a>
-				        <a class="mdl-navigation__link" href="">Link</a>
-			        </nav>
-			    </div>
-		    </header>
+		        <!-- Add spacer, to align navigation to the right -->
+		        <div class="mdl-layout-spacer"></div>
+		        <!-- Navigation. We hide it in small screens. -->
+				<nav id="mainnav" class="mainnav" role="navigation">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
+				</nav><!-- #site-navigation -->
+				<button id="menu-button-open" class="menu-slide-button open hide-on-desktop" type="button">
+					<span>Button for navigation menu</span>
+				    <i class="fa fa-bars" aria-hidden="true"></i>
+				</button>
+		    </div>
+	    </header>
 		<div class="mdl-layout__drawer">
 		    <span class="mdl-layout-title">Title</span>
 		    <nav class="mdl-navigation">
@@ -113,11 +93,10 @@
 		        <a class="mdl-navigation__link" href="">Link</a>
 		    </nav>
 		</div>
-		    <main class="mdl-layout__content">
-		    	<div class="page-content"><!-- Your content goes here --></div>
-		    </main>
-		</div>
-	</header><!-- #masthead -->
+	    <main class="mdl-layout__content">
+	    	<div class="page-content"><!-- Your content goes here --></div>
+	    </main>
+	</div>
 
 	<?php do_action('sydney_after_header'); ?>
 
