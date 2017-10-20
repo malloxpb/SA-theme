@@ -738,6 +738,21 @@ Header
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
+	.mdl-card {
+		width: 100% !important;
+		margin-bottom: 20px;
+	}
+	.mdl-card__title {
+		min-height: 200px;
+		background: #000;
+	}
+	.mdl-card__title a {
+		color: #fff;
+	}
+	.mdl-card__title a:hover,
+	.mdl-card__title a:focus {
+		color: #999;
+	}
 	.aside-image {
 		padding: 0;
 		position: relative;
@@ -1120,70 +1135,6 @@ Hero section
 .sydney-hero-area {
 	height: 92vh;
 }
-.loading-container {
-    position: absolute;
-    left: 50%;
-    top: 57%;
-    z-index: 10;
-}
-.loading-container .pulse {
-    border: 3px solid #5d0202;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    left: -15px;
-    top: -15px;
-    -webkit-animation: pulsate 1s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    animation: pulsate 1s ease-out;
-    animation-iteration-count: infinite;
-    border-radius: 30px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
- }
-
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1, 0.1);
-    opacity: 0.0;
-  }
-
-  50% {
-    opacity: 1.0;
-  }
-
-  100% {
-    -webkit-transform: scale(1.2, 1.2);
-    opacity: 0.0;
-  }
-}
-@-moz-keyframes pulsate {
-  0% {
-    -moz-transform: scale(0.1, 0.1);
-    opacity: 0.0;
-  }
-
-  50% {
-    opacity: 1.0;
-  }
-  100% {
-    -moz-transform: scale(1.2, 1.2);
-    opacity: 0.0;
-  }
-}
-@keyframes pulsate {
-  0% {
-    transform: scale(0.1, 0.1);
-    opacity: 0.0;
-  }
-  50% {
-    opacity: 1.0;
-  }
-  100% {
-    transform: scale(1.2, 1.2);
-    opacity: 0.0;
-  }
-}
 /*--------------------------------------------------------------
 Page title
 --------------------------------------------------------------*/
@@ -1272,7 +1223,6 @@ Blog
 	}
 	.content-area .hentry {
 		position: relative;
-		padding-bottom: 20px;
 	}
 	.content-area .hentry:first-child {
 		padding-top: 0;
@@ -1773,81 +1723,6 @@ Bottom
 		color: rgb(93, 2, 2);
 	}
 /*--------------------------------------------------------------
-Preloader
---------------------------------------------------------------*/
-	.preloader {
-	    background: none repeat scroll 0 0 #fff;
-	    height: 100%;
-	    opacity: 1;
-	    position: fixed;
-	    text-align: center;
-	    transition: all 0.2s ease 0s;
-	    width: 100%;
-	    z-index: 9999;
-	}
-	.preloader .spinner {
-	    height: 30px;
-	    left: 50%;
-	    margin-left: -15px;
-	    margin-top: -15px;
-	    position: relative;
-	    top: 50%;
-	    width: 30px;
-	}
-	.preloader .pre-bounce1,
-	.preloader .pre-bounce2 {
-	    -webkit-animation: 2s ease 0s normal none infinite bounce;
-	            animation: 2s ease 0s normal none infinite bounce;
-	    background-color: #de4939;
-	    border-radius: 50%;
-	    height: 100%;
-	    left: 0;
-	    opacity: 0.6;
-	    position: absolute;
-	    top: 0;
-	    width: 100%;
-	}
-	.preloader .pre-bounce2 {
-	    -webkit-animation-delay: -0.5s;
-	            animation-delay: -0.5s;
-	}
-	@-webkit-keyframes bounce {
-	  0%, 20%, 50%, 80%, 100% {
-	    -webkit-transform: translateY(0);
-	    transform: translateY(0);
-	  }
-
-	  40% {
-	    -webkit-transform: translateY(-30px);
-	    transform: translateY(-30px);
-	  }
-
-	  60% {
-	    -webkit-transform: translateY(-15px);
-	    transform: translateY(-15px);
-	  }
-	}
-
-	@keyframes bounce {
-	  0%, 20%, 50%, 80%, 100% {
-	    -webkit-transform: translateY(0);
-	    -ms-transform: translateY(0);
-	    transform: translateY(0);
-	  }
-
-	  40% {
-	    -webkit-transform: translateY(-30px);
-	    -ms-transform: translateY(-30px);
-	    transform: translateY(-30px);
-	  }
-
-	  60% {
-	    -webkit-transform: translateY(-15px);
-	    -ms-transform: translateY(-15px);
-	    transform: translateY(-15px);
-	  }
-	}
-/*--------------------------------------------------------------
 Go to top button
 --------------------------------------------------------------*/
 	.go-top {
@@ -2087,6 +1962,9 @@ Panels
 	}
 /* Button
 -------------------------------------------------------------- */
+	.mdl-button.mdl-button--colored {
+		color: rgb(93, 2, 2) !important;
+	}
 	.roll-button {
 		position: relative;
 		display: inline-block;
@@ -2355,7 +2233,7 @@ Panels
 /* Elements
 -------------------------------------------------------------- */
 	a {
-		color: #5d0202;
+		color: rgb(93, 2, 2);
 	}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: #5d0202;
