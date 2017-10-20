@@ -43,6 +43,9 @@ jQuery(function($) {
 	}
 
 	$(document).ready(function(){
+		if(!(typeof(componentHandler) == 'undefined')){
+		  componentHandler.upgradeAllRegistered();
+		}
 		owlInit();
 		unsemanticGrid();
 		resizeSlider();
