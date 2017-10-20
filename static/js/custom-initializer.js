@@ -35,34 +35,6 @@ jQuery(function($) {
 		});
 	}
 
-	function menuMobile() {
-		slideMenu = $('#menu-mobile');
-
-	    var sidebarMenu = $('#menu-mobile').find('nav');
-
-	    sidebarMenu.mmenu({
-	        "extensions": [
-	            "pagedim-black",
-	            "border-offset",
-	            "theme-dark"
-	        ],
-	        offCanvas: {
-	          "position": "right"
-	        },
-	        navbar: {
-			    title: ""
-			},
-	    });
-
-	    var api = sidebarMenu.data('mmenu');
-	   	$('#menu-button-open').on('click', function() {
-	        api.open();
-	    });
-		$('#menu-button-close').on('click', function() {
-	        api.close();
-	    });
-	}
-
 	function resizeSlider() {
 		$(window).resize(function() {
 	        var bodyheight = $(this).width() + 30;
@@ -72,7 +44,6 @@ jQuery(function($) {
 
 	$(document).ready(function(){
 		owlInit();
-		menuMobile();
 		unsemanticGrid();
 		resizeSlider();
 	});

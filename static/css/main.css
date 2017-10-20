@@ -502,9 +502,7 @@ Header
 	}
 	.mdl-layout__header {
 		background: #fff !important;
-	}
-	.mdl-layout--fixed-header {
-		position: fixed !important;
+		position: fixed;
 	}
 	.mdl-layout {
 		z-index: 100;

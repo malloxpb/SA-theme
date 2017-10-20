@@ -94,40 +94,37 @@
 		    </nav>
 		</div>
 	    <main class="mdl-layout__content">
-	    	<div class="page-content"><!-- Your content goes here --></div>
-	    </main>
-	</div>
+	    	<div class="page-content"><!-- Your content goes here -->
+				<?php do_action('sydney_after_header'); ?>
 
-	<?php do_action('sydney_after_header'); ?>
+				<?php if (is_front_page()): ?>
+				<div class="customized-slider-width"></div>
+				<div class="sydney-hero-area">
+					<div class="loading-container">
+					    <div class="pulse"></div>
+					</div>
+					<?php sydney_slider_template(); ?>
+					<div class="header-image">
+						<?php sydney_header_overlay(); ?>
+						<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+					</div>
+					<?php sydney_header_video(); ?>
 
-	<?php if (is_front_page()): ?>
-	<div class="customized-slider-width"></div>
-	<div class="sydney-hero-area">
-		<div class="loading-container">
-		    <div class="pulse"></div>
-		</div>
-		<?php sydney_slider_template(); ?>
-		<div class="header-image">
-			<?php sydney_header_overlay(); ?>
-			<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-		</div>
-		<?php sydney_header_video(); ?>
+					<?php do_action('sydney_inside_hero'); ?>
+				</div>
+				<?php endif; ?>
 
-		<?php do_action('sydney_inside_hero'); ?>
-	</div>
-	<?php endif; ?>
+				<?php do_action('sydney_after_hero'); ?>
 
-	<?php do_action('sydney_after_hero'); ?>
+				<?php if (!is_singular("post")): ?>
+					<?php if (has_post_thumbnail() && (get_theme_mod( 'post_feat_image' ) != 1)): ?>
+						<div class="header-image">
+							<?php sydney_header_overlay(); ?>
+							<img class="header-inner" src="<?php the_post_thumbnail_url(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+						</div>
+					<?php endif; ?>
+				<?php endif; ?>
 
-	<?php if (!is_singular("post")): ?>
-		<?php if (has_post_thumbnail() && (get_theme_mod( 'post_feat_image' ) != 1)): ?>
-			<div class="header-image">
-				<?php sydney_header_overlay(); ?>
-				<img class="header-inner" src="<?php the_post_thumbnail_url(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-			</div>
-		<?php endif; ?>
-	<?php endif; ?>
-
-	<div id="content" class="page-wrap">
-		<div class="grid-container content-wrapper">
-			<div class="row">
+				<div id="content" class="page-wrap">
+					<div class="grid-container content-wrapper">
+						<div class="row">
