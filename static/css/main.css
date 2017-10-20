@@ -143,7 +143,7 @@ Content
 	border: 0;
 }
 .page-wrap .content-wrapper {
-	background-color: #fff;
+	background-color: #FAFAFA;
 }
 .page-template-page_front-page .page-wrap .content-wrapper {
 	padding-top: 0;
@@ -273,7 +273,7 @@ Repeatable Patterns
 	}
 	body {
 		font: 14px/1.7 'Roboto', 'Helvetica', 'Arial', sans-serif;
-		background: #fff;
+		background: #FAFAFA;
 		color: #757575;
 	}
 	a {
@@ -509,9 +509,14 @@ Header
 	}
 	.mdl-layout__drawer-button .material-icons {
 		color: rgba(0,0,0,0.54);
+		outline: none;
 	}
-	.site-header.not-front-page-header {
-		background: rgb(93, 2, 2) !important;
+	.mdl-layout__header .mdl-layout__drawer-button {
+		outline: none;
+	}
+	.mdl-layout__drawer-button .material-icons:hover,
+	.mdl-layout__drawer-button .material-icons:focus {
+		color: rgb(93, 2, 2);
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
@@ -618,14 +623,11 @@ Header
 		text-decoration: none;
 		outline: none;
 	}
-	.has-header #mainnav ul li a:hover {
-		color: #fff;
-	}
 	#mainnav ul li a:hover {
-		color: #777;
+		color: rgb(93, 2, 2);
 	}
 	#mainnav ul li a:focus {
-		color: #777;
+		color: rgb(93, 2, 2);
 	}
 	#mainnav ul ul a {
 		width: 180px;
@@ -733,42 +735,6 @@ Header
 		transition: all 0.3s ease;
 		-webkit-transition: all 0.3s ease;
 	}
-/*--------------------------------------------------------------
-Mobile navigation
---------------------------------------------------------------*/
-#menu-mobile {
-	display: none !important;
-}
-.menu-slide-button span {
-	display: none;
-}
-.menu-slide-button.open {
-	right: 0;
-    z-index: 10000;
-    position: absolute;
-    background: transparent;
-    border: none;
-}
-.menu-slide-button.open i:before,
-.menu-slide-button.close i:before {
-	font-size: 25px;
-}
-.menu-slide-button.close {
-	position: fixed;
-	right: -450px;
-	top: 0;
-    background: transparent;
-    border: none;
-}
-.menu-slide-button:hover {
-	border: none;
-}
-.menu-slide-button:focus {
-	outline: none;
-}
-.mm-panel.mm-opened .mm-listview {
-    padding-top: 50px;
-}
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
@@ -1521,7 +1487,7 @@ Widgets
 	}
 	.widget-area,
 	.widget-area  a {
-		color: #fff;
+		color: #999;
 	}
 	/* widget popular posts */
 	.widget-popular-post .news .thumb {
@@ -1698,24 +1664,23 @@ Footer
 --------------------------------------------------------------*/
 	.footer-widgets {
 		padding: 95px 0;
-		background-color: #252525;
 	}
 	.footer .copyr {
-		color: #a8a8a8;
+		color: #999;
 		margin-bottom: 0;
 	}
 	.footer-widgets .widget-title {
 		text-transform: uppercase;
-		color: #fff;
+		color: #999;
 		line-height: normal;
 		margin: 5px 0 0;
 	}
-	.widget-area, .widget-area  a:hover,
-	.widget-area, .widget-area  a:focus {
-		color: #777;
+	.widget-area, .widget-area a:hover,
+	.widget-area, .widget-area a:focus {
+		color: rgb(93, 2, 2);
 	}
 	.sow-contact-form strong {
-		color: #fff;
+		color: #999;
 	}
 	/* widget info */
 	.widget-info .logo-footer {
@@ -1771,14 +1736,16 @@ Footer
 /*--------------------------------------------------------------
 Bottom
 --------------------------------------------------------------*/
+    .mdl-mega-footer {
+		background-color: #fff !important;
+	}
 	.site-footer {
-		background-color: #1c1c1c;
 		line-height: 35px;
 		padding: 15px 0;
 	}
 	.site-footer,
 	.site-footer a {
-		color: #fff;
+		color: #999;
 	}
 	.site-footer .socials {
 		margin: 0;
@@ -1803,7 +1770,7 @@ Bottom
 				border-radius: 50%;
 	}
 	.site-footer .socials li:hover a {
-		color: #fff;
+		color: rgb(93, 2, 2);
 	}
 /*--------------------------------------------------------------
 Preloader
@@ -2053,11 +2020,11 @@ Panels
 -------------------------------------------------------------- */
 
 .sydney_contact_info_widget span {
-	color: #fff;
+	color: #999;
 	margin-right: 15px;
 }
 .sydney_contact_info_widget div {
-	color: #fff;
+	color: #999;
 	margin-bottom: 15px;
 }
 /* Icon List

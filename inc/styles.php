@@ -120,18 +120,6 @@ function sydney_custom_styles($custom) {
 	$custom .= "#secondary, #secondary a { color:" . esc_attr($sidebar_color) . "}"."\n";
 	//Footer widget area background
 	$footer_widgets_background = get_theme_mod( 'footer_widgets_background', '#252525' );
-	$custom .= ".footer-widgets { background-color:" . esc_attr($footer_widgets_background) . "}"."\n";
-	//Footer widget area color
-	$footer_widgets_color = get_theme_mod( 'footer_widgets_color', '#fff' );
-	if ( $footer_widgets_color != '#fff' ) {
-		$custom .= "#sidebar-footer,#sidebar-footer a,.footer-widgets .widget-title { color:" . esc_attr($footer_widgets_color) . "}"."\n";
-	}
-	//Footer background
-	$footer_background = get_theme_mod( 'footer_background', '#1c1c1c' );
-	$custom .= ".site-footer { background-color:" . esc_attr($footer_background) . "}"."\n";
-	//Footer color
-	$footer_color = get_theme_mod( 'footer_color', '#fff' );
-	$custom .= ".site-footer,.site-footer a { color:" . esc_attr($footer_color) . "}"."\n";
 	//Rows overlay
 	$rows_overlay = get_theme_mod( 'rows_overlay', '#000000' );
 	$custom .= ".overlay { background-color:" . esc_attr($rows_overlay) . "}"."\n";

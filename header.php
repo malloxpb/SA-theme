@@ -43,22 +43,8 @@
 	<?php dynamic_sidebar('above-header'); ?>
 	<div id="scroller-anchor"></div>
 
-	<button id="menu-button-close" class="menu-slide-button close hide-on-desktop" type="button">
-		<span>Button for navigation menu</span>
-	    <i class="fa fa-times" aria-hidden="true"></i>
-	</button>
-	<!-- reposive menu  -->
-	<div id="menu-mobile">
-		<?php
-		wp_nav_menu(array(
-			'theme_location' => 'mobile_menu',
-			'container' => 'nav',
-		));
-		?>
-	</div>
-
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		<header id="masthead" class="mdl-layout__header site-header <?php if (!is_front_page()) echo "not-front-page-header" ?>" role="banner">
+		<header id="masthead" class="mdl-layout__header site-header" role="banner">
 			<div class="alert hide-on-mobile">
 	            <div class="grid-container">
 	                <p>Welcome to the Student Association - Students Serving Students - Since 1963</p>
@@ -78,10 +64,6 @@
 				<nav id="mainnav" class="mainnav" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<button id="menu-button-open" class="menu-slide-button open hide-on-desktop" type="button">
-					<span>Button for navigation menu</span>
-				    <i class="fa fa-bars" aria-hidden="true"></i>
-				</button>
 		    </div>
 	    </header>
 		<div class="mdl-layout__drawer">
