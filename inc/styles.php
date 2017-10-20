@@ -114,7 +114,7 @@ function sydney_custom_styles($custom) {
 	$custom .= "body { color:" . esc_attr($body_text) . "}"."\n";
 	//Sidebar background
 	$sidebar_background = get_theme_mod( 'sidebar_background', '#ffffff' );
-	$custom .= "#secondary { background-color:#1C1E29}"."\n";
+	$custom .= "#secondary { background-color:#212121}"."\n";
 	//Sidebar color
 	$sidebar_color = get_theme_mod( 'sidebar_color', '#fff' );
 	$custom .= "#secondary, #secondary a { color:" . esc_attr($sidebar_color) . "}"."\n";

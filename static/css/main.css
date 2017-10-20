@@ -1487,7 +1487,7 @@ Widgets
 	}
 	.widget-area,
 	.widget-area  a {
-		color: #999;
+		color: #fff;
 	}
 	/* widget popular posts */
 	.widget-popular-post .news .thumb {
@@ -1671,13 +1671,13 @@ Footer
 	}
 	.footer-widgets .widget-title {
 		text-transform: uppercase;
-		color: #999;
+		color: #fff;
 		line-height: normal;
 		margin: 5px 0 0;
 	}
 	.widget-area, .widget-area a:hover,
 	.widget-area, .widget-area a:focus {
-		color: rgb(93, 2, 2);
+		color: #777;
 	}
 	.sow-contact-form strong {
 		color: #999;
@@ -1737,7 +1737,7 @@ Footer
 Bottom
 --------------------------------------------------------------*/
     .mdl-mega-footer {
-		background-color: #fff !important;
+		background-color: #212121 !important;
 	}
 	.site-footer {
 		line-height: 35px;
@@ -1745,7 +1745,7 @@ Bottom
 	}
 	.site-footer,
 	.site-footer a {
-		color: #999;
+		color: #fff;
 	}
 	.site-footer .socials {
 		margin: 0;
@@ -2020,11 +2020,11 @@ Panels
 -------------------------------------------------------------- */
 
 .sydney_contact_info_widget span {
-	color: #999;
+	color: #fff;
 	margin-right: 15px;
 }
 .sydney_contact_info_widget div {
-	color: #999;
+	color: #fff;
 	margin-bottom: 15px;
 }
 /* Icon List
@@ -2631,6 +2631,11 @@ Panels
 		}
 		.footer-widgets .widget {
 			margin-bottom: 50px;
+		}
+	}
+	@media only screen and (min-width: 1024px) {
+		.mdl-layout__header .mdl-layout__drawer-button {
+			display: none;
 		}
 	}
 	@media only screen and (max-width: 1025px) {
