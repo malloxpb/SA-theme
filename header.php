@@ -52,7 +52,9 @@
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
-			<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>
+			<?php if ( get_theme_mod('site_logo') ) : ?>
+				<img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" />
+			<?php endif; ?>
         </header>
         <nav id="main-menubar" class="demo-navigation mdl-navigation mdl-color-text--white">
 		    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
