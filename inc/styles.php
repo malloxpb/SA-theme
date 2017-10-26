@@ -91,9 +91,6 @@ function sydney_custom_styles($custom) {
 	$menu_bg_color = get_theme_mod( 'menu_bg_color', '#fff' );
 	$rgba = sydney_hex2rgba($menu_bg_color, 0.9);
 	$custom .= ".site-header.float-header { background-color:rgba(93,2,2,0.9);}" . "\n";
-	//Site title
-	$site_title = get_theme_mod( 'site_title_color', '#ffffff' );
-	$custom .= ".site-title a, .site-title a:hover { color:" . esc_attr($site_title) . "}"."\n";
 	//Site desc
 	$site_desc = get_theme_mod( 'site_desc_color', '#ffffff' );
 	$custom .= ".site-description { color:" . esc_attr($site_desc) . "}"."\n";

@@ -42,9 +42,15 @@ jQuery(function($) {
 	    }).resize();
 	}
 
-	$(document).ready(function(){
-		if(!(typeof(componentHandler) == 'undefined')){
-		  componentHandler.upgradeAllRegistered();
+	function initSidebar() {
+		$('#main-menubar ul li a').addClass('mdl-navigation__link')
+		$('#main-menubar').show();
+	}
+
+	$(document).ready(function() {
+		initSidebar();
+		if (!(typeof(componentHandler) == 'undefined')) {
+		    componentHandler.upgradeAllRegistered();
 		}
 		owlInit();
 		unsemanticGrid();
