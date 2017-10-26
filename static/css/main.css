@@ -641,7 +641,7 @@ Layout
 	}
 	.mdl-card__title a:hover,
 	.mdl-card__title a:focus {
-		color: #999;
+		color: rgb(93, 2, 2);
 	}
 	.aside-image {
 		padding: 0;
