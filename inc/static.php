@@ -31,7 +31,7 @@ function sydney_scripts() {
 
 	// material design
 	wp_enqueue_style('material-icons', '//fonts.googleapis.com/icon?family=Material+Icons', false);
-	wp_enqueue_style('material-css', '//code.getmdl.io/1.3.0/material.pink-red.min.css', false, '1.3.0');
+	wp_enqueue_style('material-css', '//cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.cyan-light_blue.min.css', false, '1.3.0');
 
 	wp_style_add_data( 'sydney-ie9', 'conditional', 'lte IE 9' );
 
@@ -45,7 +45,6 @@ function sydney_scripts() {
 	wp_enqueue_script( 'sydney-skip-link-focus-fix', get_template_directory_uri() . '/static/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script('sydney-owljs', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js', ['jquery'], '2.2.1', true);
 	wp_enqueue_script( 'sydney-customizedjs', get_template_directory_uri() . '/static/js/custom-initializer.js', array('jquery'), STATIC_VERSION, true );
-	wp_enqueue_script('sydney-snapwidget', '//snapwidget.com/js/snapwidget.js', ['jquery'], '', true);
 	wp_enqueue_script('sydney-sidebar', '//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.0.2/jquery.mmenu.all.min.js', ['jquery'], '6.0.2', true);
 
 	// material design

@@ -297,7 +297,9 @@ class Instagram_Widget extends WP_Widget {
         <?php if ( !empty($instance['title']) ) {
 			echo $args['before_title'] . '<span class="wow bounce instagram-title">' . $instance['title'] . '</span>' . $args['after_title'];
 		}?>
-        <iframe data-src="https://snapwidget.com/embed/358809" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+		<!-- SnapWidget -->
+		<script src="https://snapwidget.com/js/snapwidget.js"></script>
+		<iframe src="https://snapwidget.com/embed/358809" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
         <?php
         echo $args['after_widget'];
 	}
