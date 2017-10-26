@@ -495,8 +495,7 @@ Header
 		color: rgb(93, 2, 2);
 	}
 	.site-logo {
-		max-width: 100px;
-    	padding-top: 20px;
+    	height: 100%;
 	}
 	.site-header {
 		width: 100%;
@@ -594,8 +593,8 @@ Header
 	    padding-top: 5px;
 	}
 	/* navigation */
-	.mdl-color--blue-grey-900 {
-		background: rgb(93, 2, 2) !important;
+	.demo-drawer {
+		background: rgb(72, 8, 8) !important;
 	}
 	#main-menubar {
 		display: none;
@@ -611,6 +610,9 @@ Header
 	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 		color: #fff !important;
+	}
+	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+		background-color: #671919 !important;
 	}
 /*--------------------------------------------------------------
 Layout
@@ -728,6 +730,7 @@ Layout
 	}
 	.page-wrap {
 		clear: both;
+		width: 100%;
 	}
 	.page-template-page_front-page .page-wrap {
 		padding: 0;
