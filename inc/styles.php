@@ -36,11 +36,6 @@ function sydney_custom_styles($custom) {
 	if ( $headings_fonts !='' ) {
 		$custom .= "h1, h2, h3, h4, h5, h6, #mainnav ul li a, .portfolio-info, .roll-testimonials .name, .roll-team .team-content .name, .roll-team .team-item .team-pop .name, .roll-tabs .menu-tab li a, .roll-testimonials .name, .roll-project .project-filter li a, .roll-button, .roll-counter .name-count, .roll-counter .numb-count button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"] { font-family:" . $headings_fonts . ";}"."\n";
 	}
-    //Site title
-    $site_title_size = get_theme_mod( 'site_title_size', '32' );
-    if ($site_title_size) {
-        $custom .= ".site-title { font-size:" . intval($site_title_size) . "px; }"."\n";
-    }
     //Site description
     $site_desc_size = get_theme_mod( 'site_desc_size', '16' );
     if ($site_desc_size) {
