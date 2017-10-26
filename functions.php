@@ -5,7 +5,7 @@
  * @package Sydney
  */
 
-define('STATIC_VERSION', '00112');
+define('STATIC_VERSION', '00113');
 
 show_admin_bar(false);
 

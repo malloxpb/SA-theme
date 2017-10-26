@@ -611,7 +611,8 @@ Header
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 		color: #fff !important;
 	}
-	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover,
+	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:focus {
 		background-color: #671919 !important;
 	}
 /*--------------------------------------------------------------
@@ -2401,10 +2402,6 @@ html, body {
   align-items: center;
   color: rgba(255, 255, 255, 0.56);
   font-weight: 700;
-}
-.demo-layout .demo-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
-  color: #37474F;
 }
 .demo-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
