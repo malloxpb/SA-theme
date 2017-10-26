@@ -70,21 +70,6 @@ add_action( 'admin_init', 'sydney_polylang' );
 endif;
 
 /**
- * Preloader
- */
-function sydney_preloader() {
-	?>
-	<div class="preloader">
-	    <div class="spinner">
-	        <div class="pre-bounce1"></div>
-	        <div class="pre-bounce2"></div>
-	    </div>
-	</div>
-	<?php
-}
-add_action('sydney_before_site', 'sydney_preloader');
-
-/**
  * Header clone
  */
 function sydney_header_clone() {
@@ -93,7 +78,7 @@ function sydney_header_clone() {
 	$site_header_type 	=get_theme_mod('site_header_type');
 
 	if ( ( $front_header_type == 'nothing' && is_front_page() ) || ( $site_header_type == 'nothing' && !is_front_page() ) ) { ?>
-	
+
 	<div class="header-clone"></div>
 
 	<?php }
@@ -121,18 +106,18 @@ function clubs_post_type() {
 		'not_found_in_trash' => 'No club found in Trash.'
 	);
 
-	$args = array( 
+	$args = array(
 		'label'               => __( 'club', 'sydney' ),
 		'description'         => __( 'SUNY Plattsburgh Clubs and Organizations', 'sydney' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
-		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		// You can associate this CPT with a taxonomy or custom taxonomy.
 		'taxonomies'          => array( 'genres', 'category' ),
 		/* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
-		*/	
+		*/
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -169,18 +154,18 @@ function SAteam_post_type() {
 		'not_found_in_trash' => 'No member found in Trash.'
 	);
 
-	$args = array( 
+	$args = array(
 		'label'               => __( 'SA team', 'sydney' ),
 		'description'         => __( 'SUNY Plattsburgh SA team', 'sydney' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
-		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		// You can associate this CPT with a taxonomy or custom taxonomy.
 		'taxonomies'          => array( 'genres', 'category' ),
 		/* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
-		*/	
+		*/
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
