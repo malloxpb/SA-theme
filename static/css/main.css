@@ -598,6 +598,7 @@ Header
 	}
 	#main-menubar {
 		display: none;
+		background: rgb(103, 30, 30);
 	}
 	#menu-main {
 		padding: 0;
@@ -613,7 +614,7 @@ Header
 	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover,
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:focus {
-		background-color: #671919 !important;
+		background-color: #3e0707 !important;
 	}
 /*--------------------------------------------------------------
 Layout
