@@ -1296,7 +1296,7 @@ Widgets
 --------------------------------------------------------------*/
 	#secondary, #secondary a:hover,
 	#secondary, #secondary a:focus {
-		color: #777;
+		color: rgb(233, 30, 99);
 	}
 	div#secondary {
 	    padding: 30px;
@@ -1531,7 +1531,7 @@ Footer
 	}
 	.widget-area, .widget-area a:hover,
 	.widget-area, .widget-area a:focus {
-		color: #777;
+		color: rgb(233, 30, 99);
 	}
 	.sow-contact-form strong {
 		color: #999;
