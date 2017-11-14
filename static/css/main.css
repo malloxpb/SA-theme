@@ -487,6 +487,8 @@ Header
 	.site-title {
 		font-size: 32px;
 		line-height: 1.2;
+		display: none;
+		margin: 0;
 	}
 	.site-title a {
 		color: #000;
@@ -533,9 +535,6 @@ Header
 	}
 	.header-inner {
 		display: none;
-	}
-	.site-title {
-		margin: 0;
 	}
 	.site-header.fixed {
 		position: fixed;

@@ -44,12 +44,15 @@ jQuery(function($) {
 
 	function initSidebar() {
 		$('#main-menubar ul li a').addClass('mdl-navigation__link')
-		$('#main-menubar').show();
 
 		$('#menu-main li:nth-child(1) a').prepend('<i class="mdl-color-text--white material-icons" role="presentation">home</i>');
 		$('#menu-main li:nth-child(2) a').prepend('<i class="mdl-color-text--white material-icons" role="presentation">inbox</i>');
 		$('#menu-main li:nth-child(3) a').prepend('<i class="mdl-color-text--white material-icons" role="presentation">forum</i>');
 		$('#menu-main li:nth-child(4) a').prepend('<i class="mdl-color-text--white material-icons" role="presentation">people</i>');
+
+		// finally shows the side bar and the title when everything is done
+		$('#main-menubar').show();
+		$('.site-title').show();
 	}
 
 	$(document).ready(function() {
