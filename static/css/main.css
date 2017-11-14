@@ -627,7 +627,7 @@ Layout
 	    bottom: 0;
 	    left: 0;
 	    right: 0;
-	    background: rgba(0,0,0,0.5);
+	    background: rgba(0,0,0,0.7);
 	}
 	.card-title-background {
 		position: absolute;
@@ -643,7 +643,7 @@ Layout
 	}
 	.mdl-card__title a:hover,
 	.mdl-card__title a:focus {
-		color: rgb(93, 2, 2);
+		color: rgb(233, 30, 99);
 	}
 	.aside-image {
 		padding: 0;
