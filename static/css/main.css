@@ -1865,6 +1865,7 @@ Panels
 -------------------------------------------------------------- */
 	.mdl-button.mdl-button--colored {
 		color: rgb(93, 2, 2) !important;
+		font-weight: 700;
 	}
 	.roll-button {
 		position: relative;
