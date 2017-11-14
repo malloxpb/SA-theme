@@ -36,11 +36,6 @@ function sydney_custom_styles($custom) {
 	if ( $headings_fonts !='' ) {
 		$custom .= "h1, h2, h3, h4, h5, h6, #mainnav ul li a, .portfolio-info, .roll-testimonials .name, .roll-team .team-content .name, .roll-team .team-item .team-pop .name, .roll-tabs .menu-tab li a, .roll-testimonials .name, .roll-project .project-filter li a, .roll-button, .roll-counter .name-count, .roll-counter .numb-count button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"] { font-family:" . $headings_fonts . ";}"."\n";
 	}
-    //Site description
-    $site_desc_size = get_theme_mod( 'site_desc_size', '16' );
-    if ($site_desc_size) {
-        $custom .= ".site-description { font-size:" . intval($site_desc_size) . "px; }"."\n";
-    }
     //Menu
     $menu_size = get_theme_mod( 'menu_size', '14' );
     if ($menu_size) {
@@ -86,9 +81,6 @@ function sydney_custom_styles($custom) {
 	$menu_bg_color = get_theme_mod( 'menu_bg_color', '#fff' );
 	$rgba = sydney_hex2rgba($menu_bg_color, 0.9);
 	$custom .= ".site-header.float-header { background-color:rgba(93,2,2,0.9);}" . "\n";
-	//Site desc
-	$site_desc = get_theme_mod( 'site_desc_color', '#ffffff' );
-	$custom .= ".site-description { color:" . esc_attr($site_desc) . "}"."\n";
 	//Top level menu items color
 	$top_items_color = get_theme_mod( 'top_items_color', 'rgba(0,0,0,0.54)' );
 	$custom .= "#mainnav ul li a, #mainnav ul li::before { color:" . esc_attr($top_items_color) . "}"."\n";

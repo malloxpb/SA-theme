@@ -537,15 +537,6 @@ Header
 	.site-title {
 		margin: 0;
 	}
-	.site-description {
-		font-size: 16px;
-		margin: 15px 0 0;
-		line-height: 1.6;
-		color: #efefef;
-	}
-	.site-description:empty {
-		margin: 0;
-	}
 	.site-header.fixed {
 		position: fixed;
 	}
@@ -980,6 +971,9 @@ Hero section
 }
 #slideshow .slides-navigation a:hover {
 	background: rgba(0, 0, 0, 0.4);
+}
+#slideshow .slides-navigation a:focus {
+    outline: -webkit-focus-ring-color auto 5px;
 }
 #slideshow .slides-navigation a i {
 	color: #fff;
