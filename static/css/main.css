@@ -490,9 +490,6 @@ Header
 		display: none;
 		margin: 0;
 	}
-	.site-title a {
-		color: #000;
-	}
 	.site-title a:hover {
 		color: rgb(93, 2, 2);
 	}
