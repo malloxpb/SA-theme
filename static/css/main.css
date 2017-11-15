@@ -1293,11 +1293,11 @@ Blog
     transition: opacity ease-in-out 0.5s;
 }
 .pagination a:hover, .pagination span:hover,
-.pagination a:hover, .pagination span:focus {
+.pagination a:focus, .pagination span:focus {
 	color: #fff;
 	opacity: 0.6;
 }
-.pagination a:hover, .pagination span:focus {
+.pagination a:focus, .pagination span:focus {
 	outline: -webkit-focus-ring-color auto 5px;
 }
 .pagination .current{
