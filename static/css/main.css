@@ -502,6 +502,9 @@ Header
 		z-index: 1000;
 		padding: 0 0 5px 0;
 	}
+	.demo-header {
+		background: rgb(93, 2, 2);
+	}
 	.mdl-layout__header {
 		background: #fff !important;
 	}
