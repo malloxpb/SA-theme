@@ -1607,6 +1607,7 @@ Bottom
 --------------------------------------------------------------*/
     .mdl-mega-footer {
 		background-color: #212121 !important;
+		width: 100%;
 	}
 	.site-footer {
 		line-height: 35px;
