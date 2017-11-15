@@ -45,7 +45,7 @@
       <header class="demo-header mdl-layout__header mdl-color--pink-900 mdl-color-text--white">
         <div class="mdl-layout__header-row">
 			<!-- Title -->
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title mdl-color-text--white"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
