@@ -585,7 +585,7 @@ Header
 	}
 	/* navigation */
 	.demo-drawer {
-		background: rgb(72, 8, 8) !important;
+		background: #fff !important;
 	}
 	#main-menubar {
 		display: none;
@@ -601,11 +601,7 @@ Header
 		border: none !important;
 	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-		color: #fff !important;
-	}
-	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover,
-	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:focus {
-		background-color: #3e0707 !important;
+		color: #000 !important;
 	}
 /*--------------------------------------------------------------
 Layout
