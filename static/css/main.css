@@ -600,6 +600,10 @@ Header
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 		color: #000 !important;
 	}
+	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:focus {
+		background-color: #e0e0e0;
+		outline: -webkit-focus-ring-color auto 5px;
+	}
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
