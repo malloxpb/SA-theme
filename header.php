@@ -42,7 +42,7 @@
 
 
 	<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <header class="demo-header mdl-layout__header mdl-color--pink-900 mdl-color-text--white">
         <div class="mdl-layout__header-row">
 			<!-- Title -->
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
