@@ -492,7 +492,7 @@ Header
 		margin: 0;
 	}
 	.site-title a:hover {
-		color: rgb(233, 30, 99) !important;
+		color: #757575 !important;
 	}
 	.site-logo {
     	max-width: 120px;
