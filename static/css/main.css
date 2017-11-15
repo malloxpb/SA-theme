@@ -503,7 +503,7 @@ Header
 		padding: 0 0 5px 0;
 	}
 	.demo-header {
-		background: rgb(93, 2, 2);
+		background: rgb(93, 2, 2) !important;
 	}
 	.mdl-layout {
 		z-index: 100;
