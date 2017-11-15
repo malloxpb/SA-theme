@@ -491,7 +491,7 @@ Header
 		margin: 0;
 	}
 	.site-title a:hover {
-		color: rgb(93, 2, 2);
+		color: rgb(249, 141, 141) !important;
 	}
 	.site-logo {
     	max-width: 120px;
@@ -1664,12 +1664,12 @@ Panels
 --------------------------------------------------------------*/
 	.panel-grid-cell .widget-title {
 		text-align: center;
-		margin-bottom: 50px;
+		margin: 50px 0;
 		position: relative;
 		font-weight: 600;
 		line-height: normal;
 		text-transform: uppercase;
-		padding-bottom: 10px;
+		padding: 10px 0;
 	}
 	.panel-grid-cell .widget-title:after {
 		content: "";
