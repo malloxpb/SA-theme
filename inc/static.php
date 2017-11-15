@@ -27,7 +27,7 @@ function sydney_scripts() {
 
 	// material design
 	wp_enqueue_style('material-icons', '//fonts.googleapis.com/icon?family=Material+Icons', false);
-	wp_enqueue_style('material-css', '//cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.cyan-light_blue.min.css', false, '1.3.0');
+	wp_enqueue_style('material-css', '//cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.pink-red.min.css', false, '1.3.0');
 
 	wp_style_add_data( 'sydney-ie9', 'conditional', 'lte IE 9' );
 
