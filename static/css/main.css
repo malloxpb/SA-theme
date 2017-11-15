@@ -818,7 +818,8 @@ Layout
 	.club-inner {
 		border: 1px solid;
 	}
-	.club-inner:hover {
+	.club-inner:hover,
+	.club-inner:focus{
 		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 	}
 	.club-description {
