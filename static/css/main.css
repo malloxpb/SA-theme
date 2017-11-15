@@ -594,9 +594,6 @@ Header
 	#menu-main li {
 		list-style: none;
 	}
-	.mdl-layout__drawer {
-		border: none !important;
-	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 		color: #000 !important;
 	}
@@ -2387,9 +2384,6 @@ html, body {
 }
 .mdl-layout__drawer .avatar {
   margin-bottom: 16px;
-}
-.demo-drawer {
-  border: none;
 }
 /* iOS Safari specific workaround */
 .demo-drawer .mdl-menu__container {
