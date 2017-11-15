@@ -815,6 +815,10 @@ Layout
 	.club-item {
 		margin: 0 0 2em 0;
 	}
+	.club-item:focus {
+		outline: -webkit-focus-ring-color auto 5px;
+		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+	}
 	.club-inner {
 		border: 1px solid;
 	}
