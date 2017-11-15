@@ -505,9 +505,6 @@ Header
 	.demo-header {
 		background: rgb(93, 2, 2);
 	}
-	.mdl-layout__header {
-		background: #fff !important;
-	}
 	.mdl-layout {
 		z-index: 100;
 	}
