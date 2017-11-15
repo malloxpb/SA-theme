@@ -10,14 +10,10 @@ function sydney_scripts() {
 	*/
 	if ( get_theme_mod('body_font_name') !='' ) {
 	    wp_enqueue_style( 'sydney-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) );
-	} else {
-	    wp_enqueue_style( 'sydney-body-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600');
 	}
 
 	if ( get_theme_mod('headings_font_name') !='' ) {
 	    wp_enqueue_style( 'sydney-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) );
-	} else {
-	    wp_enqueue_style( 'sydney-headings-fonts', '//fonts.googleapis.com/css?family=Raleway:400,500,600');
 	}
 
 	wp_enqueue_style( 'sydney-slider-fonts', '//fonts.googleapis.com/css?family=Cedarville+Cursive');
