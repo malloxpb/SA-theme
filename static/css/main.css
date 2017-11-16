@@ -122,10 +122,6 @@ Content
 .updated:not(.published) {
 	display: none;
 }
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
 .single .entry-header,
 .page .entry-header {
 	margin-bottom: 30px;
