@@ -634,7 +634,7 @@ Layout
 	}
 	.mdl-card__title a:hover,
 	.mdl-card__title a:focus {
-		color: rgb(233, 30, 99);
+		color: #CCBEB8;
 	}
 	.mdl-card__supporting-text {
 		color: #212121 !important;
@@ -1308,7 +1308,7 @@ Widgets
 --------------------------------------------------------------*/
 	#secondary, #secondary a:hover,
 	#secondary, #secondary a:focus {
-		color: rgb(233, 30, 99);
+		color: #CCBEB8;
 	}
 	div#secondary {
 	    padding: 30px;
@@ -1544,7 +1544,7 @@ Footer
 	}
 	.widget-area, .widget-area a:hover,
 	.widget-area, .widget-area a:focus {
-		color: rgb(233, 30, 99);
+		color: #CCBEB8;
 	}
 	.sow-contact-form strong {
 		color: #999;
