@@ -58,6 +58,8 @@ Accessibility
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 	height: 1px;
+	color: #212121;
+	background: #fff;
 	width: 1px;
 	overflow: hidden;
 }
