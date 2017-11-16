@@ -635,6 +635,7 @@ Layout
 	.mdl-card__title a:hover,
 	.mdl-card__title a:focus {
 		color: #CCBEB8;
+		text-decoration: underline;
 	}
 	.mdl-card__supporting-text {
 		color: #212121 !important;
@@ -1310,6 +1311,10 @@ Widgets
 	#secondary, #secondary a:focus {
 		color: #CCBEB8;
 	}
+	#secondary a:hover,
+	#secondary a:focus {
+		text-decoration: underline;
+	}
 	div#secondary {
 	    padding: 30px;
 	}
@@ -1545,6 +1550,10 @@ Footer
 	.widget-area, .widget-area a:hover,
 	.widget-area, .widget-area a:focus {
 		color: #CCBEB8;
+	}
+	.widget-area a:hover,
+	.widget-area a:focus {
+		text-decoration: underline;
 	}
 	.sow-contact-form strong {
 		color: #999;
