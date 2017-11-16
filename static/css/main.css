@@ -638,6 +638,9 @@ Layout
 	.mdl-card__title a:focus {
 		color: rgb(233, 30, 99);
 	}
+	.mdl-card__supporting-text {
+		color: #212121 !important;
+	}
 	.aside-image {
 		padding: 0;
 		position: relative;
@@ -1014,7 +1017,7 @@ Hero section
 }
 #slideshow .slides-pagination a {
 	background: transparent;
-	border: 2px solid #fff;
+	border: 2px solid #212121;
 	width: 15px;
 	height: 15px;
 	-webkit-box-shadow: 0 1px 1px black;
@@ -1025,7 +1028,7 @@ Hero section
 	outline: -webkit-focus-ring-color auto 5px;
 }
 #slideshow .slides-pagination a.current {
-	background: #fff;
+	background: #212121;
 }
 .header-slider {
 	overflow: hidden;
