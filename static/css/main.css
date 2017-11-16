@@ -20,6 +20,18 @@ Navigation
 	text-align: right;
 	width: 50%;
 }
+.post-navigation .nav-next a,
+.post-navigation .nav-previous a {
+	color: rgb(93,2,2);
+	font-weight: 700;
+	padding: 4px 7px;
+}
+.post-navigation .nav-next a:hover,
+.post-navigation .nav-previous a:hover,
+.post-navigation .nav-next a:focus,
+.post-navigation .nav-previous a:focus {
+	background: #ececec;
+}
 .posts-navigation .nav-previous {
 	padding-left: 15px;
 }
