@@ -285,7 +285,7 @@ Repeatable Patterns
 	body {
 		font: 14px/1.7 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		background: #FAFAFA;
-		color: #757575;
+		color: #212121;
 	}
 	a {
 		text-decoration: none;
@@ -297,7 +297,7 @@ Repeatable Patterns
 	}
 	a:hover,
 	a:focus {
-		color: #757575;
+		color: #212121;
 		text-decoration: none;
 		outline: 0;
 		-webkit-transition: all 0.3s ease-in-out;
@@ -337,7 +337,7 @@ Repeatable Patterns
 		margin: 10px 0 24px;
 	}
 	.text-white { color: #fff !important; }
-	.text-dark { color: #757575 !important;}
+	.text-dark { color: #212121 !important;}
 	button,
 	input[type="button"],
 	input[type="reset"],
