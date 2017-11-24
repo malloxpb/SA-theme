@@ -1554,10 +1554,6 @@ Footer
 		line-height: normal;
 		margin: 5px 0 0;
 	}
-	.widget-area, .widget-area a:hover,
-	.widget-area, .widget-area a:focus {
-		text-decoration: underline;
-	}
 	.widget-area a:hover,
 	.widget-area a:focus {
 		text-decoration: underline;
