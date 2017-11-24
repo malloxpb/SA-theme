@@ -28,7 +28,7 @@ get_header(); ?>
 
 					if ($postslist->have_posts()):
 					    while ($postslist->have_posts()):
-					    	$postslist->the_post(); 
+					    	$postslist->the_post();
 					    ?>
 					    <article class="grid-item aboutus-post-wrapper grid-25 tablet-grid-33 mobile-grid-50">
 							<div class="aboutus-inner">
@@ -37,7 +37,7 @@ get_header(); ?>
 								</div>
 								<div class="club-description">
 									<h3 class="aboutus-title"><?php the_title(); ?></h3>
-									<div class="aboutus-description-inner hidden">
+									<div class="aboutus-description-inner">
 										<p> <?php the_excerpt(); ?> </p>
 									</div>
 								</div>
