@@ -614,6 +614,7 @@ Header
 	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 		color: #000 !important;
+		padding: 16px 20px !important;
 	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:focus {
 		background-color: #e0e0e0;
