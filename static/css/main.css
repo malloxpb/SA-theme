@@ -1318,10 +1318,6 @@ Blog
 /*--------------------------------------------------------------
 Widgets
 --------------------------------------------------------------*/
-	#secondary, #secondary a:hover,
-	#secondary, #secondary a:focus {
-		text-decoration: underline;
-	}
 	#secondary a:hover,
 	#secondary a:focus {
 		text-decoration: underline;
