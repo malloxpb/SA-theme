@@ -6,9 +6,8 @@ Template Name: events page
 get_header(); ?>
 
 	<div id="primary" class="content-area grid-70">
-		<main id="main" class="post-wrap" role="main">
-
 		<h2> Events on campus </h2>
+		<main id="main" class="post-wrap event-homepage" role="main">
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$args = array(
@@ -23,8 +22,8 @@ get_header(); ?>
 				$postslist = new WP_Query($args);
 
 				if ($postslist->have_posts()) :
-			        while ($postslist->have_posts()) : 
-			        	$postslist->the_post(); 
+			        while ($postslist->have_posts()) :
+			        	$postslist->the_post();
 			    		get_template_part( 'page-templates/content', 'post' );
 			        endwhile;
 			        kriesi_pagination($postslist->max_num_pages);

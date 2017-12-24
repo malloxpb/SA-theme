@@ -1295,15 +1295,18 @@ Blog
 ## customized pagination
 --------------------------------------------------------------*/
 .pagination {
-	clear:both;
+	clear: both;
 	padding: 0 0 10px 0;
-    margin: 0 auto;
-	position:relative;
-	font-size:11px;
-	line-height:13px;
+	margin: 0 auto;
+	position: absolute;
+	font-size: 11px;
+	line-height: 13px;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
+	bottom: -60px;
+	left: 0;
+	right: 0;
 }
 .pagination span, .pagination a {
 	display:block;

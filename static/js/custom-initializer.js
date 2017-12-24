@@ -54,6 +54,18 @@ jQuery(function($) {
 		});
 	}
 
+	function eventpageInit() {
+		var $container = $('.event-homepage').masonry({
+		        itemSelector : '.mdl-card',
+		        columnWidth : '',
+				gutter: 20
+		    });
+
+		$container.imagesLoaded().progress(function() {
+		    $container.masonry('layout');
+		});
+	}
+
 	$(document).ready(function() {
 		if (!(typeof(componentHandler) == 'undefined')) {
 		    componentHandler.upgradeAllRegistered();
@@ -61,6 +73,7 @@ jQuery(function($) {
 		owlInit();
 		unsemanticGrid();
 		homepageInit();
+		eventpageInit();
 		resizeSlider();
 	});
 });
