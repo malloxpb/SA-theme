@@ -48,13 +48,13 @@ Template Name: Club page template
 							</article>
 				    	<?php
 				        endwhile;
-				        echo '</div></div>';
 				        kriesi_pagination($postslist->max_num_pages);
 				        wp_reset_postdata();
 				    endif;
 				    ?>
 
-
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php get_sidebar(); ?>
