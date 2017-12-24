@@ -522,7 +522,7 @@ Header
 		z-index: 100;
 	}
 	.mdl-layout__drawer-button .material-icons {
-		color: rgba(0,0,0,0.54);
+		color: #fff;
 		outline: none;
 	}
 	.mdl-layout__header .mdl-layout__drawer-button {
@@ -530,7 +530,7 @@ Header
 	}
 	.mdl-layout__drawer-button .material-icons:hover,
 	.mdl-layout__drawer-button .material-icons:focus {
-		color: rgb(93, 2, 2);
+		outline: -webkit-focus-ring-color auto 5px;
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
@@ -594,20 +594,6 @@ Header
 	    padding-top: 5px;
 	}
 	/* navigation */
-	.demo-drawer {
-		background: #fff !important;
-		width: 200px !important;
-	}
-	.mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)>.mdl-layout__header {
-		margin-left: 200px !important;
-		width: calc(100% - 200px) !important;
-	}
-	.mdl-layout--fixed-drawer>.mdl-layout__content {
-		margin-left: 200px !important;
-	}
-	#main-menubar {
-		display: none;
-	}
 	#menu-main {
 		padding: 0;
 	}
@@ -631,6 +617,25 @@ Header
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:focus {
 		background-color: #e0e0e0;
 		outline: -webkit-focus-ring-color auto 5px;
+	}
+	.menu-main-container ul {
+		padding: 0px;
+	}
+	.menu-main-container ul li {
+		padding: 15px 20px;
+		list-style: none;
+	}
+	.menu-main-container ul li a {
+		color: #fff;
+		padding: 20px;
+	}
+	.menu-main-container ul li a:hover,
+	.menu-main-container ul li a:focus {
+		background: #7d3434;
+	}
+	.mdl-layout__drawer {
+		background: rgb(93, 2, 2) !important;
+		border-right: none !important;
 	}
 /*--------------------------------------------------------------
 Layout
@@ -1048,18 +1053,18 @@ Hero section
 }
 #slideshow .slides-pagination a {
 	background: transparent;
-	border: 2px solid #212121;
+	border: 2px solid #fff;
 	width: 15px;
 	height: 15px;
-	-webkit-box-shadow: 0 1px 1px black;
-    -moz-box-shadow: 0 1px 1px black;
-    box-shadow: 0 1px 1px black;
+	-webkit-box-shadow: 0 1px 1px #fff;
+    -moz-box-shadow: 0 1px 1px #fff;
+    box-shadow: 0 1px 1px #fff;
 }
 #slideshow .slides-pagination a:focus {
 	outline: -webkit-focus-ring-color auto 5px;
 }
 #slideshow .slides-pagination a.current {
-	background: #212121;
+	background: #fff;
 }
 .header-slider {
 	overflow: hidden;
@@ -2508,6 +2513,11 @@ Panels
 		    padding: 0px !important;
 		}
 	}
+	@media (max-width: 839px) and (min-width: 480px) {
+		.mdl-grid {
+		    padding: 0 !important;
+		}
+	}
 	@media only screen and (max-width: 780px) {
 		.roll-client .client-item img {
 			max-width: 100%;
@@ -2525,11 +2535,16 @@ Panels
 		h6 { font-size: 14px;}
 	}
 	/* Tablet Landscape */
-	 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 		.parallax {
 			background-size: cover;
 			background-attachment: scroll;
 			background-position: top center!important;
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		.site-title {
+			margin-top: 25px;
 		}
 	}
 	/* All Mobile Sizes */

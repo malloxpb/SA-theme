@@ -54,8 +54,7 @@
 			    </div>
 		    </header>
 		    <div class="mdl-layout__drawer">
-			    <span class="mdl-layout-title">Title</span>
-				<nav id="main-menubar" class="demo-navigation mdl-navigation mdl-color-text--white">
+				<nav class="demo-navigation mdl-navigation mdl-color-text--white">
 			        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
 			    </nav>
 		    </div>
