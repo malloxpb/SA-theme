@@ -42,12 +42,25 @@ jQuery(function($) {
 	    }).resize();
 	}
 
+	function homepageInit() {
+		var $container = $('.homepage-container').masonry({
+		        itemSelector : '.mdl-card',
+		        columnWidth : '',
+				gutter: 20
+		    });
+
+		$container.imagesLoaded().progress(function() {
+		    $container.masonry('layout');
+		});
+	}
+
 	$(document).ready(function() {
 		if (!(typeof(componentHandler) == 'undefined')) {
 		    componentHandler.upgradeAllRegistered();
 		}
 		owlInit();
 		unsemanticGrid();
+		homepageInit();
 		resizeSlider();
 	});
 });

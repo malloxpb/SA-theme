@@ -641,7 +641,6 @@ Header
 Layout
 --------------------------------------------------------------*/
 	.mdl-card {
-		width: 100% !important;
 		margin-bottom: 20px;
 	}
 	.mdl-card__title {
@@ -1157,6 +1156,9 @@ Blog
 	}
 	.content-area .hentry {
 		position: relative;
+	}
+	.demo-card-wide {
+		width: 45% !important;
 	}
 	.content-area .hentry:first-child {
 		padding-top: 0;

@@ -13,9 +13,8 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area grid-70">
-		<main id="main" class="post-wrap" role="main">
-
 		<h3> Student Association activities </h3>
+		<main id="main" class="post-wrap homepage-container" role="main">
 			<?php
 				$args = array(
 					'category_name'    => 'sa-events',
@@ -35,11 +34,13 @@ get_header(); ?>
 			        wp_reset_postdata();
 			    endif;
 			?>
+
+		</main><!-- #main -->
+		<div>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'page-templates/content', 'page' ); ?>
 			<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
+		</div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
