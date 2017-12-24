@@ -7,8 +7,8 @@
  * @package Sydney
  */
 ?>
-							</div>
-						</div>
+							</div><!--#row-->
+						</div><!--!grid-container-->
 					</div><!-- #content -->
 
 					<?php do_action('sydney_before_footer'); ?>
@@ -31,9 +31,9 @@
 
 					<?php do_action('sydney_after_footer'); ?>
 					<?php wp_footer(); ?>
-				</div>
-			</main>
-		</div>
+				</div><!--mdl grid-->
+			</main><!--mdl layout content-->
+		</div><!--mdl layout-->
 	</div><!-- #page -->
 
 
