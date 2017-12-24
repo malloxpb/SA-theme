@@ -2546,6 +2546,9 @@ Panels
 		.site-title {
 			margin-top: 25px;
 		}
+		.mdl-layout--large-screen-only {
+			display: none !important;
+		}
 	}
 	/* All Mobile Sizes */
 	@media only screen and (max-width: 767px) {
