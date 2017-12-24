@@ -496,12 +496,12 @@ th,td {
 Header
 --------------------------------------------------------------*/
 	.site-title {
-		font-size: 27px;
+		font-size: 22px;
 		line-height: 1.2;
-		display: none;
-		margin: 0;
+		margin-top: 12px;
 	}
-	.site-title a:hover {
+	.site-title a:hover,
+	.site-title a:focus {
 		text-decoration: underline;
 	}
 	.site-logo {
@@ -515,6 +515,8 @@ Header
 	}
 	.demo-header {
 		background: rgb(93, 2, 2) !important;
+		max-height: 52px !important;
+		min-height: 52px !important;
 	}
 	.mdl-layout {
 		z-index: 100;
@@ -611,6 +613,16 @@ Header
 	}
 	#menu-main li {
 		list-style: none;
+		display: inline-block;
+		padding: 15px;
+	}
+	#menu-main li a {
+		color: #fff;
+		padding: 10px;
+	}
+	#menu-main li a:hover,
+	#menu-main li a:focus {
+		background: #7d3434;
 	}
 	.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 		color: #000 !important;

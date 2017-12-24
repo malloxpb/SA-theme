@@ -41,10 +41,10 @@
 		<div id="scroller-anchor"></div>
 
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		    <header class="mdl-layout__header">
+		    <header class="demo-header mdl-layout__header">
 			    <div class="mdl-layout__header-row">
 			        <!-- Title -->
-			        <span class="mdl-layout-title">Title</span>
+			        <h1 class="site-title"><a class="mdl-color-text--white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			        <!-- Add spacer, to align navigation to the right -->
 			        <div class="mdl-layout-spacer"></div>
 			        <!-- Navigation. We hide it in small screens. -->
