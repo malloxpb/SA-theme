@@ -9,7 +9,7 @@ function sydney_hex2rgba($color, $opacity = false) {
         if ($color[0] == '#' ) {
         	$color = substr( $color, 1 );
         }
-        $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+        $hex = array();
         $rgb =  array_map('hexdec', $hex);
         $opacity = 0.9;
         $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
