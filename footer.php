@@ -35,8 +35,6 @@
 			</main><!--mdl layout content-->
 		</div><!--mdl layout-->
 	</div><!-- #page -->
-
-
-
+	
 </body>
 </html>
